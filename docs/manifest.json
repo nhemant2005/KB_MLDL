@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-05-12T17:17:48.774764Z",
+  "total_notes": 4,
+  "sections": {
+    "Feature Engineering": [
+      {
+        "section": "Feature Engineering",
+        "day": 25,
+        "title": "Feature Scaling - Normalization",
+        "path": "Feature_Engineering/day_25_feature_scaling___normalization.md",
+        "filename": "day_25_feature_scaling___normalization.md"
+      },
+      {
+        "section": "Feature Engineering",
+        "day": 34,
+        "title": "Handling Date and Time Variables",
+        "path": "Feature_Engineering/day_34_handling_date_and_time_variables.md",
+        "filename": "day_34_handling_date_and_time_variables.md"
+      }
+    ],
+    "Foundations": [
+      {
+        "section": "Foundations",
+        "day": 1,
+        "title": "What is Machine Learning",
+        "path": "Foundations/day_1_what_is_machine_learning.md",
+        "filename": "day_1_what_is_machine_learning.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 2,
+        "title": "AI vs ML vs DL",
+        "path": "Foundations/day_2_ai_vs_ml_vs_dl.md",
+        "filename": "day_2_ai_vs_ml_vs_dl.md"
+      }
+    ]
+  }
+}

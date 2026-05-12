@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Curriculum OS — Knowledge Base</title>
+  <meta name="description" content="A structured 100-day Machine Learning curriculum knowledge base, generated from textbooks and playlist annotations." />
+
+  <!-- Marked.js for client-side markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- KaTeX for LaTeX math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
+      ]
+    })"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Tokens ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0d1117;
+      --surface:     #161b22;
+      --surface2:    #1c2128;
+      --border:      #30363d;
+      --accent:      #58a6ff;
+      --accent2:     #79c0ff;
+      --green:       #3fb950;
+      --purple:      #bc8cff;
+      --orange:      #d29922;
+      --text:        #e6edf3;
+      --text-muted:  #8b949e;
+      --text-dim:    #4d6070;
+      --radius:      8px;
+      --sidebar-w:   300px;
+      --font:        'Inter', system-ui, sans-serif;
+      --mono:        'JetBrains Mono', monospace;
+    }
+
+    html, body { height: 100%; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Top Bar ────────────────────────────────────────────────────────── */
+    header {
+      height: 52px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 16px;
+      flex-shrink: 0;
+      z-index: 100;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--accent), var(--purple));
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+    }
+    .header-stats {
+      margin-left: auto;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .stat-badge {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .stat-badge strong { color: var(--accent); }
+
+    #search {
+      flex: 1;
+      max-width: 360px;
+      height: 32px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0 12px;
+      color: var(--text);
+      font-size: 13px;
+      font-family: var(--font);
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    #search:focus { border-color: var(--accent); }
+    #search::placeholder { color: var(--text-dim); }
+
+    /* ── Layout ─────────────────────────────────────────────────────────── */
+    .layout {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── Sidebar ────────────────────────────────────────────────────────── */
+    .sidebar {
+      width: var(--sidebar-w);
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    .section-group { border-bottom: 1px solid var(--border); }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.1s;
+    }
+    .section-header:hover { background: var(--surface2); }
+    .section-chevron {
+      margin-left: auto;
+      transition: transform 0.2s;
+      font-size: 10px;
+    }
+    .section-group.collapsed .section-chevron { transform: rotate(-90deg); }
+    .section-group.collapsed .note-list { display: none; }
+
+    .section-color {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .note-list { list-style: none; }
+    .note-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px 7px 28px;
+      font-size: 12.5px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: background 0.1s, color 0.1s;
+      border-left: 2px solid transparent;
+      line-height: 1.35;
+    }
+    .note-item:hover { background: var(--surface2); color: var(--text); }
+    .note-item.active {
+      background: var(--surface2);
+      color: var(--accent);
+      border-left-color: var(--accent);
+    }
+    .day-badge {
+      font-size: 10px;
+      color: var(--text-dim);
+      font-family: var(--mono);
+      flex-shrink: 0;
+      min-width: 28px;
+    }
+
+    /* ── Main Content ───────────────────────────────────────────────────── */
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .main::-webkit-scrollbar { width: 6px; }
+    .main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    /* ── Welcome Screen ─────────────────────────────────────────────────── */
+    #welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 60px 40px;
+      text-align: center;
+      gap: 16px;
+    }
+    .welcome-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px;
+      margin-bottom: 8px;
+      box-shadow: 0 0 40px rgba(88,166,255,0.2);
+    }
+    #welcome h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+    #welcome p { color: var(--text-muted); font-size: 14px; max-width: 440px; line-height: 1.6; }
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+      max-width: 540px;
+      width: 100%;
+    }
+    .welcome-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: left;
+      font-size: 12px;
+    }
+    .welcome-card .card-label { color: var(--text-dim); font-size: 11px; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .welcome-card .card-value { font-size: 22px; font-weight: 700; color: var(--accent); }
+    .welcome-card .card-sub { color: var(--text-muted); margin-top: 2px; }
+
+    /* ── Note Viewer ─────────────────────────────────────────────────────── */
+    #note-view {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+    }
+    .note-header {
+      padding: 24px 40px 16px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .note-breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .note-breadcrumb span { color: var(--text-dim); }
+    .note-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      color: var(--text);
+    }
+    .note-meta {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+    .meta-tag {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      background: var(--surface2);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .note-body {
+      padding: 32px 40px 60px;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    /* ── Markdown Styles ─────────────────────────────────────────────────── */
+    .note-body h1, .note-body h2, .note-body h3, .note-body h4 {
+      color: var(--text);
+      margin: 1.6em 0 0.5em;
+      letter-spacing: -0.3px;
+    }
+    .note-body h1 { font-size: 22px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    .note-body h2 { font-size: 17px; color: var(--accent2); }
+    .note-body h3 { font-size: 15px; }
+    .note-body p  { line-height: 1.75; color: #cdd9e5; margin-bottom: 0.9em; font-size: 14.5px; }
+    .note-body ul, .note-body ol {
+      margin: 0.5em 0 0.9em 1.2em;
+      color: #cdd9e5;
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+    .note-body li { margin-bottom: 4px; }
+    .note-body strong { color: var(--text); font-weight: 600; }
+    .note-body em { color: var(--text-muted); }
+    .note-body code {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 5px;
+      color: var(--purple);
+    }
+    .note-body pre {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+    .note-body pre code {
+      background: none; border: none; padding: 0;
+      color: #adbac7; font-size: 13px;
+    }
+    .note-body blockquote {
+      border-left: 3px solid var(--accent);
+      margin: 1em 0;
+      padding: 8px 16px;
+      background: var(--surface2);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .note-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5em 0;
+    }
+    .note-body a { color: var(--accent); text-decoration: none; }
+    .note-body a:hover { text-decoration: underline; }
+
+    /* Obsidian [[wikilinks]] — rendered as styled spans */
+    .wikilink {
+      color: var(--purple);
+      background: rgba(188,140,255,0.08);
+      border-radius: 4px;
+      padding: 0 4px;
+      font-size: 13px;
+      cursor: default;
+    }
+
+    /* ── Loading / Error ─────────────────────────────────────────────────── */
+    .loading {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 13px;
+      padding: 60px 40px;
+    }
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .error-msg {
+      padding: 60px 40px;
+      color: #f85149;
+      font-size: 13px;
+    }
+
+    /* ── Section colors ──────────────────────────────────────────────────── */
+    .sc-0 { background: #58a6ff; }
+    .sc-1 { background: #3fb950; }
+    .sc-2 { background: #bc8cff; }
+    .sc-3 { background: #d29922; }
+    .sc-4 { background: #f85149; }
+    .sc-5 { background: #39d353; }
+    .sc-6 { background: #ff7b72; }
+    .sc-7 { background: #ffa657; }
+
+    /* ── Responsive ──────────────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .sidebar { display: none; }
+      .note-body { padding: 20px 20px 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
+  <header>
+    <a class="logo" href="#">
+      <div class="logo-icon">🧠</div>
+      ML Curriculum OS
+    </a>
+    <input id="search" type="search" placeholder="Search notes…" autocomplete="off" />
+    <div class="header-stats">
+      <div class="stat-badge" id="note-count-badge">
+        <strong id="total-count">—</strong> notes
+      </div>
+      <div class="stat-badge" id="updated-badge" style="display:none">
+        Updated <strong id="updated-at">—</strong>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Layout ──────────────────────────────────────────────────────────── -->
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+      <div class="loading" style="padding:20px 16px;font-size:12px;">
+        <div class="spinner"></div> Loading vault…
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="main" id="main">
+
+      <!-- Welcome -->
+      <div id="welcome">
+        <div class="welcome-icon">🧠</div>
+        <h1>ML Curriculum Knowledge Base</h1>
+        <p>100-day structured Machine Learning curriculum, compiled from textbooks and annotated playlist notes. Select a note from the sidebar to begin.</p>
+        <div class="welcome-grid">
+          <div class="welcome-card">
+            <div class="card-label">Total Notes</div>
+            <div class="card-value" id="wc-notes">—</div>
+            <div class="card-sub">generated</div>
+          </div>
+          <div class="welcome-card">
+            <div class="card-label">Sections</div>
+            <div class="card-value" id="wc-sections">—</div>
+            <div class="card-sub">topic areas</div>
+          </div>
+          <div class="welcome-card">
+            <div class="card-label">Last Updated</div>
+            <div class="card-value" style="font-size:13px;padding-top:4px" id="wc-updated">—</div>
+            <div class="card-sub">via git push</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Viewer -->
+      <div id="note-view">
+        <div class="note-header">
+          <div class="note-breadcrumb">
+            <span id="nv-section">—</span>
+            ›
+            <span id="nv-day" style="font-family:var(--mono); color:var(--accent);">—</span>
+          </div>
+          <div class="note-title" id="nv-title">—</div>
+          <div class="note-meta" id="nv-meta"></div>
+        </div>
+        <div class="note-body" id="nv-body"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // ── CONFIG ──────────────────────────────────────────────────────────────
+    // Replace with your actual GitHub username and repo name
+    const GITHUB_USER = "nhemant2005";
+    const GITHUB_REPO = "KB_MLDL";
+    const GITHUB_BRANCH = "main";
+
+    const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/${GITHUB_BRANCH}`;
+    const MANIFEST_URL = `${RAW_BASE}/docs/manifest.json`;
+
+    // ── STATE ───────────────────────────────────────────────────────────────
+    let manifest = null;
+    let activeNote = null;
+
+    // ── INIT ────────────────────────────────────────────────────────────────
+    async function init() {
+      try {
+        const res = await fetch(MANIFEST_URL + "?t=" + Date.now());
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        manifest = await res.json();
+        renderSidebar(manifest);
+        updateStats(manifest);
+      } catch (e) {
+        document.getElementById("sidebar").innerHTML =
+          `<div class="error-msg">⚠ Could not load manifest.<br><small>${e.message}</small></div>`;
+      }
+    }
+
+    // ── STATS ────────────────────────────────────────────────────────────────
+    function updateStats(m) {
+      const sectionCount = Object.keys(m.sections).length;
+      const dateStr = m.generated_at
+        ? new Date(m.generated_at).toLocaleDateString("en-GB", { day:"numeric", month:"short", year:"numeric" })
+        : "—";
+
+      document.getElementById("total-count").textContent = m.total_notes;
+      document.getElementById("wc-notes").textContent    = m.total_notes;
+      document.getElementById("wc-sections").textContent = sectionCount;
+      document.getElementById("wc-updated").textContent  = dateStr;
+      document.getElementById("updated-at").textContent  = dateStr;
+      document.getElementById("updated-badge").style.display = "flex";
+    }
+
+    // ── SIDEBAR ──────────────────────────────────────────────────────────────
+    const SECTION_COLORS = ["sc-0","sc-1","sc-2","sc-3","sc-4","sc-5","sc-6","sc-7"];
+
+    function renderSidebar(m, filter = "") {
+      const sidebar = document.getElementById("sidebar");
+      const sections = m.sections;
+      const lc = filter.toLowerCase();
+      let html = "";
+      let colorIdx = 0;
+
+      for (const [sec, notes] of Object.entries(sections)) {
+        const filtered = filter
+          ? notes.filter(n => n.title.toLowerCase().includes(lc) || (n.day && String(n.day).includes(lc)))
+          : notes;
+        if (!filtered.length) { colorIdx++; continue; }
+
+        const color = SECTION_COLORS[colorIdx % SECTION_COLORS.length];
+        colorIdx++;
+
+        const items = filtered.map(n => {
+          const dayLabel = n.day ? `D${String(n.day).padStart(2,"0")}` : "   ";
+          const isActive = activeNote && activeNote.path === n.path ? "active" : "";
+          return `<li class="note-item ${isActive}" data-path="${n.path}" data-title="${escHtml(n.title)}" data-section="${escHtml(sec)}" data-day="${n.day||""}">
+            <span class="day-badge">${dayLabel}</span>
+            ${escHtml(n.title)}
+          </li>`;
+        }).join("");
+
+        html += `<div class="section-group" id="sg-${colorIdx}">
+          <div class="section-header" onclick="toggleSection('sg-${colorIdx}')">
+            <div class="section-color ${color}"></div>
+            ${escHtml(sec)}
+            <span class="section-chevron">▾</span>
+          </div>
+          <ul class="note-list">${items}</ul>
+        </div>`;
+      }
+
+      sidebar.innerHTML = html || `<div style="padding:20px;color:var(--text-muted);font-size:13px;">No results for "${escHtml(filter)}"</div>`;
+
+      // Attach click handlers
+      sidebar.querySelectorAll(".note-item").forEach(el => {
+        el.addEventListener("click", () => loadNote({
+          path:    el.dataset.path,
+          title:   el.dataset.title,
+          section: el.dataset.section,
+          day:     el.dataset.day || null,
+        }));
+      });
+    }
+
+    function toggleSection(id) {
+      document.getElementById(id)?.classList.toggle("collapsed");
+    }
+
+    // ── NOTE LOADER ──────────────────────────────────────────────────────────
+    async function loadNote(note) {
+      activeNote = note;
+
+      // Highlight active in sidebar
+      document.querySelectorAll(".note-item").forEach(el => {
+        el.classList.toggle("active", el.dataset.path === note.path);
+      });
+
+      // Show note view, hide welcome
+      document.getElementById("welcome").style.display = "none";
+      const view = document.getElementById("note-view");
+      view.style.display = "flex";
+
+      // Header
+      document.getElementById("nv-section").textContent = note.section;
+      document.getElementById("nv-day").textContent     = note.day ? `Day ${note.day}` : "Merged";
+      document.getElementById("nv-title").textContent   = note.title;
+      document.getElementById("nv-meta").innerHTML      = `
+        <span class="meta-tag">📁 ${escHtml(note.section)}</span>
+        ${note.day ? `<span class="meta-tag">📅 Day ${note.day}</span>` : `<span class="meta-tag">🔗 Merged Group</span>`}
+      `;
+
+      // Body: show loading
+      const body = document.getElementById("nv-body");
+      body.innerHTML = `<div class="loading"><div class="spinner"></div>Loading note…</div>`;
+
+      // Scroll main to top
+      document.getElementById("main").scrollTop = 0;
+
+      try {
+        const url = `${RAW_BASE}/KB_Obsidian/${note.path}?t=${Date.now()}`;
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const raw = await res.text();
+        const html = renderMarkdown(raw);
+        body.innerHTML = html;
+
+        // Re-render math after content is inserted
+        if (window.renderMathInElement) {
+          renderMathInElement(body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$",  right: "$",  display: false}
+            ],
+            throwOnError: false
+          });
+        }
+      } catch (e) {
+        body.innerHTML = `<div class="error-msg">⚠ Could not load this note.<br><small>${e.message}</small></div>`;
+      }
+    }
+
+    // ── MARKDOWN RENDERER ────────────────────────────────────────────────────
+    function renderMarkdown(raw) {
+      // Pre-process: convert Obsidian [[wikilinks]] → styled spans
+      const processed = raw.replace(/\[\[([^\]]+)\]\]/g, (_, inner) =>
+        `<span class="wikilink">[[${escHtml(inner)}]]</span>`
+      );
+      return marked.parse(processed, { gfm: true, breaks: false });
+    }
+
+    // ── SEARCH ───────────────────────────────────────────────────────────────
+    let searchTimer;
+    document.getElementById("search").addEventListener("input", e => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        if (manifest) renderSidebar(manifest, e.target.value.trim());
+      }, 180);
+    });
+
+    // ── UTILS ────────────────────────────────────────────────────────────────
+    function escHtml(s) {
+      return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+    }
+
+    // ── BOOT ────────────────────────────────────────────────────────────────
+    init();
+  </script>
+</body>
+</html>

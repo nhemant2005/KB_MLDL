@@ -1,4 +1,5 @@
-import anthropic
+import openai
+import os
 import argparse
 import fitz
 import json
@@ -8,20 +9,21 @@ from dotenv import load_dotenv
 
 import sys
 from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).parent))
 import cfg
 
 # Load environment variables from .env file
 load_dotenv()
 
-client = anthropic.Anthropic()
+client = openai.OpenAI(
+    api_key=os.environ.get(cfg.API_KEY_ENV),
+    base_url=cfg.API_BASE_URL,
+)
 
 # Pull all user-configurable settings from cfg (sourced from user_config.json)
-BOOK_PATHS      = cfg.BOOK_PATHS
+BOOK_PATHS = cfg.BOOK_PATHS
 CHAPTER_PAGE_MAP = cfg.CHAPTER_PAGE_MAP
-
-
-
 
 
 # ── TEXTBOOK EXTRACTION ────────────────────────────────────────────────────────
@@ -150,7 +152,6 @@ NON-NEGOTIABLE RULES:
         + f"{'=' * 60}\n\n"
         + textbook_content
     )
-
 
 
 def build_merged_textbook_content(group_topics: list) -> str:
@@ -447,13 +448,13 @@ def generate_note(
                     textbook_content,
                 )
 
-                response = client.messages.create(
+                response = client.chat.completions.create(
                     model=cfg.MODEL,
                     max_tokens=cfg.MERGED_NOTE_MAX_TOKENS,
                     messages=[{"role": "user", "content": prompt}],
                 )
 
-                section_content = response.content[0].text.strip()
+                section_content = response.choices[0].message.content.strip()
                 final_note += section_content + "\n\n"
                 time.sleep(cfg.RATE_LIMIT_SLEEP)
 
@@ -518,7 +519,7 @@ def generate_note(
             else "NO — run extract_textbook_sections.py first"
         )
         print(f"\n  [dry-run] Day {topic['playlist_day']}: {topic['topic']}")
-        print(f"    Note type:   {topic.get("note_type", "concept")}")
+        print(f"    Note type:   {topic.get('note_type', 'concept')}")
         print(f"    Section:     {topic['section']}")
         print(f"    Difficulty:  {topic['difficulty']}")
         print(f"    Importance:  {topic.get('interview_importance')}/10")
@@ -529,18 +530,18 @@ def generate_note(
 
     print(
         f"\n  Generating: Day {topic['playlist_day']} — "
-        f"{topic['topic']} [{topic.get("note_type", "concept")}]"
+        f"{topic['topic']} [{topic.get('note_type', 'concept')}]"
     )
 
     try:
-        response = client.messages.create(
+        response = client.chat.completions.create(
             model=cfg.MODEL,
             max_tokens=cfg.STANDALONE_NOTE_MAX_TOKENS,
             messages=[
                 {"role": "user", "content": build_prompt(topic, textbook_content)}
             ],
         )
-        note_content = response.content[0].text
+        note_content = response.choices[0].message.content
 
         vault_path.parent.mkdir(parents=True, exist_ok=True)
         vault_path.write_text(note_content, encoding="utf-8")
@@ -694,7 +695,7 @@ def print_topic_summary(
             words = len(body.split())
             print(f"    Word count:   {words} words")
             print(f"    Length:       {len(content):,} characters")
-            print(f"    Note type:    {topic.get("note_type", "concept")}")
+            print(f"    Note type:    {topic.get('note_type', 'concept')}")
             print(f"    File exists:  [OK] {vault_path.as_posix()}")
     else:
         print("    File exists:  [NO] Not yet generated")

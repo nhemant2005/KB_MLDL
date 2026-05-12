@@ -8,12 +8,14 @@ All notable changes to the ML Curriculum OS project will be documented in this f
 - **Merge Group Tracking**: Added `merge_group` and `merge_role` to `topics.json`. Topics spanning multiple days (e.g., Linear Regression across Days 50-56) are now aggregated into single comprehensive Obsidian notes.
 - **Group Briefs**: Enhanced the `--brief` CLI flag in `generate_notes.py` to print unified group summaries, aggregating prerequisites and textbook chapters for merged days.
 - **User Config Layer (`user_config.json` + `cfg.py`)**: Separated all user-facing settings from core architecture into a single `user_config.json`. Users can now change the LLM model, playlist URL, textbook file paths, chapter page maps, API token limits, rate-limiting delay, and all per-note-type prompt templates without touching any Python code. A new `scripts/cfg.py` module acts as the single import point for all downstream scripts.
-
-### Pending / Incomplete
-- **Anthropic Prompt Caching**: Plan to implement server-side caching for textbook context blocks to reduce input token costs by ~90% for iterative merged note generation.
-  - **Infrastructure Ready**: `user_config.json` and `cfg.py` already include the `prompt_caching` flag.
-  - **Remaining Work**: Need to refactor `generate_notes.py` to use structured message blocks with `cache_control: {"type": "ephemeral"}` specifically for the `TEXTBOOK CONTENT` sections.
-
+- **Anthropic Prompt Caching** *(superseded — see Universal LLM Backend below)*: Implemented `cache_control: {"type": "ephemeral"}` message blocks for textbook sections. This was removed in the DeepSeek migration as server-side caching is now handled automatically.
+- **Universal LLM Backend (DeepSeek V4 Pro)**: Replaced the hard-coded Anthropic SDK with a universal OpenAI-compatible client. All provider configuration now lives in a single `"api"` block in `user_config.json`. Switching to any OpenAI-compatible provider (GPT-4o, Llama 3, local Ollama) requires zero code changes — only `base_url`, `model`, and `api_key_env` need updating.
+  - Migrated `generate_notes.py`: `anthropic` → `openai` SDK; `client.messages.create` → `client.chat.completions.create`; response parsing updated to `choices[0].message.content`.
+  - Reverted prompt builder return types from `list[dict]` (Anthropic content blocks) back to plain `str`.
+  - Removed context truncation (`MAX_CONTEXT_CHARS`) — DeepSeek's 1M token context window makes this unnecessary.
+  - Restored full-depth textbook extraction (no chapter truncation).
+  - `cfg.py` now exposes `API_PROVIDER`, `API_BASE_URL`, `MODEL`, `API_KEY_ENV` sourced from the new `"api"` block.
+  - `api_rate_limit_sleep_seconds` restored to `2` (DeepSeek has no hard Tier 1 TPM bottleneck).
 
 ### Changed
 - **System-Wide Refactoring & Bloat Removal**: Executed a massive architectural cleanup:

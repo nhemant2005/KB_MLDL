@@ -1,0 +1,85 @@
+name: Update Vault Manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "KB_Obsidian/**"
+
+jobs:
+  build-manifest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate manifest.json
+        run: |
+          python3 - <<'EOF'
+          import json, os
+          from pathlib import Path
+
+          vault = Path("KB_Obsidian")
+          notes = []
+
+          for md in sorted(vault.rglob("*.md")):
+              rel = md.relative_to(vault)
+              parts = rel.parts
+              section = parts[0] if len(parts) > 1 else "Root"
+              stem    = md.stem                        # e.g. day_1_what_is_machine_learning
+              pieces  = stem.split("_", 2)             # ['day','1','what_is_machine_learning']
+
+              day   = int(pieces[1]) if len(pieces) >= 2 and pieces[1].isdigit() else None
+              title = pieces[2].replace("_", " ").title() if len(pieces) >= 3 else stem.replace("_", " ").title()
+
+              # Read first non-empty line as actual h1 title
+              try:
+                  lines = md.read_text(encoding="utf-8").splitlines()
+                  for line in lines:
+                      line = line.strip()
+                      if line.startswith("# "):
+                          title = line[2:].strip()
+                          break
+              except Exception:
+                  pass
+
+              notes.append({
+                  "section":  section.replace("_", " "),
+                  "day":      day,
+                  "title":    title,
+                  "path":     str(rel).replace("\\", "/"),   # always forward slashes
+                  "filename": md.name,
+              })
+
+          # Group by section
+          sections = {}
+          for n in notes:
+              sec = n["section"]
+              sections.setdefault(sec, []).append(n)
+
+          # Sort each section by day, then title
+          for sec in sections:
+              sections[sec].sort(key=lambda x: (x["day"] or 9999, x["title"]))
+
+          manifest = {
+              "generated_at": __import__("datetime").datetime.utcnow().isoformat() + "Z",
+              "total_notes":  len(notes),
+              "sections":     sections,
+          }
+
+          out = Path("docs/manifest.json")
+          out.parent.mkdir(exist_ok=True)
+          out.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
+          print(f"manifest.json written — {len(notes)} notes across {len(sections)} sections")
+          EOF
+
+      - name: Commit manifest
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/manifest.json
+          git diff --staged --quiet || git commit -m "chore: update vault manifest [skip ci]"
+          git push

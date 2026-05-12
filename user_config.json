@@ -2,7 +2,13 @@
   "_comment": "This is your personal configuration file. All user-facing settings live here.",
   "_comment2": "Changes here take effect immediately — no code edits needed.",
 
-  "model": "claude-haiku-4-5-20251001",
+  "api": {
+    "_comment": "Switch providers by changing base_url + model + api_key_env. No code edits needed.",
+    "provider":    "deepseek",
+    "base_url":    "https://api.deepseek.com/v1",
+    "model":       "deepseek-v4-pro",
+    "api_key_env": "DEEPSEEK_API_KEY"
+  },
 
   "playlist_url": "https://www.youtube.com/playlist?list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH",
 
@@ -69,8 +75,6 @@
   },
 
   "generation": {
-    "_comment": "Set prompt_caching to true to mark textbook content blocks for Anthropic caching. Saves ~90% on repeated input tokens within merged group section calls.",
-    "prompt_caching": true,
     "api_rate_limit_sleep_seconds": 2,
     "merged_note_max_tokens": 2000,
     "standalone_note_max_tokens": 4000
