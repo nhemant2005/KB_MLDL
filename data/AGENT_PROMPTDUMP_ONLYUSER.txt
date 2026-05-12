@@ -1,0 +1,575 @@
+You are a precise, minimal coding assistant helping me build a
+local ML curriculum operating system. We are in PHASE 2.
+
+Phase 1 is complete. topics.json exists and is confirmed.
+
+SYSTEM PHILOSOPHY:
+- Notes are generated ONE TOPIC AT A TIME, not in batch
+- Humans control: topic ordering, prerequisites, textbook mapping,
+  quality verification
+- Automation handles: markdown generation, formatting, backlinks,
+  flashcards
+- Obsidian is the main interface — all notes must be
+  Obsidian-compatible markdown with [[backlinks]]
+- Do NOT hallucinate concept relationships —
+  use only human-curated prerequisite chains from topics.json
+
+Stack: Python, JSON, Markdown, Anthropic API only.
+Model: claude-sonnet-4-20250514
+free to use any library, just mention their use case, try to minimize library usage as much as possible
+you are also free to improve on the code below, use the internet to source better implementations of the system I am trying to build and reuse code/architecture.
+---
+
+## TEXTBOOK ACCESS
+
+All textbooks are PDFs located in the /textbooks/ folder:
+
+/textbooks/
+├── homl.pdf       ← Hands-On ML (Geron, 2019)
+├── isl.pdf        ← Introduction to Statistical Learning
+└── prml.pdf       ← Pattern Recognition and Machine Learning
+
+These are your ONLY content sources for note generation.
+Do NOT generate notes from memory or training data.
+Every claim in a note must come from extracted textbook text.
+
+---
+
+## PHASE 2 HAS 4 STEPS. Complete in order.
+Pause and wait for my confirmation after each step.
+
+---
+
+## STEP 0 — ONE-TIME PDF SETUP (run once, never again)
+
+Before anything else, write two scripts:
+
+### scripts/inspect_pdf_toc.py
+
+```python
+import fitz
+
+BOOKS = {
+    "HOML": "textbooks/homl.pdf",
+    "ISL":  "textbooks/isl.pdf",
+    "PRML": "textbooks/prml.pdf"
+}
+
+for name, path in BOOKS.items():
+    print(f"\n{'='*60}")
+    print(f"  {name} — Table of Contents")
+    print(f"{'='*60}")
+    doc = fitz.open(path)
+    toc = doc.get_toc()
+    if not toc:
+        print("  [No embedded TOC — print page count only]")
+        print(f"  Total pages: {doc.page_count}")
+    else:
+        for level, title, page in toc:
+            print(f"  p.{page:<5} {'  ' * (level-1)}{title}")
+```
+
+Run this. Paste the output back to me.
+I will give you the corrected CHAPTER_PAGE_MAP.
+Do NOT proceed further until I confirm page ranges.
+
+---
+
+### scripts/extract_textbook_sections.py
+
+Write this after I confirm the page map.
+
+```python
+import fitz
+import json
+from pathlib import Path
+
+BOOK_PATHS = {
+    "HOML": "textbooks/homl.pdf",
+    "ISL":  "textbooks/isl.pdf",
+    "PRML": "textbooks/prml.pdf"
+}
+
+# ← I will fill this after you paste TOC output
+CHAPTER_PAGE_MAP = {
+    "HOML": {},
+    "ISL":  {},
+    "PRML": {}
+}
+
+def extract_chapter(book: str, chapter: int) -> str:
+    cache_path = Path(f"textbooks/extracted/{book.lower()}_ch{chapter}.txt")
+
+    if cache_path.exists():
+        print(f"  [cache hit] {book} ch.{chapter}")
+        return cache_path.read_text(encoding="utf-8")
+
+    if chapter not in CHAPTER_PAGE_MAP[book]:
+        print(f"  [MISSING] {book} ch.{chapter} not in page map — skipping")
+        return ""
+
+    doc = fitz.open(BOOK_PATHS[book])
+    start, end = CHAPTER_PAGE_MAP[book][chapter]
+    text = ""
+    for page_num in range(start - 1, min(end, doc.page_count)):
+        text += doc[page_num].get_text()
+
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_text(text, encoding="utf-8")
+    print(f"  [extracted] {book} ch.{chapter} → {cache_path}")
+    return text
+
+# Extract all chapters referenced in topics.json
+with open("topics.json") as f:
+    topics = json.load(f)
+
+needed = set()
+for topic in topics:
+    for source in topic.get("textbook_sources", []):
+        for ch in source.get("chapters", []):
+            needed.add((source["book"], ch))
+
+print(f"\nExtracting {len(needed)} unique chapter/book combinations...\n")
+for book, chapter in sorted(needed):
+    extract_chapter(book, chapter)
+
+print("\n✓ Extraction complete.")
+print(f"  Files saved to: textbooks/extracted/")
+```
+
+CHECKPOINT 0:
+Run inspect_pdf_toc.py first.
+Paste TOC output to me.
+Wait for my confirmed CHAPTER_PAGE_MAP before proceeding.
+
+---
+
+## STEP 1 — NOTE GENERATOR SCRIPT
+
+Write scripts/generate_notes.py
+
+This script is the CORE of Phase 2.
+It generates ONE note at a time, not in batch.
+
+### USER CONTROL — TOPIC SELECTION
+
+The script must support these run modes:
+
+```bash
+# Generate note for a single topic by day number
+python scripts/generate_notes.py --day 57
+
+# Generate notes for a range of days
+python scripts/generate_notes.py --days 57-62
+
+# Generate notes for a named section only
+python scripts/generate_notes.py --section "Linear Regression"
+
+# Generate notes for specific days (comma separated)
+python scripts/generate_notes.py --days 50,51,52
+
+# Preview what would be generated without calling API
+python scripts/generate_notes.py --days 57-62 --dry-run
+```
+
+The --dry-run flag must:
+- Print which topics would be processed
+- Print which textbook chapters would be loaded
+- Print estimated API calls
+- NOT call the Claude API
+- NOT write any files
+
+---
+
+### FULL SCRIPT STRUCTURE
+
+```python
+import anthropic
+import argparse
+import fitz
+import json
+import os
+import time
+from pathlib import Path
+
+client = anthropic.Anthropic()
+
+BOOK_PATHS = {
+    "HOML": "textbooks/homl.pdf",
+    "ISL":  "textbooks/isl.pdf",
+    "PRML": "textbooks/prml.pdf"
+}
+
+# Filled after TOC inspection
+CHAPTER_PAGE_MAP = {
+    "HOML": {},
+    "ISL":  {},
+    "PRML": {}
+}
+
+VAULT_SECTION_MAP = {
+    "Foundations":                "ML_Vault/Foundations/",
+    "Data Representation & Tooling": "ML_Vault/Foundations/",
+    "Data Ingestion":             "ML_Vault/Foundations/",
+    "EDA":                        "ML_Vault/Foundations/",
+    "Feature Engineering":        "ML_Vault/Regression/",
+    "Missing Data Handling":      "ML_Vault/Regression/",
+    "Outlier Handling":           "ML_Vault/Regression/",
+    "Advanced Feature Engineering": "ML_Vault/Regression/",
+    "Dimensionality Reduction":   "ML_Vault/Regression/",
+    "Linear Regression":          "ML_Vault/Regression/",
+    "Gradient Descent":           "ML_Vault/Optimization/",
+    "Polynomial & Regularized Regression": "ML_Vault/Regression/",
+    "Logistic Regression":        "ML_Vault/Regression/",
+    "Naive Bayes":                "ML_Vault/Foundations/",
+    "SVM":                        "ML_Vault/Regression/",
+    "Decision Trees":             "ML_Vault/Trees/",
+    "Ensemble Methods":           "ML_Vault/Ensembles/",
+    "Boosting":                   "ML_Vault/Ensembles/",
+    "Clustering":                 "ML_Vault/Foundations/",
+    "Advanced Topics":            "ML_Vault/Foundations/",
+}
+
+def load_topics() -> list:
+    with open("topics.json") as f:
+        return json.load(f)
+
+def load_progress() -> dict:
+    path = Path("notes_progress.json")
+    if path.exists():
+        with open(path) as f:
+            return json.load(f)
+    return {}
+
+def save_progress(progress: dict):
+    with open("notes_progress.json", "w") as f:
+        json.dump(progress, f, indent=2)
+
+def log_failure(topic: dict, error: str):
+    path = Path("failed_topics.json")
+    failures = []
+    if path.exists():
+        with open(path) as f:
+            failures = json.load(f)
+    failures.append({
+        "topic": topic["topic"],
+        "day": topic["playlist_day"],
+        "error": error
+    })
+    with open(path, "w") as f:
+        json.dump(failures, f, indent=2)
+
+def extract_chapter_cached(book: str, chapter: int) -> str:
+    cache_path = Path(
+        f"textbooks/extracted/{book.lower()}_ch{chapter}.txt"
+    )
+    if cache_path.exists():
+        return cache_path.read_text(encoding="utf-8")
+    if chapter not in CHAPTER_PAGE_MAP.get(book, {}):
+        return ""
+    doc = fitz.open(BOOK_PATHS[book])
+    start, end = CHAPTER_PAGE_MAP[book][chapter]
+    text = ""
+    for page_num in range(start - 1, min(end, doc.page_count)):
+        text += doc[page_num].get_text()
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
+    cache_path.write_text(text, encoding="utf-8")
+    return text
+
+def get_relevant_excerpt(text: str, topic: str,
+                         max_chars: int = 5000) -> str:
+    if not text:
+        return ""
+    keywords = topic.lower().replace("_", " ").split()
+    lines = text.split("\n")
+    scored = []
+    for i, line in enumerate(lines):
+        score = sum(1 for kw in keywords if kw in line.lower())
+        scored.append((score, i))
+    scored.sort(reverse=True)
+    if not scored or scored[0][0] == 0:
+        return text[:max_chars]
+    center = scored[0][1]
+    start = max(0, center - 40)
+    end = min(len(lines), center + 100)
+    excerpt = "\n".join(lines[start:end])
+    return excerpt[:max_chars]
+
+def build_textbook_content(topic: dict) -> str:
+    sections = []
+    for source in topic.get("textbook_sources", []):
+        book = source["book"]
+        priority = source.get("priority", "support")
+        for chapter in source.get("chapters", []):
+            raw = extract_chapter_cached(book, chapter)
+            if not raw:
+                sections.append(
+                    f"[{book} ch.{chapter}: extraction failed]"
+                )
+                continue
+            excerpt = get_relevant_excerpt(raw, topic["topic"])
+            sections.append(
+                f"--- {book} Chapter {chapter} "
+                f"[{priority}] ---\n{excerpt}"
+            )
+    return "\n\n".join(sections)
+
+def build_prompt(topic: dict, textbook_content: str) -> str:
+    prereqs = topic.get("prerequisites", [])
+    prereq_links = " ".join([f"[[{p}]]" for p in prereqs])
+
+    return f"""You are generating Obsidian markdown notes for an ML
+curriculum knowledge system. Output ONLY the markdown note.
+No preamble. No explanation outside the note.
+
+Topic: {topic['topic']}
+Section: {topic['section']}
+Difficulty: {topic['difficulty']}
+Interview Importance: {topic['interview_importance']}/10
+Prerequisites: {prereqs}
+
+Generate a note using this EXACT template structure:
+
+# {topic['topic']}
+
+## Core Idea
+2–3 sentences. Plain English. What problem does this solve?
+
+## Mathematical Intuition
+{"Full derivation required. Show all steps." if topic['difficulty'] == 'high'
+ else "Intuition-level math only. Key equations with brief explanation."
+ if topic['difficulty'] == 'medium'
+ else "Skip heavy math. Conceptual explanation only."}
+
+## Key Formulas
+Bullet list. LaTeX format. One formula per bullet with its name.
+{"Omit this section entirely." if topic['difficulty'] == 'low' else ""}
+
+## Assumptions
+Bullet list. When does this method make assumptions about data?
+{"Omit this section for tooling/data handling topics." 
+ if topic['section'] in ['Data Ingestion', 'EDA'] else ""}
+
+## Step-by-Step Algorithm
+Numbered list. Maximum 6 steps. Concrete not abstract.
+
+## Failure Modes
+Bullet list. When does this break? What do beginners get wrong?
+
+## Interview Questions
+Exactly 5 questions ordered most-common to least-common.
+No answers here — questions only.
+
+## Code Example
+Minimal sklearn or numpy implementation.
+Key parameters explained inline as comments.
+{"Omit this section if purely theoretical." 
+ if topic['difficulty'] == 'high' and 
+ 'math' in topic['topic'].lower() else ""}
+
+## Common Mistakes
+Bullet list. 3–5 points.
+
+## Related Topics
+Bullet list of semantically related topics.
+Maximum 5. Use [[Topic Name]] format for ALL items here.
+
+---
+Prerequisites: {prereq_links}
+
+---
+RULES:
+- Use ONLY the textbook content provided below
+- Do NOT use training data or memory for facts/formulas
+- Every non-trivial claim ends with its source: (HOML ch.4)
+- All math must be LaTeX: $inline$ or $$block$$
+- [[backlinks]] must use exact topic names from prerequisites
+- If textbook content is missing for a section, write exactly:
+  > [NEEDS REVIEW: insufficient source material]
+- Keep total note length between 400–700 words
+
+TEXTBOOK CONTENT:
+{textbook_content}"""
+
+def get_vault_path(topic: dict) -> Path:
+    section = topic.get("section", "Foundations")
+    folder = VAULT_SECTION_MAP.get(section, "ML_Vault/notes/")
+    slug = topic["topic"].lower().replace(" ", "_")
+               .replace("-", "_")
+    return Path(folder) / f"{slug}.md"
+
+def generate_note(topic: dict, dry_run: bool = False) -> bool:
+    progress = load_progress()
+    topic_key = f"day_{topic['playlist_day']}"
+
+    if progress.get(topic_key) == "done":
+        print(f"  [skip] Day {topic['playlist_day']}: "
+              f"{topic['topic']} — already generated")
+        return True
+
+    textbook_content = build_textbook_content(topic)
+    vault_path = get_vault_path(topic)
+
+    if dry_run:
+        sources = [
+            f"{s['book']} ch.{c}"
+            for s in topic.get("textbook_sources", [])
+            for c in s.get("chapters", [])
+        ]
+        print(f"\n  [dry-run] Day {topic['playlist_day']}: "
+              f"{topic['topic']}")
+        print(f"    Section:   {topic['section']}")
+        print(f"    Difficulty: {topic['difficulty']}")
+        print(f"    Sources:   {', '.join(sources) or 'none'}")
+        print(f"    Output:    {vault_path}")
+        print(f"    Content available: "
+              f"{'YES' if textbook_content.strip() else 'NO — check extraction'}")
+        return True
+
+    print(f"\n  Generating: Day {topic['playlist_day']} — "
+          f"{topic['topic']}")
+
+    try:
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=1000,
+            messages=[{
+                "role": "user",
+                "content": build_prompt(topic, textbook_content)
+            }]
+        )
+        note_content = response.content[0].text
+
+        vault_path.parent.mkdir(parents=True, exist_ok=True)
+        vault_path.write_text(note_content, encoding="utf-8")
+
+        progress[topic_key] = "done"
+        save_progress(progress)
+
+        print(f"  ✓ Saved → {vault_path}")
+        time.sleep(2)  # rate limit safety
+        return True
+
+    except Exception as e:
+        error_msg = str(e)
+        log_failure(topic, error_msg)
+        print(f"  ✗ FAILED: {error_msg} — logged to failed_topics.json")
+        return False
+
+def parse_day_arg(arg: str) -> list[int]:
+    """Parse --days argument: '57', '57-62', '50,51,52'"""
+    days = []
+    for part in arg.split(","):
+        part = part.strip()
+        if "-" in part:
+            start, end = part.split("-")
+            days.extend(range(int(start), int(end) + 1))
+        else:
+            days.append(int(part))
+    return days
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Generate Obsidian ML notes from textbooks"
+    )
+    parser.add_argument("--day", type=int,
+        help="Single day number")
+    parser.add_argument("--days", type=str,
+        help="Day range or list: '57-62' or '50,51,52'")
+    parser.add_argument("--section", type=str,
+        help="Generate all topics in a named section")
+    parser.add_argument("--dry-run", action="store_true",
+        help="Preview without calling API or writing files")
+    args = parser.parse_args()
+
+    all_topics = load_topics()
+
+    # Filter topics by user selection
+    if args.day:
+        selected = [t for t in all_topics
+                    if t["playlist_day"] == args.day]
+
+    elif args.days:
+        day_list = parse_day_arg(args.days)
+        selected = [t for t in all_topics
+                    if t["playlist_day"] in day_list]
+
+    elif args.section:
+        selected = [t for t in all_topics
+                    if t["section"].lower() == args.section.lower()]
+
+    else:
+        parser.print_help()
+        print("\n  ERROR: You must specify --day, --days, or --section")
+        print("  Examples:")
+        print("    python scripts/generate_notes.py --day 57")
+        print("    python scripts/generate_notes.py --days 57-62")
+        print("    python scripts/generate_notes.py "
+              "--section 'Linear Regression'")
+        print("    python scripts/generate_notes.py "
+              "--days 50,51,52 --dry-run")
+        return
+
+    if not selected:
+        print("  No topics matched your selection. Check day numbers.")
+        return
+
+    mode = "[DRY RUN] " if args.dry_run else ""
+    print(f"\n{mode}Generating {len(selected)} note(s)...\n")
+
+    success, failed = 0, 0
+    for topic in selected:
+        ok = generate_note(topic, dry_run=args.dry_run)
+        if ok:
+            success += 1
+        else:
+            failed += 1
+
+    print(f"\n{'='*50}")
+    print(f"  {'[DRY RUN] ' if args.dry_run else ''}Complete")
+    print(f"  ✓ Success: {success}")
+    if failed:
+        print(f"  ✗ Failed:  {failed} — see failed_topics.json")
+    print(f"{'='*50}\n")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## STEP 2 — FORMULA EXTRACTION SCRIPT
+
+Write scripts/extract_formulas.py
+
+Reads all generated .md files.
+Extracts every LaTeX block from ## Key Formulas sections.
+Saves to formulas.json:
+
+```json
+{
+  "formula_id": "linear_regression_cost",
+  "latex": "$$J(\\theta)=\\frac{1}{2m}\\sum...",
+  "name": "MSE Cost Function",
+  "meaning": "one sentence plain English",
+  "topic": "linear_regression",
+  "section": "Linear Regression",
+  "interview_importance": 10,
+  "derivation_required": true
+}
+```
+
+derivation_required: true when
+interview_importance >= 9 AND difficulty == "high"
+
+---
+
+## STEP 3 — FLASHCARD GENERATION SCRIPT
+
+Write scripts/generate_flashcards.py
+
+Supports same --day / --days / --section / --dry-run
+flags as generate_notes.py
+
+Reads the already-generated .md note for the topic.
+Calls Claude API with this prompt:

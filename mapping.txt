@@ -1,0 +1,644 @@
+VIDEO TITLE TO TEXTBOOK CONCEPT MAPPING
+100 Days of Machine Learning (CampusX)
+
+Primary:  Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow (Geron, 2019) — cited as [HOML ch.X]
+Secondary: An Introduction to Statistical Learning (James et al., 2021) — cited as [ISL ch.X]
+Tertiary:  Pattern Recognition and Machine Learning (Bishop, 2006) — cited as [PRML ch.X]
+
+================================================================================
+FOUNDATIONS
+================================================================================
+
+1. What is Machine Learning?
+   [HOML ch.1] Definition of ML, why use ML, types of ML systems overview.
+   [ISL ch.1] Introduction: what is statistical learning, supervised vs unsupervised.
+
+2. AI Vs ML Vs DL for Beginners
+   [HOML ch.1] Relationship between AI, ML, and deep learning; brief history.
+   [ISL ch.1] Statistical learning as a subfield of AI/ML.
+
+3. Types of Machine Learning
+   [HOML ch.1] Supervised, unsupervised, semi-supervised, reinforcement learning; classification vs regression.
+   [ISL ch.2] Supervised vs unsupervised learning taxonomy.
+
+4. Batch Machine Learning / Offline Vs Online Learning
+   [HOML ch.1] Batch learning: training on full dataset, then deploying without retraining.
+   [ISL ch.2] Parametric models trained on fixed datasets (conceptual parallel).
+
+5. Online Machine Learning
+   [HOML ch.1] Online learning: incremental training on mini-batches; learning rate; out-of-core learning.
+   [ISL ch.2] No direct coverage; HOML is primary source here.
+
+6. Instance-Based Vs Model-Based Learning
+   [HOML ch.1] Instance-based learning (memorize + generalize by similarity) vs model-based learning (fit a model, use it to predict).
+   [ISL ch.2] Parametric vs non-parametric methods (conceptual equivalent).
+
+7. Challenges in Machine Learning
+   [HOML ch.1] Insufficient data, non-representative data, poor-quality data, irrelevant features, overfitting, underfitting.
+   [ISL ch.2] Bias-variance tradeoff as a central challenge; overfitting.
+
+8. Applications of Machine Learning
+   [HOML ch.1] Application examples: image classification, speech recognition, spam filtering, recommender systems, etc.
+   [ISL ch.1] Motivating real-world examples: wage prediction, stock market, gene expression.
+
+9. Machine Learning Development Life Cycle (MLDLC)
+   [HOML ch.2] End-to-end ML project pipeline: frame the problem, get data, explore, prepare, select model, fine-tune, deploy.
+   [ISL ch.2] General workflow of building and evaluating a statistical learning model.
+
+10. Data Engineer Vs Data Analyst Vs Data Scientist Vs ML Engineer
+    [HOML ch.1] Brief mention of ML roles (no deep coverage); HOML is practical guide for ML engineers.
+    [ISL ch.1] Focus on statistical/data analysis roles.
+
+================================================================================
+DATA REPRESENTATION & TOOLING
+================================================================================
+
+11. What are Tensors
+    [HOML ch.2, ch.12] Tensors as multi-dimensional arrays; scalar/vector/matrix/higher-rank tensors; role in TensorFlow/Keras.
+    [PRML ch.1] Vectors and matrices as the mathematical substrate of ML models.
+
+12. Installing Anaconda / Jupyter Notebook / Google Colab
+    [HOML Appendix A] Setting up the ML environment: Python, Jupyter, key libraries (NumPy, Pandas, Matplotlib, Sklearn).
+    [ISL ch.1 Lab] R/Python lab setup and tool introduction.
+
+13. End to End Toy Project
+    [HOML ch.2] Full walkthrough: California housing dataset; frame problem, explore data, prepare data, train model, evaluate, fine-tune.
+    [ISL ch.3 Lab] Linear regression applied to a real dataset end-to-end.
+
+14. How to Frame a Machine Learning Problem
+    [HOML ch.2] Define the objective, select a performance measure, check assumptions, list available resources.
+    [ISL ch.2] Supervised learning problem formulation: inputs, outputs, loss functions.
+
+================================================================================
+DATA INGESTION
+================================================================================
+
+15. Working with CSV Files
+    [HOML ch.2] Loading CSV with Pandas; quick look at data structure, info(), describe().
+    [ISL ch.2 Lab] Reading datasets in R/Python.
+
+16. Working with JSON/SQL
+    [HOML ch.2] Fetching data from relational databases and JSON files; Pandas read_sql, read_json.
+    [ISL ch.2] No direct coverage; HOML primary.
+
+17. Fetching Data from an API
+    [HOML ch.2] Downloading datasets programmatically; HTTP requests.
+    No direct textbook coverage; HOML is the reference.
+
+18. Fetching Data using Web Scraping
+    [HOML ch.2] Acquiring data from the web as part of the data collection step.
+    No direct textbook coverage; HOML is the reference.
+
+================================================================================
+EXPLORATORY DATA ANALYSIS (EDA)
+================================================================================
+
+19. Understanding Your Data
+    [HOML ch.2] Looking at data structure, data types, quick stats; identifying missing values.
+    [ISL ch.2] Exploratory overview: summary statistics, understanding the feature space.
+
+20. EDA using Univariate Analysis
+    [HOML ch.2] Histograms, value counts, distribution of individual attributes.
+    [ISL ch.3] Exploratory plots for single variables; distribution of predictors.
+
+21. EDA using Bivariate and Multivariate Analysis
+    [HOML ch.2] Scatter plots, correlation matrix, scatter matrix; finding relationships between attributes.
+    [ISL ch.3] Correlation, scatter plots, pairs plots in regression context.
+
+22. Pandas Profiling
+    [HOML ch.2] Automated EDA as an extension of the manual exploration step.
+    [ISL ch.2] No direct equivalent; HOML practical tooling.
+
+================================================================================
+FEATURE ENGINEERING
+================================================================================
+
+23. What is Feature Engineering
+    [HOML ch.2, ch.4] Feature engineering pipeline: creating new features, combining attributes.
+    [ISL ch.7] Moving beyond linearity: basis expansions, feature transformations.
+
+24. Feature Scaling - Standardization
+    [HOML ch.2] StandardScaler: zero mean, unit variance; why scaling matters for gradient-based methods and distance-based models.
+    [ISL ch.6] Standardization as a preprocessing step for regularized regression.
+    [PRML ch.3] Feature normalization in linear models.
+
+25. Feature Scaling - Normalization (MinMax, MaxAbs, Robust)
+    [HOML ch.2] MinMaxScaler, MaxAbsScaler, RobustScaler; when to prefer each.
+    [ISL ch.6] Scaling features before applying regularization methods.
+
+26. Encoding Categorical Data - Ordinal & Label Encoding
+    [HOML ch.2] OrdinalEncoder: converting ordered categories to integers.
+    [ISL ch.3] Qualitative predictors: converting to numeric form using coding schemes.
+
+27. One Hot Encoding
+    [HOML ch.2] OneHotEncoder: creating binary dummy variables; handling unknown categories.
+    [ISL ch.3] Dummy variable encoding for categorical predictors.
+
+28. Column Transformer
+    [HOML ch.2] ColumnTransformer: applying different transformations to different feature subsets in a pipeline.
+    [ISL ch.3] No direct equivalent; HOML/Sklearn tooling.
+
+29. Machine Learning Pipelines
+    [HOML ch.2] sklearn Pipeline: chaining transformers and a final estimator; preventing data leakage; clean workflow.
+    [ISL ch.6] Conceptual workflow of preprocessing + model, though no Pipeline API coverage.
+
+30. Function Transformer (Log, Reciprocal, Square Root)
+    [HOML ch.2] Applying mathematical transformations to skewed features using FunctionTransformer.
+    [ISL ch.7] Transformations of predictors and responses; log transform for skewed data.
+
+31. Power Transformer (Box-Cox, Yeo-Johnson)
+    [HOML ch.2] PowerTransformer to make distributions more Gaussian-like; Box-Cox (positive data) vs Yeo-Johnson (any data).
+    [ISL ch.7] Transformations to stabilize variance and meet regression assumptions.
+
+32. Binning and Binarization (Quantile, KMeans Binning)
+    [HOML ch.2] KBinsDiscretizer: discretizing continuous features into bins.
+    [ISL ch.7] Piecewise constant regression; step functions and basis functions.
+
+33. Handling Mixed Variables
+    [HOML ch.2] Features that are partly numerical and partly categorical; custom transformers.
+    [ISL ch.3] Qualitative predictors mixed with quantitative ones.
+
+34. Handling Date and Time Variables
+    [HOML ch.2] Extracting useful signals from datetime features (day, month, cyclical encoding).
+    No deep textbook coverage; HOML is the primary reference.
+
+================================================================================
+MISSING DATA HANDLING
+================================================================================
+
+35. Handling Missing Data - Complete Case Analysis
+    [HOML ch.2] Dropping rows/columns with missing values; when this is safe.
+    [ISL ch.3] Assumptions about data completeness; briefly mentions listwise deletion.
+
+36. Handling Missing Numerical Data - Simple Imputer
+    [HOML ch.2] SimpleImputer with mean/median/constant strategies.
+    [ISL ch.3] No direct coverage of imputation mechanics; HOML primary.
+
+37. Handling Missing Categorical Data - Simple Imputer
+    [HOML ch.2] SimpleImputer with most_frequent strategy for categorical features.
+    No deep textbook coverage; HOML primary.
+
+38. Missing Indicator / Random Sample Imputation
+    [HOML ch.2] Adding a binary indicator column to flag imputed rows; preserving missingness information.
+    No direct textbook coverage; HOML primary.
+
+39. KNN Imputer / Multivariate Imputation
+    [HOML ch.2] KNNImputer: using nearest neighbors to fill missing values.
+    [ISL ch.12] Nearest neighbor ideas; matrix completion (unsupervised context).
+
+40. MICE Algorithm / Iterative Imputer
+    [HOML ch.2] IterativeImputer: multivariate imputation by modeling each feature with missing values as a function of others.
+    [ISL ch.3] Multiple imputation concept (briefly).
+
+================================================================================
+OUTLIER HANDLING
+================================================================================
+
+41. What are Outliers
+    [HOML ch.9] Outliers and anomaly detection; isolation forests.
+    [ISL ch.3] Leverage points and outliers in regression; impact on model fitting.
+
+42. Outlier Detection - Z-Score Method
+    [HOML ch.2] Identifying outliers via standard deviations from mean.
+    [ISL ch.3] Studentized residuals and outlier detection in regression.
+    [PRML ch.2] Gaussian distribution and identifying extreme observations.
+
+43. Outlier Detection - IQR Method
+    [HOML ch.2] Box-plot based outlier detection; Tukey's fences.
+    [ISL ch.3] Visual identification of outliers; boxplots.
+
+44. Outlier Detection - Percentile Method / Winsorization
+    [HOML ch.2] Capping extremes at percentile thresholds.
+    [ISL ch.3] Robustness of regression estimates to influential observations.
+
+================================================================================
+ADVANCED FEATURE ENGINEERING
+================================================================================
+
+45. Feature Construction / Feature Splitting
+    [HOML ch.2] Combining or splitting raw attributes to create more informative features.
+    [ISL ch.7] Derived predictors; interactions and polynomial terms.
+
+================================================================================
+DIMENSIONALITY REDUCTION
+================================================================================
+
+46. Curse of Dimensionality
+    [HOML ch.8] Exponential growth of space with dimensions; data sparsity; impact on distance metrics and model performance.
+    [ISL ch.6] High-dimensional settings and the need for dimension reduction.
+    [PRML ch.1] Curse of dimensionality: polynomial basis functions, sparsity.
+
+47. PCA Part 1 - Geometric Intuition
+    [HOML ch.8] PCA goal: find axes of maximum variance; projecting data onto principal components.
+    [ISL ch.12] PCA: principal components as directions of maximum variance; score plots.
+    [PRML ch.12] PCA as a latent variable model; covariance matrix eigenvectors.
+
+48. PCA Part 2 - Problem Formulation & Step-by-Step Solution
+    [HOML ch.8] Covariance matrix, eigendecomposition, choosing number of components, explained variance ratio.
+    [ISL ch.12] Mathematical derivation of principal components; proportion of variance explained.
+    [PRML ch.12] Probabilistic PCA; reconstruction error minimization.
+
+49. PCA Part 3 - Code Example & Visualization
+    [HOML ch.8] sklearn PCA; scree plot; 2D/3D projection visualization.
+    [ISL ch.12 Lab] PCA in R on USArrests dataset; biplot.
+
+================================================================================
+LINEAR REGRESSION
+================================================================================
+
+50. Simple Linear Regression - Intuition & Code
+    [HOML ch.4] Linear regression model; closed-form Normal Equation; sklearn LinearRegression.
+    [ISL ch.3] Simple linear regression: estimating coefficients, assessing accuracy.
+
+51. Simple Linear Regression - Mathematical Formulation & Code from Scratch
+    [HOML ch.4] Deriving Normal Equation; MSE cost function; implementing from scratch with NumPy.
+    [ISL ch.3] Least squares estimation derivation; RSS minimization.
+    [PRML ch.3] Bayesian and maximum likelihood perspective on linear regression.
+
+52. Regression Metrics (MSE, MAE, RMSE, R2, Adjusted R2)
+    [HOML ch.2] RMSE and MAE as performance measures; choosing between them.
+    [ISL ch.3] RSE, R-squared, adjusted R-squared; assessing regression model fit.
+
+53. Multiple Linear Regression - Geometric Intuition & Code
+    [HOML ch.4] Extending to multiple features; hyperplane fitting; sklearn implementation.
+    [ISL ch.3] Multiple linear regression: estimating coefficients, interpreting results.
+
+54. Multiple Linear Regression - Mathematical Formulation from Scratch
+    [HOML ch.4] Matrix form: y = Xθ; Normal Equation θ = (X^T X)^{-1} X^T y.
+    [ISL ch.3] Matrix notation for MLR; least squares in matrix form.
+    [PRML ch.3] Weight vector estimation via maximum likelihood in linear regression.
+
+55. Multiple Linear Regression - Code from Scratch
+    [HOML ch.4] NumPy-based implementation of the Normal Equation.
+    [ISL ch.3 Lab] Applying MLR in R/Python on real datasets.
+
+56. Assumptions of Linear Regression
+    [HOML ch.4] Linearity, independence, homoscedasticity, normality of errors.
+    [ISL ch.3] Potential problems: non-linearity, correlation of errors, non-constant variance, outliers, collinearity.
+
+================================================================================
+GRADIENT DESCENT
+================================================================================
+
+57. Gradient Descent from Scratch
+    [HOML ch.4] Gradient descent intuition; cost surface; learning rate; convergence.
+    [ISL ch.6] Gradient descent briefly introduced in context of regularization and model training.
+    [PRML ch.5] Gradient-based optimization in neural networks; gradient descent algorithm.
+
+58. Batch Gradient Descent with Code
+    [HOML ch.4] Batch GD: use all training samples per step; convergence guarantees; learning rate tuning.
+    [ISL ch.6] Coordinate descent for regularized models (related optimization method).
+
+59. Stochastic Gradient Descent
+    [HOML ch.4] SGD: one random sample per step; noisy but fast; learning schedule.
+    [ISL ch.6] No direct SGD coverage; HOML primary.
+    [PRML ch.5] Online learning and sequential gradient updates.
+
+60. Mini-Batch Gradient Descent
+    [HOML ch.4] Mini-batch GD: compromise between batch and stochastic; GPU-friendly.
+    [HOML ch.11] Mini-batches in neural network training.
+
+================================================================================
+POLYNOMIAL & REGULARIZED REGRESSION
+================================================================================
+
+61. Polynomial Regression
+    [HOML ch.4] PolynomialFeatures transformer; fitting nonlinear data with linear models.
+    [ISL ch.7] Polynomial regression as a basis expansion; choosing polynomial degree.
+
+62. Bias-Variance Trade-off / Overfitting & Underfitting
+    [HOML ch.4] High bias = underfitting; high variance = overfitting; learning curves as a diagnostic.
+    [ISL ch.2] Bias-variance decomposition; test MSE as a function of model flexibility.
+    [PRML ch.1] Polynomial curve fitting example illustrating bias-variance trade-off.
+
+63. Ridge Regression Part 1 - Geometric Intuition & Code
+    [HOML ch.4] Ridge adds L2 penalty; shrinks weights toward zero; sklearn Ridge.
+    [ISL ch.6] Ridge regression: shrinkage, constraint region, coefficient paths.
+
+64. Ridge Regression Part 2 - Mathematical Formulation & Code from Scratch
+    [HOML ch.4] Closed-form Ridge solution; effect of alpha on coefficients.
+    [ISL ch.6] Standardization before Ridge; degrees of freedom; selecting lambda via CV.
+    [PRML ch.3] Regularized least squares as MAP estimation with Gaussian prior.
+
+65. Ridge Regression Part 3 - Gradient Descent
+    [HOML ch.4] Ridge with gradient descent: adding the L2 gradient term to weight update.
+    [ISL ch.6] Conceptual discussion of Ridge optimization; HOML provides GD details.
+
+66. Ridge Regression - 5 Key Points
+    [HOML ch.4] Does not set coefficients to zero; handles multicollinearity; always improves on OLS when lambda > 0.
+    [ISL ch.6] Comparing Ridge to OLS; Ridge always has lower variance at cost of some bias.
+
+67. Lasso Regression - Intuition and Code
+    [HOML ch.4] Lasso adds L1 penalty; performs feature selection; sklearn Lasso.
+    [ISL ch.6] Lasso regression: sparsity, coefficient paths, comparison to Ridge.
+
+68. Why Lasso Creates Sparsity
+    [HOML ch.4] L1 ball geometry: corners at axes cause exact zero coefficients.
+    [ISL ch.6] Geometric argument for Lasso sparsity: diamond-shaped constraint region.
+    [PRML ch.3] Laplace prior interpretation of Lasso / sparse Bayesian learning.
+
+69. ElasticNet Regression
+    [HOML ch.4] ElasticNet: combines L1 and L2 penalties; l1_ratio hyperparameter.
+    [ISL ch.6] Elastic net as a middle ground between Ridge and Lasso.
+
+================================================================================
+LOGISTIC REGRESSION
+================================================================================
+
+70. Logistic Regression Part 1 - Perceptron Trick
+    [HOML ch.4] Logistic regression as a linear classifier; decision boundary.
+    [ISL ch.4] Logistic regression: why not linear regression for classification.
+
+71. Logistic Regression Part 2 - Perceptron Trick Code
+    [HOML ch.4] Implementing a simple linear classifier from scratch.
+    [ISL ch.4 Lab] Logistic regression in Python/R on real datasets.
+
+72. Logistic Regression Part 3 - Sigmoid Function
+    [HOML ch.4] Sigmoid squashes output to (0,1); interpretation as probability.
+    [ISL ch.4] Logistic function; log-odds (logit); estimating probabilities.
+    [PRML ch.4] Logistic sigmoid as the canonical link for Bernoulli distribution.
+
+73. Logistic Regression Part 4 - Loss Function / Maximum Likelihood / Binary Cross-Entropy
+    [HOML ch.4] Log loss (binary cross-entropy); maximum likelihood estimation.
+    [ISL ch.4] Maximum likelihood estimation of logistic regression parameters.
+    [PRML ch.4] Cross-entropy error function derived from maximum likelihood; gradient computation.
+
+74. Derivative of Sigmoid Function
+    [HOML ch.4] Mathematical aside supporting gradient derivation.
+    [PRML ch.4] Sigmoid derivative used in computing the gradient of cross-entropy loss.
+
+75. Logistic Regression Part 5 - Gradient Descent & Code from Scratch
+    [HOML ch.4] Training logistic regression via gradient descent; implementing from scratch.
+    [ISL ch.4] MLE for logistic regression (iteratively reweighted least squares conceptually).
+    [PRML ch.4] IRLS algorithm for logistic regression; Newton-Raphson update.
+
+================================================================================
+CLASSIFICATION METRICS
+================================================================================
+
+76. Accuracy and Confusion Matrix / Type 1 & Type 2 Errors
+    [HOML ch.3] Confusion matrix; precision, recall, F1; accuracy pitfalls on imbalanced data.
+    [ISL ch.4] Confusion matrix; error rate; Type I and Type II errors.
+
+77. Precision, Recall, and F1 Score
+    [HOML ch.3] Precision-recall trade-off; F1 as harmonic mean; threshold tuning.
+    [ISL ch.4] Sensitivity (recall) and specificity; precision mentioned in classification context.
+
+78. ROC Curve and AUC
+    [HOML ch.3] ROC curve: TPR vs FPR at all thresholds; AUC as a single metric; comparing classifiers.
+    [ISL ch.4] ROC curve; AUC interpretation; default threshold at 0.5 vs optimal.
+
+79. Softmax Regression / Multinomial Logistic Regression
+    [HOML ch.4] Softmax function; cross-entropy loss for multiclass; sklearn multi_class options.
+    [ISL ch.4] Multinomial logistic regression; softmax transformation; one-vs-rest.
+    [PRML ch.4] Softmax activation for multiclass classification; generalized linear model.
+
+80. Polynomial Features in Logistic Regression / Non-Linear Logistic Regression
+    [HOML ch.4] Adding polynomial features to create nonlinear decision boundaries.
+    [ISL ch.7] Non-linear extensions; polynomial and spline features in classification.
+
+81. Logistic Regression Hyperparameters
+    [HOML ch.4] Regularization strength C (inverse of lambda); solver; max_iter; penalty type.
+    [ISL ch.4] No direct sklearn hyperparameter discussion; HOML primary.
+
+================================================================================
+NAIVE BAYES
+================================================================================
+
+82-86. Naive Bayes Parts 1-5 (Conditional Probability, Independent Events, Mutually Exclusive Events, Bayes Theorem, Problem Examples)
+    [HOML ch.3] Naive Bayes briefly mentioned; no deep probability theory coverage.
+    [ISL ch.4] Bayes classifier; LDA/QDA as probabilistic classifiers; Bayes error rate.
+    [PRML ch.1] Probability theory foundations: sum/product rules, Bayes theorem (extensive treatment).
+    [PRML ch.2] Bayesian inference; prior, likelihood, posterior.
+
+87. Naive Bayes Part 6 - Intuition
+    [HOML ch.3] Naive Bayes as a fast baseline; conditional independence assumption.
+    [ISL ch.4] Naive Bayes introduced as a special case of LDA under independence.
+    [PRML ch.4] Generative vs discriminative classifiers; Naive Bayes as a generative model.
+
+88. Naive Bayes Part 7 - Mathematics
+    [HOML ch.3] Log-probability formulation; class posterior; decision rule.
+    [PRML ch.4] Mathematical derivation of Naive Bayes; parameter estimation via MLE.
+
+89. Naive Bayes Part 8 - Code Example
+    [HOML ch.3] GaussianNB, BernoulliNB, MultinomialNB in sklearn.
+    [ISL ch.4 Lab] Naive Bayes implementation example.
+
+90. Naive Bayes Part 9 - Handling Numerical Data
+    [HOML ch.3] GaussianNB: models continuous features as Gaussian distributions.
+    [PRML ch.2] Gaussian distribution as a continuous likelihood model.
+
+================================================================================
+K-NEAREST NEIGHBORS
+================================================================================
+
+91. K-Nearest Neighbors (KNN)
+    [HOML ch.1, ch.3] KNN as an instance-based learner; choosing k; distance metrics; sklearn KNeighborsClassifier/Regressor.
+    [ISL ch.2, ch.4] KNN classifier and regressor; bias-variance as a function of k; KNN vs parametric methods.
+    [PRML ch.2] Nearest-neighbor methods; Parzen windows.
+
+================================================================================
+SUPPORT VECTOR MACHINES
+================================================================================
+
+92. SVM - Geometric Intuition
+    [HOML ch.5] Maximum-margin classifier; support vectors; decision boundary.
+    [ISL ch.9] Maximal margin classifier; support vector classifier intuition.
+
+93. Mathematics of SVM - Hard Margin
+    [HOML ch.5] Constrained optimization; margin = 2/||w||; primal form; Lagrange duality.
+    [ISL ch.9] Hard margin SVM formulation; geometric margin; separating hyperplane.
+    [PRML ch.7] SVM as maximum margin classifier; dual formulation; KKT conditions.
+
+94. Mathematics of SVM - Soft Margin
+    [HOML ch.5] Hinge loss; slack variables; C hyperparameter controlling margin vs misclassification.
+    [ISL ch.9] Support vector classifier: allowing misclassifications; cost parameter C.
+    [PRML ch.7] Soft margin SVM; slack variables; regularization interpretation.
+
+95. Kernel Trick in SVM - Geometric Intuition
+    [HOML ch.5] Kernel trick: implicitly mapping to high-dimensional space without computing the map.
+    [ISL ch.9] Kernels: enlarging feature space; polynomial and RBF kernels.
+    [PRML ch.6] Kernel functions; reproducing kernel Hilbert spaces; Mercer's condition.
+
+96. Kernel Trick in SVM - Code Example
+    [HOML ch.5] sklearn SVC with kernel='rbf', 'poly'; gamma and C tuning.
+    [ISL ch.9 Lab] SVM with different kernels in R/Python.
+
+================================================================================
+DECISION TREES
+================================================================================
+
+97. Decision Trees - Entropy, Gini Impurity, Information Gain
+    [HOML ch.6] CART algorithm; Gini impurity; splitting criterion; tree visualization.
+    [ISL ch.8] Recursive binary splitting; residual sum of squares for regression trees; Gini index and entropy for classification.
+    [PRML ch.14] Decision trees as hierarchical partitioning models; information gain.
+
+98. Decision Trees - Hyperparameters / Overfitting & Underfitting
+    [HOML ch.6] max_depth, min_samples_split, min_samples_leaf, max_features; pruning via constraints.
+    [ISL ch.8] Tree pruning: cost-complexity pruning; tuning alpha; cross-validation for tree size.
+
+99. Regression Trees
+    [HOML ch.6] Decision tree for regression: predicting mean of leaf node samples; MSE splitting criterion.
+    [ISL ch.8] Regression trees: recursive binary splitting minimizing RSS; comparing to linear regression.
+
+100. Decision Tree Visualization using dtreeviz
+    [HOML ch.6] Tree visualization; export_graphviz; interpreting node purity and split rules.
+    [ISL ch.8] Tree diagrams for interpreting decision boundaries.
+
+================================================================================
+ENSEMBLE METHODS
+================================================================================
+
+101. Introduction to Ensemble Learning
+    [HOML ch.7] Wisdom of the crowd; combining weak learners; bagging, boosting, stacking.
+    [ISL ch.8] Ensemble methods overview: bagging, random forests, boosting as improvements over single trees.
+
+102. Voting Ensemble - Introduction
+    [HOML ch.7] Hard voting vs soft voting; aggregating predictions from diverse classifiers.
+    [ISL ch.8] Conceptually related to model averaging; majority vote.
+
+103. Voting Ensemble - Classification (Hard vs Soft Voting)
+    [HOML ch.7] Hard voting: majority class; soft voting: average predicted probabilities; soft usually better.
+    [ISL ch.8] Bagging as a form of averaging; analogous to soft voting for regression.
+
+104. Voting Ensemble - Regression
+    [HOML ch.7] VotingRegressor: average predictions from multiple regressors.
+    [ISL ch.8] Bagging for regression: averaging predictions to reduce variance.
+
+105. Bagging - Introduction
+    [HOML ch.7] Bootstrap Aggregating: train same algorithm on random subsets with replacement; reduces variance.
+    [ISL ch.8] Bagging: bootstrap sampling to reduce variance; out-of-bag error estimation.
+
+106. Bagging - Classifiers
+    [HOML ch.7] BaggingClassifier; oob_score; bootstrap vs pasting.
+    [ISL ch.8] Bagging for classification: majority vote; OOB samples as validation.
+
+107. Bagging - Regressors
+    [HOML ch.7] BaggingRegressor; averaging predictions from bootstrapped models.
+    [ISL ch.8] Bagging for regression trees; variance reduction.
+
+108. Introduction to Random Forest
+    [HOML ch.7] Random Forest = Bagging + feature subsampling at each split; decorrelating trees.
+    [ISL ch.8] Random forests: randomly selected predictors at each split; why this helps over bagging.
+
+109. Random Forest - Bias-Variance Trade-off
+    [HOML ch.7] RF reduces variance without increasing bias much; ensemble averaging effect.
+    [ISL ch.8] Variance reduction in RF: uncorrelated trees average to lower variance.
+
+110. Bagging Vs Random Forest
+    [HOML ch.7] Key difference: random feature selection per split in RF vs using all features in bagging.
+    [ISL ch.8] RF as a refinement of bagging; feature subsampling as the distinguishing factor.
+
+111. Random Forest Hyperparameters
+    [HOML ch.7] n_estimators, max_features, max_depth, min_samples_split, bootstrap; tuning strategy.
+    [ISL ch.8] Tuning m (number of features per split); typically sqrt(p) for classification, p/3 for regression.
+
+112. Hyperparameter Tuning RF using GridSearchCV / RandomizedSearchCV
+    [HOML ch.2] GridSearchCV and RandomizedSearchCV for exhaustive and random hyperparameter search.
+    [ISL ch.5] Cross-validation for model selection; choosing tuning parameters.
+
+113. OOB Score - Out of Bag Evaluation
+    [HOML ch.7] OOB samples: ~37% of data not seen per tree; OOB error as free validation estimate.
+    [ISL ch.8] OOB error for bagged trees; equivalent to leave-one-out cross-validation.
+
+114. Feature Importance using Random Forest & Decision Trees
+    [HOML ch.7] Mean decrease in impurity (MDI); permutation importance; sklearn feature_importances_.
+    [ISL ch.8] Variable importance: RSS / Gini decrease summed over splits; interpreting feature relevance.
+
+================================================================================
+BOOSTING
+================================================================================
+
+115. How AdaBoost Classifier Works - Geometric Intuition
+    [HOML ch.7] AdaBoost: sequential weak learners; misclassified samples get higher weight.
+    [ISL ch.8] Boosting overview: sequential trees fitting residuals; AdaBoost as a special case.
+
+116. AdaBoost - Step-by-Step Explanation
+    [HOML ch.7] Sample weight update; stump predictor weights alpha; final weighted vote.
+    [ISL ch.8] AdaBoost algorithm steps: computing alpha, updating weights, aggregating.
+
+117. AdaBoost - Code from Scratch
+    [HOML ch.7] Implementing AdaBoost manually; comparing to sklearn AdaBoostClassifier.
+    [ISL ch.8] No scratch implementation; HOML primary.
+
+118. AdaBoost Hyperparameters / GridSearchCV
+    [HOML ch.7] n_estimators, learning_rate, base_estimator; overfitting with too many estimators.
+    [ISL ch.8] Tuning number of trees and shrinkage in boosting.
+
+119. Bagging Vs Boosting
+    [HOML ch.7] Parallel (bagging) vs sequential (boosting); bias vs variance reduction perspective.
+    [ISL ch.8] Key distinction: bagging reduces variance, boosting primarily reduces bias.
+
+120. Gradient Boosting Explained
+    [HOML ch.7] Gradient Boosting: fit successive trees to pseudo-residuals (negative gradient of loss).
+    [ISL ch.8] Gradient boosting: fitting trees to residuals; three tuning parameters: B, lambda, d.
+
+121. Gradient Boosting Regression - Mathematics
+    [HOML ch.7] Gradient of MSE loss leads to ordinary residuals; chain of shallow trees.
+    [ISL ch.8] Mathematical formulation: slow learning via shrinkage; boosting as functional gradient descent.
+
+122. Gradient Boosting for Classification
+    [HOML ch.7] Log-loss gradient for classification; pseudo-residuals differ from regression case.
+    [ISL ch.8] Boosting applied to classification trees; log-odds residuals.
+
+123. Introduction to XGBoost
+    [HOML ch.7] XGBoost as an optimized, regularized gradient boosting implementation; speed advantages.
+    [ISL ch.8] Boosting framework; XGBoost mentioned as a leading implementation.
+
+124. XGBoost for Regression
+    [HOML ch.7] XGBoost regression with reg:squarederror objective; sklearn API.
+    [ISL ch.8] Gradient boosting for regression; XGBoost as practical tool.
+
+125. XGBoost for Classification
+    [HOML ch.7] XGBoost classification with binary:logistic or multi:softmax; eval metrics.
+    [ISL ch.8] Gradient boosting for classification.
+
+126. The Maths Behind XGBoost
+    [HOML ch.7] Second-order Taylor expansion of loss; gain formula; regularization term on tree structure.
+    [ISL ch.8] No deep XGBoost math; HOML and XGBoost original paper are primary references.
+    [PRML ch.14] Boosting as additive model; functional gradient descent framework.
+
+127. Stacking and Blending Ensembles
+    [HOML ch.7] Stacking: train a meta-learner on out-of-fold predictions of base learners; blending variant.
+    [ISL ch.8] Model averaging; brief mention of stacking as an ensemble method.
+
+================================================================================
+CLUSTERING (UNSUPERVISED LEARNING)
+================================================================================
+
+128. K-Means Clustering - Geometric Intuition
+    [HOML ch.9] K-Means algorithm: assign to nearest centroid, update centroid; Lloyd's algorithm.
+    [ISL ch.12] K-means clustering: within-cluster variation objective; algorithm steps.
+
+129. K-Means Clustering - Python / sklearn
+    [HOML ch.9] sklearn KMeans; choosing k with inertia / elbow method; initialization with k-means++.
+    [ISL ch.12 Lab] K-means in R on simulated data.
+
+130. K-Means Clustering - From Scratch
+    [HOML ch.9] Implementing K-Means: random initialization, assignment, update loop.
+    [ISL ch.12] Algorithm description; pseudocode for K-means.
+
+131. Agglomerative Hierarchical Clustering
+    [HOML ch.9] Agglomerative clustering: bottom-up merging; linkage criteria (single, complete, average, ward); dendrogram.
+    [ISL ch.12] Hierarchical clustering: dendrogram interpretation; bottom-up agglomeration; linkage types.
+
+132. DBSCAN Clustering
+    [HOML ch.9] DBSCAN: density-based; core/border/noise points; eps and min_samples; handles arbitrary shapes.
+    [ISL ch.12] DBSCAN mentioned as a density-based alternative to K-means.
+
+================================================================================
+ADVANCED TOPICS
+================================================================================
+
+133. Imbalanced Data (Undersampling, Oversampling, SMOTE)
+    [HOML ch.3] Class imbalance strategies: resampling, class_weight, threshold tuning.
+    [ISL ch.4] Imbalanced classes: adjusting classification threshold; cost-sensitive learning.
+
+134. Hyperparameter Tuning using Optuna / Bayesian Optimization
+    [HOML ch.2] GridSearchCV, RandomizedSearchCV as search baselines.
+    [ISL ch.5] Cross-validation for model/hyperparameter selection.
+    Note: Optuna and Bayesian optimization go beyond both textbooks; Optuna docs and the paper "Algorithms for Hyper-Parameter Optimization" (Bergstra et al.) are additional references.
+
+================================================================================
+END OF MAPPING
+================================================================================

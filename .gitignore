@@ -1,0 +1,23 @@
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# ── Environment variables (NEVER commit API keys) ─────────
+.env
+
+# ── Textbooks (large PDFs, not for version control) ───────
+Textbooks/*.pdf
+Textbooks/extracted/
+
+# ── Obsidian internal settings ────────────────────────────
+KB_Obsidian/.obsidian/
+
+# ── OS / Editor junk ──────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

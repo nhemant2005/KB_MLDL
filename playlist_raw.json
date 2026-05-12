@@ -1,0 +1,806 @@
+[
+  {
+    "index": 1,
+    "title": "What is Machine Learning? | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=ZftI2fEz0Fw",
+    "duration_seconds": 1200
+  },
+  {
+    "index": 2,
+    "title": "AI Vs ML Vs DL for Beginners in Hindi",
+    "url": "https://www.youtube.com/watch?v=1v3_AQ26jZ0",
+    "duration_seconds": 962
+  },
+  {
+    "index": 3,
+    "title": "Types of Machine Learning for Beginners | Types of Machine learning in Hindi | Types of ML in Depth",
+    "url": "https://www.youtube.com/watch?v=81ymPYEtFOw",
+    "duration_seconds": 1662
+  },
+  {
+    "index": 4,
+    "title": "Batch Machine Learning | Offline Vs Online Learning | Machine Learning Types",
+    "url": "https://www.youtube.com/watch?v=nPrhFxEuTYU",
+    "duration_seconds": 688
+  },
+  {
+    "index": 5,
+    "title": "Online Machine Learning | Online Learning | Online Vs Offline Machine Learning",
+    "url": "https://www.youtube.com/watch?v=3oOipgCbLIk",
+    "duration_seconds": 1168
+  },
+  {
+    "index": 6,
+    "title": "Instance-Based Vs Model-Based Learning | Types of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=ntAOq1ioTKo",
+    "duration_seconds": 1004
+  },
+  {
+    "index": 7,
+    "title": "Challenges in Machine Learning | Problems in Machine Learning",
+    "url": "https://www.youtube.com/watch?v=WGUNAJki2S4",
+    "duration_seconds": 1420
+  },
+  {
+    "index": 8,
+    "title": "Application of Machine Learning | Real Life Machine Learning Applications",
+    "url": "https://www.youtube.com/watch?v=UZio8TcTMrI",
+    "duration_seconds": 1742
+  },
+  {
+    "index": 9,
+    "title": "Machine Learning Development Life Cycle | MLDLC in Data Science",
+    "url": "https://www.youtube.com/watch?v=iDbhQGz_rEo",
+    "duration_seconds": 1513
+  },
+  {
+    "index": 10,
+    "title": "Data Engineer Vs Data Analyst Vs Data Scientist Vs ML Engineer | Data Science Job Roles",
+    "url": "https://www.youtube.com/watch?v=93rKZs0MkgU",
+    "duration_seconds": 1583
+  },
+  {
+    "index": 11,
+    "title": "What are Tensors | Tensor In-depth Explanation | Tensor in Machine Learning",
+    "url": "https://www.youtube.com/watch?v=vVhD2EyS41Y",
+    "duration_seconds": 2489
+  },
+  {
+    "index": 12,
+    "title": "Installing Anaconda For Data Science | Jupyter Notebook for Machine Learning | Google Colab for ML",
+    "url": "https://www.youtube.com/watch?v=82P5N2m41jE",
+    "duration_seconds": 2226
+  },
+  {
+    "index": 13,
+    "title": "End to End Toy Project | Day 13 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=dr7z7a_8lQw",
+    "duration_seconds": 1843
+  },
+  {
+    "index": 14,
+    "title": "How to Frame a Machine Learning Problem | How to plan a Data Science Project Effectively",
+    "url": "https://www.youtube.com/watch?v=A9SezQlvakw",
+    "duration_seconds": 1342
+  },
+  {
+    "index": 15,
+    "title": "Working with CSV files | Day 15 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=a_XrmKlaGTs",
+    "duration_seconds": 2190
+  },
+  {
+    "index": 16,
+    "title": "Working with JSON/SQL | Day 16 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=fFwRC-fapIU",
+    "duration_seconds": 1020
+  },
+  {
+    "index": 17,
+    "title": "Fetching Data From an API | Day 17 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=roTZJaxjnJc",
+    "duration_seconds": 1370
+  },
+  {
+    "index": 18,
+    "title": "Fetching data using Web Scraping | Day 18 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=8NOdgjC1988",
+    "duration_seconds": 2269
+  },
+  {
+    "index": 19,
+    "title": "Understanding Your Data | Day 19 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=mJlRTUuVr04",
+    "duration_seconds": 923
+  },
+  {
+    "index": 20,
+    "title": "EDA using Univariate Analysis | Day 20 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=4HyTlbHUKSw",
+    "duration_seconds": 1831
+  },
+  {
+    "index": 21,
+    "title": "EDA using Bivariate and Multivariate Analysis | Day 21 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=6D3VtEfCw7w",
+    "duration_seconds": 2283
+  },
+  {
+    "index": 22,
+    "title": "Pandas Profiling | Day 22 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=E69Lg2ZgOxg",
+    "duration_seconds": 784
+  },
+  {
+    "index": 23,
+    "title": "What is Feature Engineering | Day 23 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=sluoVhT0ehg",
+    "duration_seconds": 1492
+  },
+  {
+    "index": 24,
+    "title": "Feature Scaling - Standardization | Day 24 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=1Yw9sC0PNwY",
+    "duration_seconds": 1958
+  },
+  {
+    "index": 25,
+    "title": "Feature Scaling - Normalization | MinMaxScaling | MaxAbsScaling | RobustScaling",
+    "url": "https://www.youtube.com/watch?v=eBrGyuA2MIg",
+    "duration_seconds": 1411
+  },
+  {
+    "index": 26,
+    "title": "Encoding Categorical Data | Ordinal Encoding | Label Encoding",
+    "url": "https://www.youtube.com/watch?v=w2GglmYHfmM",
+    "duration_seconds": 1193
+  },
+  {
+    "index": 27,
+    "title": "One Hot Encoding | Handling Categorical Data | Day 27 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=U5oCv3JKWKA",
+    "duration_seconds": 1812
+  },
+  {
+    "index": 28,
+    "title": "Column Transformer in Machine Learning | How to use ColumnTransformer in Sklearn",
+    "url": "https://www.youtube.com/watch?v=5TVj6iEBR4I",
+    "duration_seconds": 941
+  },
+  {
+    "index": 29,
+    "title": "Machine Learning Pipelines A-Z | Day 29 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=xOccYkgRV4Q",
+    "duration_seconds": 2739
+  },
+  {
+    "index": 30,
+    "title": "Function Transformer | Log Transform | Reciprocal Transform | Square Root Transform",
+    "url": "https://www.youtube.com/watch?v=cTjj3LE8E90",
+    "duration_seconds": 1933
+  },
+  {
+    "index": 31,
+    "title": "Power Transformer | Box - Cox Transform | Yeo - Johnson Transform",
+    "url": "https://www.youtube.com/watch?v=lV_Z4HbNAx0",
+    "duration_seconds": 1288
+  },
+  {
+    "index": 32,
+    "title": "Binning and Binarization | Discretization | Quantile Binning | KMeans Binning",
+    "url": "https://www.youtube.com/watch?v=kKWsJGKcMvo",
+    "duration_seconds": 2305
+  },
+  {
+    "index": 33,
+    "title": "Handling Mixed Variables | Feature Engineering",
+    "url": "https://www.youtube.com/watch?v=9xiX-I5_LQY",
+    "duration_seconds": 730
+  },
+  {
+    "index": 34,
+    "title": "Handling Date and Time Variables | Day 34 | 100 Days of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=J73mvgG9fFs",
+    "duration_seconds": 858
+  },
+  {
+    "index": 35,
+    "title": "Handling Missing Data | Part 1 | Complete Case Analysis",
+    "url": "https://www.youtube.com/watch?v=aUnNWZorGmk",
+    "duration_seconds": 1494
+  },
+  {
+    "index": 36,
+    "title": "Handling missing data | Numerical Data | Simple Imputer",
+    "url": "https://www.youtube.com/watch?v=mCL2xLBDw8M",
+    "duration_seconds": 1881
+  },
+  {
+    "index": 37,
+    "title": "Handling Missing Categorical Data | Simple Imputer | Most Frequent Imputation | Missing Category Imp",
+    "url": "https://www.youtube.com/watch?v=l_Wip8bEDFQ",
+    "duration_seconds": 814
+  },
+  {
+    "index": 38,
+    "title": "Missing Indicator | Random Sample Imputation | Handling Missing Data Part 4",
+    "url": "https://www.youtube.com/watch?v=Ratcir3p03w",
+    "duration_seconds": 2225
+  },
+  {
+    "index": 39,
+    "title": "KNN Imputer | Multivariate Imputation | Handling Missing Data Part 5",
+    "url": "https://www.youtube.com/watch?v=-fK-xEev2I8",
+    "duration_seconds": 1467
+  },
+  {
+    "index": 40,
+    "title": "Multivariate Imputation by Chained Equations for Missing Value | MICE Algorithm | Iterative Imputer",
+    "url": "https://www.youtube.com/watch?v=a38ehxv3kyk",
+    "duration_seconds": 1111
+  },
+  {
+    "index": 41,
+    "title": "What are Outliers | Outliers in Machine Learning",
+    "url": "https://www.youtube.com/watch?v=Lln1PKgGr_M",
+    "duration_seconds": 1027
+  },
+  {
+    "index": 42,
+    "title": "Outlier Detection and Removal using Z-score Method | Handling Outliers Part 2",
+    "url": "https://www.youtube.com/watch?v=OnPE-Z8jtqM",
+    "duration_seconds": 1066
+  },
+  {
+    "index": 43,
+    "title": "Outlier Detection and Removal using the IQR Method | Handing Outliers Part 3",
+    "url": "https://www.youtube.com/watch?v=Ccv1-W5ilak",
+    "duration_seconds": 845
+  },
+  {
+    "index": 44,
+    "title": "Outlier Detection using the Percentile Method | Winsorization Technique",
+    "url": "https://www.youtube.com/watch?v=bcXA4CqRXvM",
+    "duration_seconds": 983
+  },
+  {
+    "index": 45,
+    "title": "Feature Construction | Feature Splitting",
+    "url": "https://www.youtube.com/watch?v=ma-h30PoFms",
+    "duration_seconds": 742
+  },
+  {
+    "index": 46,
+    "title": "Curse of Dimensionality",
+    "url": "https://www.youtube.com/watch?v=ToGuhynu-No",
+    "duration_seconds": 925
+  },
+  {
+    "index": 47,
+    "title": "Principle Component Analysis  (PCA) | Part 1 | Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=iRbsBi5W0-c",
+    "duration_seconds": 2034
+  },
+  {
+    "index": 48,
+    "title": "Principle Component Analysis (PCA) | Part 2 | Problem Formulation and Step by Step Solution",
+    "url": "https://www.youtube.com/watch?v=tXXnxjj2wM4",
+    "duration_seconds": 3377
+  },
+  {
+    "index": 49,
+    "title": "Principle Component Analysis(PCA) | Part 3 | Code Example and Visualization",
+    "url": "https://www.youtube.com/watch?v=tofVCUDrg4M",
+    "duration_seconds": 2606
+  },
+  {
+    "index": 50,
+    "title": "Simple Linear Regression | Code + Intuition | Simplest Explanation in Hindi",
+    "url": "https://www.youtube.com/watch?v=UZPfbG0jNec",
+    "duration_seconds": 2016
+  },
+  {
+    "index": 51,
+    "title": "Simple Linear Regression | Mathematical Formulation | Coding from Scratch",
+    "url": "https://www.youtube.com/watch?v=dXHIDLPKdmA",
+    "duration_seconds": 3211
+  },
+  {
+    "index": 52,
+    "title": "Regression Metrics | MSE, MAE & RMSE | R2 Score & Adjusted R2 Score",
+    "url": "https://www.youtube.com/watch?v=Ti7c-Hz7GSM",
+    "duration_seconds": 2636
+  },
+  {
+    "index": 53,
+    "title": "Multiple Linear Regression | Geometric Intuition & Code",
+    "url": "https://www.youtube.com/watch?v=ashGekqstl8",
+    "duration_seconds": 1257
+  },
+  {
+    "index": 54,
+    "title": "Multiple Linear Regression | Part 2 | Mathematical Formulation From Scratch",
+    "url": "https://www.youtube.com/watch?v=NU37mF5q8VE",
+    "duration_seconds": 2891
+  },
+  {
+    "index": 55,
+    "title": "Multiple Linear Regression | Part 3 | Code From Scratch",
+    "url": "https://www.youtube.com/watch?v=VmZWXzxmNrE",
+    "duration_seconds": 961
+  },
+  {
+    "index": 56,
+    "title": "What are the main Assumptions of Linear Regression? | Top 5 Assumptions of Linear Regression",
+    "url": "https://www.youtube.com/watch?v=EmSNAtcHLm8",
+    "duration_seconds": 1058
+  },
+  {
+    "index": 57,
+    "title": "Gradient Descent From Scratch | End to End Gradient Descent | Gradient Descent Animation",
+    "url": "https://www.youtube.com/watch?v=ORyfPJypKuU",
+    "duration_seconds": 7076
+  },
+  {
+    "index": 58,
+    "title": "Batch Gradient Descent with Code Demo | Simple Explanation in Hindi",
+    "url": "https://www.youtube.com/watch?v=Jyo53pAyVAM",
+    "duration_seconds": 3889
+  },
+  {
+    "index": 59,
+    "title": "Stochastic Gradient Descent",
+    "url": "https://www.youtube.com/watch?v=V7KBAa_gh4c",
+    "duration_seconds": 2975
+  },
+  {
+    "index": 60,
+    "title": "Mini-Batch Gradient Descent",
+    "url": "https://www.youtube.com/watch?v=_scscQ4HVTY",
+    "duration_seconds": 1330
+  },
+  {
+    "index": 61,
+    "title": "Polynomial Regression | Machine Learning",
+    "url": "https://www.youtube.com/watch?v=BNWLf3cKdbQ",
+    "duration_seconds": 1606
+  },
+  {
+    "index": 62,
+    "title": "Bias Variance Trade-off | Overfitting and Underfitting in Machine Learning",
+    "url": "https://www.youtube.com/watch?v=74DU02Fyrhk",
+    "duration_seconds": 485
+  },
+  {
+    "index": 63,
+    "title": "Ridge Regression Part 1 | Geometric Intuition and Code | Regularized Linear Models",
+    "url": "https://www.youtube.com/watch?v=aEow1QoTLo0",
+    "duration_seconds": 1198
+  },
+  {
+    "index": 64,
+    "title": "Ridge Regression Part 2 | Mathematical Formulation & Code from scratch | Regularized Linear Models",
+    "url": "https://www.youtube.com/watch?v=oDlZBQjk_3A",
+    "duration_seconds": 2621
+  },
+  {
+    "index": 65,
+    "title": "Ridge Regression Part 3 | Gradient Descent | Regularized Linear Models",
+    "url": "https://www.youtube.com/watch?v=Fci_wwMp8G8",
+    "duration_seconds": 1123
+  },
+  {
+    "index": 66,
+    "title": "5 Key Points - Ridge Regression | Part 4 | Regularized Linear Models",
+    "url": "https://www.youtube.com/watch?v=8osKeShYVRQ",
+    "duration_seconds": 1817
+  },
+  {
+    "index": 67,
+    "title": "Lasso Regression | Intuition and Code Sample | Regularized Linear Models",
+    "url": "https://www.youtube.com/watch?v=HLF4bFbBgwk",
+    "duration_seconds": 1717
+  },
+  {
+    "index": 68,
+    "title": "Why Lasso Regression creates sparsity?",
+    "url": "https://www.youtube.com/watch?v=FN4aZPIAfI4",
+    "duration_seconds": 1470
+  },
+  {
+    "index": 69,
+    "title": "ElasticNet Regression | Intuition and Code Example | Regularized Linear Models",
+    "url": "https://www.youtube.com/watch?v=2g2DBkFhTTY",
+    "duration_seconds": 701
+  },
+  {
+    "index": 70,
+    "title": "Logistic Regression Part 1 | Perceptron Trick",
+    "url": "https://www.youtube.com/watch?v=XNXzVfItWGY",
+    "duration_seconds": 2826
+  },
+  {
+    "index": 71,
+    "title": "Logistic Regression Part 2 | Perceptron Trick Code",
+    "url": "https://www.youtube.com/watch?v=tLezwPKvPK4",
+    "duration_seconds": 1027
+  },
+  {
+    "index": 72,
+    "title": "Logistic Regression Part 3 | Sigmoid Function | 100 Days of ML",
+    "url": "https://www.youtube.com/watch?v=ehO0-6i9qD4",
+    "duration_seconds": 2444
+  },
+  {
+    "index": 73,
+    "title": "Logistic Regression Part 4 | Loss Function | Maximum Likelihood | Binary Cross Entropy",
+    "url": "https://www.youtube.com/watch?v=6bXOo0sxY5c",
+    "duration_seconds": 1743
+  },
+  {
+    "index": 74,
+    "title": "Derivative of Sigmoid Function",
+    "url": "https://www.youtube.com/watch?v=awjXaFR1jOM",
+    "duration_seconds": 357
+  },
+  {
+    "index": 75,
+    "title": "Logistic Regression Part 5 | Gradient Descent & Code From Scratch",
+    "url": "https://www.youtube.com/watch?v=ABrrSwMYWSg",
+    "duration_seconds": 2202
+  },
+  {
+    "index": 76,
+    "title": "Accuracy and Confusion Matrix | Type 1 and Type 2 Errors | Classification Metrics Part 1",
+    "url": "https://www.youtube.com/watch?v=c09drtuCS3c",
+    "duration_seconds": 2048
+  },
+  {
+    "index": 77,
+    "title": "Precision, Recall and F1 Score | Classification Metrics Part 2",
+    "url": "https://www.youtube.com/watch?v=iK-kdhJ-7yI",
+    "duration_seconds": 2562
+  },
+  {
+    "index": 78,
+    "title": "ROC Curve in Machine Learning | ROC-AUC in Machine Learning Simplified | CampusX",
+    "url": "https://www.youtube.com/watch?v=gdW6hj9IXaA",
+    "duration_seconds": 4275
+  },
+  {
+    "index": 79,
+    "title": "Softmax Regression || Multinomial Logistic Regression || Logistic Regression Part 6",
+    "url": "https://www.youtube.com/watch?v=Z8noL_0M4tw",
+    "duration_seconds": 2301
+  },
+  {
+    "index": 80,
+    "title": "Polynomial Features in Logistic Regression | Non Linear Logistic Regression | Logistic Regression 7",
+    "url": "https://www.youtube.com/watch?v=WnBYW_DX3sM",
+    "duration_seconds": 551
+  },
+  {
+    "index": 81,
+    "title": "Logistic Regression Hyperparameters || Logistic Regression Part 8",
+    "url": "https://www.youtube.com/watch?v=ay_OcblJasE",
+    "duration_seconds": 787
+  },
+  {
+    "index": 82,
+    "title": "Naive Bayes Classifier | Part 1 | Conditional Probability",
+    "url": "https://www.youtube.com/watch?v=Ty7knppVo9E",
+    "duration_seconds": 566
+  },
+  {
+    "index": 83,
+    "title": "Naive Bayes Classifier | Part 2 | Independent Events in Probability",
+    "url": "https://www.youtube.com/watch?v=0GD480CnrO4",
+    "duration_seconds": 479
+  },
+  {
+    "index": 84,
+    "title": "Naive Bayes Classifier | Part 3 | Mutually Exclusive Events",
+    "url": "https://www.youtube.com/watch?v=nneTjTYikBE",
+    "duration_seconds": 109
+  },
+  {
+    "index": 85,
+    "title": "Naive Bayes Classifier | Part 4 | Bayes Theorem in Probability",
+    "url": "https://www.youtube.com/watch?v=Oqw-v-Z7PuU",
+    "duration_seconds": 267
+  },
+  {
+    "index": 86,
+    "title": "Naive Bayes Classifier | Part 5 | Problem based upon Bayes Theorem",
+    "url": "https://www.youtube.com/watch?v=aAEHjXDHtbE",
+    "duration_seconds": 540
+  },
+  {
+    "index": 87,
+    "title": "Naive Bayes Classifier | Part 6 | Intuition",
+    "url": "https://www.youtube.com/watch?v=ZR1_QtLk_4U",
+    "duration_seconds": 884
+  },
+  {
+    "index": 88,
+    "title": "Naive Bayes Classifier | Part 7 | Mathematics behind Naive Bayes Algorithm",
+    "url": "https://www.youtube.com/watch?v=2PVRG45eVrY",
+    "duration_seconds": 1149
+  },
+  {
+    "index": 89,
+    "title": "Naive Bayes Classifier | Part 8 | Simple Example Code",
+    "url": "https://www.youtube.com/watch?v=DeeWsqoY4Eo",
+    "duration_seconds": 963
+  },
+  {
+    "index": 90,
+    "title": "Naive Bayes Part 9 | Handling Numerical Data",
+    "url": "https://www.youtube.com/watch?v=TCgK2nBJx9o",
+    "duration_seconds": 527
+  },
+  {
+    "index": 91,
+    "title": "What is K Nearest Neighbors? | KNN Explained in Hindi | Simple Overview in 1 Video | CampusX",
+    "url": "https://www.youtube.com/watch?v=abnL_GUGub4",
+    "duration_seconds": 3121
+  },
+  {
+    "index": 92,
+    "title": "Support Vector Machines | Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=ugTxMLjLS8M",
+    "duration_seconds": 706
+  },
+  {
+    "index": 93,
+    "title": "Mathematics of SVM | Support Vector Machines | Hard margin SVM",
+    "url": "https://www.youtube.com/watch?v=yCAlHPDgWtM",
+    "duration_seconds": 2094
+  },
+  {
+    "index": 94,
+    "title": "Mathematics of Support Vector Machine | Soft Margin SVM",
+    "url": "https://www.youtube.com/watch?v=utqrvIFAE1k",
+    "duration_seconds": 878
+  },
+  {
+    "index": 95,
+    "title": "Kernel Trick in SVM | Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=egxjT0p7_K8",
+    "duration_seconds": 378
+  },
+  {
+    "index": 96,
+    "title": "Kernel Trick in SVM | Code Example",
+    "url": "https://www.youtube.com/watch?v=pjvmVMDrzVU",
+    "duration_seconds": 844
+  },
+  {
+    "index": 97,
+    "title": "Decision Trees Geometric Intuition | Entropy | Gini impurity | Information Gain",
+    "url": "https://www.youtube.com/watch?v=IZnno-dKgVQ",
+    "duration_seconds": 3509
+  },
+  {
+    "index": 98,
+    "title": "Decision Trees - Hyperparameters | Overfitting and Underfitting in Decision Trees",
+    "url": "https://www.youtube.com/watch?v=mDEV0Iucwz0",
+    "duration_seconds": 1643
+  },
+  {
+    "index": 99,
+    "title": "Regression Trees | Decision Trees Part 3",
+    "url": "https://www.youtube.com/watch?v=RANHxyAvtM4",
+    "duration_seconds": 2115
+  },
+  {
+    "index": 100,
+    "title": "Awesome Decision Tree Visualization using dtreeviz library",
+    "url": "https://www.youtube.com/watch?v=SlMZqfvl5uw",
+    "duration_seconds": 1116
+  },
+  {
+    "index": 101,
+    "title": "Introduction to Ensemble Learning | Ensemble Techniques in Machine Learning",
+    "url": "https://www.youtube.com/watch?v=bHK1fE_BUms",
+    "duration_seconds": 2263
+  },
+  {
+    "index": 102,
+    "title": "Voting Ensemble |  Introduction and Core Idea | Part 1",
+    "url": "https://www.youtube.com/watch?v=_W1i-c_6rOk",
+    "duration_seconds": 990
+  },
+  {
+    "index": 103,
+    "title": "Voting Ensemble | Classification | Voting Classifier | Hard Voting Vs Soft Voting | Part 2",
+    "url": "https://www.youtube.com/watch?v=pGQnNYdPTvY",
+    "duration_seconds": 1430
+  },
+  {
+    "index": 104,
+    "title": "Voting Ensemble | Regression | Part 3",
+    "url": "https://www.youtube.com/watch?v=ut4vh59rGkw",
+    "duration_seconds": 657
+  },
+  {
+    "index": 105,
+    "title": "Bagging | Introduction | Part 1",
+    "url": "https://www.youtube.com/watch?v=LUiBOAy7x6Y",
+    "duration_seconds": 1873
+  },
+  {
+    "index": 106,
+    "title": "Bagging Ensemble | Part 2 | Bagging Classifiers",
+    "url": "https://www.youtube.com/watch?v=-1T54G_E-ys",
+    "duration_seconds": 1352
+  },
+  {
+    "index": 107,
+    "title": "Bagging Ensemble | Part 3 | Bagging Regressor",
+    "url": "https://www.youtube.com/watch?v=HYVzrETXbkE",
+    "duration_seconds": 655
+  },
+  {
+    "index": 108,
+    "title": "Introduction to Random Forest | Intuition behind the Algorithm",
+    "url": "https://www.youtube.com/watch?v=F9uESCHGjhA",
+    "duration_seconds": 2035
+  },
+  {
+    "index": 109,
+    "title": "How Random Forest Performs So Well? Bias Variance Trade-Off in Random Forest",
+    "url": "https://www.youtube.com/watch?v=jHgG4gjuFAk",
+    "duration_seconds": 772
+  },
+  {
+    "index": 110,
+    "title": "Bagging Vs Random Forest | What is the difference between Bagging and Random Forest | Very Important",
+    "url": "https://www.youtube.com/watch?v=l93jRojZMqU",
+    "duration_seconds": 722
+  },
+  {
+    "index": 111,
+    "title": "Random Forest Hyper-parameters",
+    "url": "https://www.youtube.com/watch?v=WOFVY_wQ9wU",
+    "duration_seconds": 917
+  },
+  {
+    "index": 112,
+    "title": "Hyperparameter Tuning Random Forest using GridSearchCV and RandomizedSearchCV | Code Example",
+    "url": "https://www.youtube.com/watch?v=4Im0CT43QxY",
+    "duration_seconds": 704
+  },
+  {
+    "index": 113,
+    "title": "OOB Score | Out of Bag Evaluation in Random Forest | Machine Learning",
+    "url": "https://www.youtube.com/watch?v=tdDhyFoSG94",
+    "duration_seconds": 405
+  },
+  {
+    "index": 114,
+    "title": "Feature Importance using Random Forest and Decision Trees | How is Feature Importance calculated",
+    "url": "https://www.youtube.com/watch?v=R47JAob1xBY",
+    "duration_seconds": 1640
+  },
+  {
+    "index": 115,
+    "title": "How Adaboost Classifier Works? | Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=sFKnP0iP0K0",
+    "duration_seconds": 1034
+  },
+  {
+    "index": 116,
+    "title": "AdaBoost - A Step by Step Explanation",
+    "url": "https://www.youtube.com/watch?v=RT0t9a3Xnfw",
+    "duration_seconds": 1163
+  },
+  {
+    "index": 117,
+    "title": "AdaBoost Algorithm | Code from Scratch",
+    "url": "https://www.youtube.com/watch?v=a20TaKNsriE",
+    "duration_seconds": 987
+  },
+  {
+    "index": 118,
+    "title": "AdaBoost Hyperparameters | GridSearchCV in Adaboost",
+    "url": "https://www.youtube.com/watch?v=JmXnztjULnQ",
+    "duration_seconds": 673
+  },
+  {
+    "index": 119,
+    "title": "Bagging Vs Boosting | What is the difference between Bagging and Boosting",
+    "url": "https://www.youtube.com/watch?v=7M5oWXCpDEw",
+    "duration_seconds": 377
+  },
+  {
+    "index": 120,
+    "title": "Gradient Boosting Explained | How Gradient Boosting Works?",
+    "url": "https://www.youtube.com/watch?v=fbKz7N92mhQ",
+    "duration_seconds": 1969
+  },
+  {
+    "index": 121,
+    "title": "Gradient Boosting Regression Part 2 | Mathematics of Gradient Boosting",
+    "url": "https://www.youtube.com/watch?v=nMNiTZm-qY0",
+    "duration_seconds": 3402
+  },
+  {
+    "index": 122,
+    "title": "Gradient Boosting for Classification | Geometric Intuition | CampusX",
+    "url": "https://www.youtube.com/watch?v=4p5EQtyxSyI",
+    "duration_seconds": 3873
+  },
+  {
+    "index": 123,
+    "title": "Introduction to XGBOOST | Machine Learning | CampusX",
+    "url": "https://www.youtube.com/watch?v=C6aDw4y8qJ0",
+    "duration_seconds": 4777
+  },
+  {
+    "index": 124,
+    "title": "XGBoost for Regression | XGBoost Part 2 | CampusX",
+    "url": "https://www.youtube.com/watch?v=gmp2tS2joaA",
+    "duration_seconds": 2837
+  },
+  {
+    "index": 125,
+    "title": "XGBoost For Classification | How XGBoost works on Classification Problems | CampusX",
+    "url": "https://www.youtube.com/watch?v=mELtxVUNNrw",
+    "duration_seconds": 2348
+  },
+  {
+    "index": 126,
+    "title": "The Maths Behind XGBoost | Machine Learning | CampusX",
+    "url": "https://www.youtube.com/watch?v=0Eo-_5bfers",
+    "duration_seconds": 7048
+  },
+  {
+    "index": 127,
+    "title": "Stacking and Blending Ensembles",
+    "url": "https://www.youtube.com/watch?v=O-aDHBGMqXA",
+    "duration_seconds": 2120
+  },
+  {
+    "index": 128,
+    "title": "K-Means Clustering Algorithm | Geometric Intuition | Clustering | Unsupervised Learning",
+    "url": "https://www.youtube.com/watch?v=5shTLzwAdEc",
+    "duration_seconds": 1438
+  },
+  {
+    "index": 129,
+    "title": "K-Means Clustering Algorithm in Python | Practical Example | Student Clustering Example | sklearn",
+    "url": "https://www.youtube.com/watch?v=UPvv9SprgVo",
+    "duration_seconds": 613
+  },
+  {
+    "index": 130,
+    "title": "K-Means Clustering Algorithm From Scratch In Python | ML Algorithms From Scratch",
+    "url": "https://www.youtube.com/watch?v=MFraC1JObUo",
+    "duration_seconds": 2033
+  },
+  {
+    "index": 131,
+    "title": "Agglomerative Hierarchical Clustering | Python Code Example",
+    "url": "https://www.youtube.com/watch?v=Ka5i9TVUT-E",
+    "duration_seconds": 2243
+  },
+  {
+    "index": 132,
+    "title": "DBSCAN Clustering Algorithms | Density Based Clustering | How DBSCAN Works | CampusX",
+    "url": "https://www.youtube.com/watch?v=1_bLnsNmhCI",
+    "duration_seconds": 2056
+  },
+  {
+    "index": 133,
+    "title": "Imbalanced Data in Machine Learning | Undersampling | Oversampling | SMOTE",
+    "url": "https://www.youtube.com/watch?v=yh2AKoJCV3k",
+    "duration_seconds": 3437
+  },
+  {
+    "index": 134,
+    "title": "Hyperparameter Tuning using Optuna | Bayesian Optimization using Optuna",
+    "url": "https://www.youtube.com/watch?v=E2b3SKMw934",
+    "duration_seconds": 3563
+  }
+]

@@ -1,0 +1,4221 @@
+[
+  {
+    "playlist_day": 1,
+    "title_raw": "What is Machine Learning? | 100 Days of Machine Learning",
+    "topic": "What is Machine Learning",
+    "url": "https://www.youtube.com/watch?v=ZftI2fEz0Fw",
+    "duration_seconds": 1200,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "1"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/what_is_machine_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 2,
+    "title_raw": "AI Vs ML Vs DL for Beginners in Hindi",
+    "topic": "AI vs ML vs DL",
+    "url": "https://www.youtube.com/watch?v=1v3_AQ26jZ0",
+    "duration_seconds": 962,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "1"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/ai_vs_ml_vs_dl.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 3,
+    "title_raw": "Types of Machine Learning for Beginners | Types of Machine learning in Hindi | Types of ML in Depth",
+    "topic": "Types of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=81ymPYEtFOw",
+    "duration_seconds": 1662,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/types_of_machine_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 4,
+    "title_raw": "Batch Machine Learning | Offline Vs Online Learning | Machine Learning Types",
+    "topic": "Batch Learning",
+    "url": "https://www.youtube.com/watch?v=nPrhFxEuTYU",
+    "duration_seconds": 688,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/batch_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 5,
+    "title_raw": "Online Machine Learning | Online Learning | Online Vs Offline Machine Learning",
+    "topic": "Online Machine Learning",
+    "url": "https://www.youtube.com/watch?v=3oOipgCbLIk",
+    "duration_seconds": 1168,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/online_machine_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 6,
+    "title_raw": "Instance-Based Vs Model-Based Learning | Types of Machine Learning",
+    "topic": "Instance-Based vs Model-Based Learning",
+    "url": "https://www.youtube.com/watch?v=ntAOq1ioTKo",
+    "duration_seconds": 1004,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/instance_based_vs_model_based_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 7,
+    "title_raw": "Challenges in Machine Learning | Problems in Machine Learning",
+    "topic": "Challenges in Machine Learning",
+    "url": "https://www.youtube.com/watch?v=WGUNAJki2S4",
+    "duration_seconds": 1420,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/challenges_in_machine_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 8,
+    "title_raw": "Application of Machine Learning | Real Life Machine Learning Applications",
+    "topic": "Applications of Machine Learning",
+    "url": "https://www.youtube.com/watch?v=UZio8TcTMrI",
+    "duration_seconds": 1742,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "1"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/applications_of_machine_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 9,
+    "title_raw": "Machine Learning Development Life Cycle | MLDLC in Data Science",
+    "topic": "ML Development Life Cycle",
+    "url": "https://www.youtube.com/watch?v=iDbhQGz_rEo",
+    "duration_seconds": 1513,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/ml_development_life_cycle.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 10,
+    "title_raw": "Data Engineer Vs Data Analyst Vs Data Scientist Vs ML Engineer | Data Science Job Roles",
+    "topic": "Data Roles",
+    "url": "https://www.youtube.com/watch?v=93rKZs0MkgU",
+    "duration_seconds": 1583,
+    "section": "Foundations",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "reference"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "1"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 1,
+    "notes_file": "notes/data_roles.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 11,
+    "title_raw": "What are Tensors | Tensor In-depth Explanation | Tensor in Machine Learning",
+    "topic": "What are Tensors",
+    "url": "https://www.youtube.com/watch?v=vVhD2EyS41Y",
+    "duration_seconds": 2489,
+    "section": "Data Representation & Tooling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2",
+          "12"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 1,
+    "notes_file": "notes/what_are_tensors.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 12,
+    "title_raw": "Installing Anaconda For Data Science | Jupyter Notebook for Machine Learning | Google Colab for ML",
+    "topic": "Installing Anaconda / Jupyter / Colab",
+    "url": "https://www.youtube.com/watch?v=82P5N2m41jE",
+    "duration_seconds": 2226,
+    "section": "Data Representation & Tooling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "Appendix A"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 1,
+    "notes_file": "notes/installing_anaconda_jupyter_colab.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 13,
+    "title_raw": "End to End Toy Project | Day 13 | 100 Days of Machine Learning",
+    "topic": "End-to-End Toy Project",
+    "url": "https://www.youtube.com/watch?v=dr7z7a_8lQw",
+    "duration_seconds": 1843,
+    "section": "Data Representation & Tooling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/end_to_end_toy_project.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 14,
+    "title_raw": "How to Frame a Machine Learning Problem | How to plan a Data Science Project Effectively",
+    "topic": "How to Frame an ML Problem",
+    "url": "https://www.youtube.com/watch?v=A9SezQlvakw",
+    "duration_seconds": 1342,
+    "section": "Data Representation & Tooling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": null,
+    "notes_file": "notes/how_to_frame_an_ml_problem.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 15,
+    "title_raw": "Working with CSV files | Day 15 | 100 Days of Machine Learning",
+    "topic": "Working with CSV Files",
+    "url": "https://www.youtube.com/watch?v=a_XrmKlaGTs",
+    "duration_seconds": 2190,
+    "section": "Data Ingestion",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 1,
+    "notes_file": "notes/working_with_csv_files.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 16,
+    "title_raw": "Working with JSON/SQL | Day 16 | 100 Days of Machine Learning",
+    "topic": "Working with JSON / SQL",
+    "url": "https://www.youtube.com/watch?v=fFwRC-fapIU",
+    "duration_seconds": 1020,
+    "section": "Data Ingestion",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 1,
+    "notes_file": "notes/working_with_json_sql.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 17,
+    "title_raw": "Fetching Data From an API | Day 17 | 100 Days of Machine Learning",
+    "topic": "Fetching Data from an API",
+    "url": "https://www.youtube.com/watch?v=roTZJaxjnJc",
+    "duration_seconds": 1370,
+    "section": "Data Ingestion",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 1,
+    "notes_file": "notes/fetching_data_from_an_api.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 18,
+    "title_raw": "Fetching data using Web Scraping | Day 18 | 100 Days of Machine Learning",
+    "topic": "Web Scraping",
+    "url": "https://www.youtube.com/watch?v=8NOdgjC1988",
+    "duration_seconds": 2269,
+    "section": "Data Ingestion",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 1,
+    "notes_file": "notes/web_scraping.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 19,
+    "title_raw": "Understanding Your Data | Day 19 | 100 Days of Machine Learning",
+    "topic": "Understanding Your Data",
+    "url": "https://www.youtube.com/watch?v=mJlRTUuVr04",
+    "duration_seconds": 923,
+    "section": "EDA",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/understanding_your_data.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 20,
+    "title_raw": "EDA using Univariate Analysis | Day 20 | 100 Days of Machine Learning",
+    "topic": "Univariate Analysis",
+    "url": "https://www.youtube.com/watch?v=4HyTlbHUKSw",
+    "duration_seconds": 1831,
+    "section": "EDA",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/univariate_analysis.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 21,
+    "title_raw": "EDA using Bivariate and Multivariate Analysis | Day 21 | 100 Days of Machine Learning",
+    "topic": "Bivariate and Multivariate Analysis",
+    "url": "https://www.youtube.com/watch?v=6D3VtEfCw7w",
+    "duration_seconds": 2283,
+    "section": "EDA",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/bivariate_and_multivariate_analysis.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 22,
+    "title_raw": "Pandas Profiling | Day 22 | 100 Days of Machine Learning",
+    "topic": "Pandas Profiling",
+    "url": "https://www.youtube.com/watch?v=E69Lg2ZgOxg",
+    "duration_seconds": 784,
+    "section": "EDA",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/pandas_profiling.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 23,
+    "title_raw": "What is Feature Engineering | Day 23 | 100 Days of Machine Learning",
+    "topic": "What is Feature Engineering",
+    "url": "https://www.youtube.com/watch?v=sluoVhT0ehg",
+    "duration_seconds": 1492,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2",
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "7"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/what_is_feature_engineering.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 24,
+    "title_raw": "Feature Scaling - Standardization | Day 24 | 100 Days of Machine Learning",
+    "topic": "Feature Scaling - Standardization",
+    "url": "https://www.youtube.com/watch?v=1Yw9sC0PNwY",
+    "duration_seconds": 1958,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/feature_scaling_standardization.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 25,
+    "title_raw": "Feature Scaling - Normalization | MinMaxScaling | MaxAbsScaling | RobustScaling",
+    "topic": "Feature Scaling - Normalization",
+    "url": "https://www.youtube.com/watch?v=eBrGyuA2MIg",
+    "duration_seconds": 1411,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/feature_scaling_normalization.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 26,
+    "title_raw": "Encoding Categorical Data | Ordinal Encoding | Label Encoding",
+    "topic": "Ordinal & Label Encoding",
+    "url": "https://www.youtube.com/watch?v=w2GglmYHfmM",
+    "duration_seconds": 1193,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/ordinal_label_encoding.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 27,
+    "title_raw": "One Hot Encoding | Handling Categorical Data | Day 27 | 100 Days of Machine Learning",
+    "topic": "One Hot Encoding",
+    "url": "https://www.youtube.com/watch?v=U5oCv3JKWKA",
+    "duration_seconds": 1812,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/one_hot_encoding.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 28,
+    "title_raw": "Column Transformer in Machine Learning | How to use ColumnTransformer in Sklearn",
+    "topic": "Column Transformer",
+    "url": "https://www.youtube.com/watch?v=5TVj6iEBR4I",
+    "duration_seconds": 941,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/column_transformer.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 29,
+    "title_raw": "Machine Learning Pipelines A-Z | Day 29 | 100 Days of Machine Learning",
+    "topic": "ML Pipelines",
+    "url": "https://www.youtube.com/watch?v=xOccYkgRV4Q",
+    "duration_seconds": 2739,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/ml_pipelines.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 30,
+    "title_raw": "Function Transformer | Log Transform | Reciprocal Transform | Square Root Transform",
+    "topic": "Function Transformer",
+    "url": "https://www.youtube.com/watch?v=cTjj3LE8E90",
+    "duration_seconds": 1933,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "7"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/function_transformer.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 31,
+    "title_raw": "Power Transformer | Box - Cox Transform | Yeo - Johnson Transform",
+    "topic": "Power Transformer",
+    "url": "https://www.youtube.com/watch?v=lV_Z4HbNAx0",
+    "duration_seconds": 1288,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "7"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/power_transformer.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 32,
+    "title_raw": "Binning and Binarization | Discretization | Quantile Binning | KMeans Binning",
+    "topic": "Binning and Binarization",
+    "url": "https://www.youtube.com/watch?v=kKWsJGKcMvo",
+    "duration_seconds": 2305,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "7"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/binning_and_binarization.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 33,
+    "title_raw": "Handling Mixed Variables | Feature Engineering",
+    "topic": "Handling Mixed Variables",
+    "url": "https://www.youtube.com/watch?v=9xiX-I5_LQY",
+    "duration_seconds": 730,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/handling_mixed_variables.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 34,
+    "title_raw": "Handling Date and Time Variables | Day 34 | 100 Days of Machine Learning",
+    "topic": "Handling Date and Time Variables",
+    "url": "https://www.youtube.com/watch?v=J73mvgG9fFs",
+    "duration_seconds": 858,
+    "section": "Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/handling_date_and_time_variables.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 35,
+    "title_raw": "Handling Missing Data | Part 1 | Complete Case Analysis",
+    "topic": "Complete Case Analysis",
+    "url": "https://www.youtube.com/watch?v=aUnNWZorGmk",
+    "duration_seconds": 1494,
+    "section": "Missing Data Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/complete_case_analysis.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 36,
+    "title_raw": "Handling missing data | Numerical Data | Simple Imputer",
+    "topic": "Simple Imputer - Numerical",
+    "url": "https://www.youtube.com/watch?v=mCL2xLBDw8M",
+    "duration_seconds": 1881,
+    "section": "Missing Data Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/simple_imputer_numerical.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 37,
+    "title_raw": "Handling Missing Categorical Data | Simple Imputer | Most Frequent Imputation | Missing Category Imp",
+    "topic": "Simple Imputer - Categorical",
+    "url": "https://www.youtube.com/watch?v=l_Wip8bEDFQ",
+    "duration_seconds": 814,
+    "section": "Missing Data Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/simple_imputer_categorical.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 38,
+    "title_raw": "Missing Indicator | Random Sample Imputation | Handling Missing Data Part 4",
+    "topic": "Missing Indicator / Random Sample Imputation",
+    "url": "https://www.youtube.com/watch?v=Ratcir3p03w",
+    "duration_seconds": 2225,
+    "section": "Missing Data Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/missing_indicator_random_sample_imputation.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 39,
+    "title_raw": "KNN Imputer | Multivariate Imputation | Handling Missing Data Part 5",
+    "topic": "KNN Imputer",
+    "url": "https://www.youtube.com/watch?v=-fK-xEev2I8",
+    "duration_seconds": 1467,
+    "section": "Missing Data Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/knn_imputer.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 40,
+    "title_raw": "Multivariate Imputation by Chained Equations for Missing Value | MICE Algorithm | Iterative Imputer",
+    "topic": "MICE / Iterative Imputer",
+    "url": "https://www.youtube.com/watch?v=a38ehxv3kyk",
+    "duration_seconds": 1111,
+    "section": "Missing Data Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "low",
+    "interview_importance": 5,
+    "notes_file": "notes/mice_iterative_imputer.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 41,
+    "title_raw": "What are Outliers | Outliers in Machine Learning",
+    "topic": "What are Outliers",
+    "url": "https://www.youtube.com/watch?v=Lln1PKgGr_M",
+    "duration_seconds": 1027,
+    "section": "Outlier Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "9"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 5,
+    "notes_file": "notes/what_are_outliers.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 42,
+    "title_raw": "Outlier Detection and Removal using Z-score Method | Handling Outliers Part 2",
+    "topic": "Z-Score Method",
+    "url": "https://www.youtube.com/watch?v=OnPE-Z8jtqM",
+    "duration_seconds": 1066,
+    "section": "Outlier Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 5,
+    "notes_file": "notes/z_score_method.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 43,
+    "title_raw": "Outlier Detection and Removal using the IQR Method | Handing Outliers Part 3",
+    "topic": "IQR Method",
+    "url": "https://www.youtube.com/watch?v=Ccv1-W5ilak",
+    "duration_seconds": 845,
+    "section": "Outlier Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 5,
+    "notes_file": "notes/iqr_method.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 44,
+    "title_raw": "Outlier Detection using the Percentile Method | Winsorization Technique",
+    "topic": "Percentile Method / Winsorization",
+    "url": "https://www.youtube.com/watch?v=bcXA4CqRXvM",
+    "duration_seconds": 983,
+    "section": "Outlier Handling",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 5,
+    "notes_file": "notes/percentile_method_winsorization.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 45,
+    "title_raw": "Feature Construction | Feature Splitting",
+    "topic": "Feature Construction / Splitting",
+    "url": "https://www.youtube.com/watch?v=ma-h30PoFms",
+    "duration_seconds": 742,
+    "section": "Advanced Feature Engineering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "7"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 5,
+    "notes_file": "notes/feature_construction_splitting.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 46,
+    "title_raw": "Curse of Dimensionality",
+    "topic": "Curse of Dimensionality",
+    "url": "https://www.youtube.com/watch?v=ToGuhynu-No",
+    "duration_seconds": 925,
+    "section": "Dimensionality Reduction",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "8"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 7,
+    "notes_file": "notes/curse_of_dimensionality.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 47,
+    "title_raw": "Principle Component Analysis  (PCA) | Part 1 | Geometric Intuition",
+    "topic": "PCA Part 1 - Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=iRbsBi5W0-c",
+    "duration_seconds": 2034,
+    "section": "Dimensionality Reduction",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "8"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "12"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 7,
+    "notes_file": "notes/pca_part_1_geometric_intuition.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 48,
+    "title_raw": "Principle Component Analysis (PCA) | Part 2 | Problem Formulation and Step by Step Solution",
+    "topic": "PCA Part 2 - Mathematical Formulation",
+    "url": "https://www.youtube.com/watch?v=tXXnxjj2wM4",
+    "duration_seconds": 3377,
+    "section": "Dimensionality Reduction",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "8"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "12"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 7,
+    "notes_file": "notes/pca_part_2_mathematical_formulation.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 49,
+    "title_raw": "Principle Component Analysis(PCA) | Part 3 | Code Example and Visualization",
+    "topic": "PCA Part 3 - Code & Visualization",
+    "url": "https://www.youtube.com/watch?v=tofVCUDrg4M",
+    "duration_seconds": 2606,
+    "section": "Dimensionality Reduction",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "8"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 7,
+    "notes_file": "notes/pca_part_3_code_visualization.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 50,
+    "title_raw": "Simple Linear Regression | Code + Intuition | Simplest Explanation in Hindi",
+    "topic": "Simple Linear Regression - Intuition & Code",
+    "url": "https://www.youtube.com/watch?v=UZPfbG0jNec",
+    "duration_seconds": 2016,
+    "section": "Linear Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/simple_linear_regression_intuition_code.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 51,
+    "title_raw": "Simple Linear Regression | Mathematical Formulation | Coding from Scratch",
+    "topic": "Simple Linear Regression - Math & Scratch",
+    "url": "https://www.youtube.com/watch?v=dXHIDLPKdmA",
+    "duration_seconds": 3211,
+    "section": "Linear Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/simple_linear_regression_math_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 52,
+    "title_raw": "Regression Metrics | MSE, MAE & RMSE | R2 Score & Adjusted R2 Score",
+    "topic": "Regression Metrics",
+    "url": "https://www.youtube.com/watch?v=Ti7c-Hz7GSM",
+    "duration_seconds": 2636,
+    "section": "Linear Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 5,
+    "notes_file": "notes/regression_metrics.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 53,
+    "title_raw": "Multiple Linear Regression | Geometric Intuition & Code",
+    "topic": "Multiple Linear Regression - Intuition & Code",
+    "url": "https://www.youtube.com/watch?v=ashGekqstl8",
+    "duration_seconds": 1257,
+    "section": "Linear Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/multiple_linear_regression_intuition_code.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 54,
+    "title_raw": "Multiple Linear Regression | Part 2 | Mathematical Formulation From Scratch",
+    "topic": "Multiple Linear Regression - Math from Scratch",
+    "url": "https://www.youtube.com/watch?v=NU37mF5q8VE",
+    "duration_seconds": 2891,
+    "section": "Linear Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/multiple_linear_regression_math_from_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 55,
+    "title_raw": "Multiple Linear Regression | Part 3 | Code From Scratch",
+    "topic": "Multiple Linear Regression - Code from Scratch",
+    "url": "https://www.youtube.com/watch?v=VmZWXzxmNrE",
+    "duration_seconds": 961,
+    "section": "Linear Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/multiple_linear_regression_code_from_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 56,
+    "title_raw": "What are the main Assumptions of Linear Regression? | Top 5 Assumptions of Linear Regression",
+    "topic": "Assumptions of Linear Regression",
+    "url": "https://www.youtube.com/watch?v=EmSNAtcHLm8",
+    "duration_seconds": 1058,
+    "section": "Linear Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "3"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/assumptions_of_linear_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 57,
+    "title_raw": "Gradient Descent From Scratch | End to End Gradient Descent | Gradient Descent Animation",
+    "topic": "Gradient Descent from Scratch",
+    "url": "https://www.youtube.com/watch?v=ORyfPJypKuU",
+    "duration_seconds": 7076,
+    "section": "Gradient Descent",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "reference"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "5"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/gradient_descent_from_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 58,
+    "title_raw": "Batch Gradient Descent with Code Demo | Simple Explanation in Hindi",
+    "topic": "Batch Gradient Descent",
+    "url": "https://www.youtube.com/watch?v=Jyo53pAyVAM",
+    "duration_seconds": 3889,
+    "section": "Gradient Descent",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/batch_gradient_descent.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 59,
+    "title_raw": "Stochastic Gradient Descent",
+    "topic": "Stochastic Gradient Descent",
+    "url": "https://www.youtube.com/watch?v=V7KBAa_gh4c",
+    "duration_seconds": 2975,
+    "section": "Gradient Descent",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "5"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/stochastic_gradient_descent.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 60,
+    "title_raw": "Mini-Batch Gradient Descent",
+    "topic": "Mini-Batch Gradient Descent",
+    "url": "https://www.youtube.com/watch?v=_scscQ4HVTY",
+    "duration_seconds": 1330,
+    "section": "Gradient Descent",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4",
+          "11"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/mini_batch_gradient_descent.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 61,
+    "title_raw": "Polynomial Regression | Machine Learning",
+    "topic": "Polynomial Regression",
+    "url": "https://www.youtube.com/watch?v=BNWLf3cKdbQ",
+    "duration_seconds": 1606,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "7"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/polynomial_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 62,
+    "title_raw": "Bias Variance Trade-off | Overfitting and Underfitting in Machine Learning",
+    "topic": "Bias-Variance Trade-off",
+    "url": "https://www.youtube.com/watch?v=74DU02Fyrhk",
+    "duration_seconds": 485,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "1"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/bias_variance_trade_off.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 63,
+    "title_raw": "Ridge Regression Part 1 | Geometric Intuition and Code | Regularized Linear Models",
+    "topic": "Ridge Regression - Intuition & Code",
+    "url": "https://www.youtube.com/watch?v=aEow1QoTLo0",
+    "duration_seconds": 1198,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [
+      "simple_linear_regression_intuition_code",
+      "simple_linear_regression_math_scratch",
+      "regression_metrics",
+      "multiple_linear_regression_intuition_code",
+      "multiple_linear_regression_math_from_scratch",
+      "multiple_linear_regression_code_from_scratch"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/ridge_regression_intuition_code.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 64,
+    "title_raw": "Ridge Regression Part 2 | Mathematical Formulation & Code from scratch | Regularized Linear Models",
+    "topic": "Ridge Regression - Math from Scratch",
+    "url": "https://www.youtube.com/watch?v=oDlZBQjk_3A",
+    "duration_seconds": 2621,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [
+      "simple_linear_regression_intuition_code",
+      "simple_linear_regression_math_scratch",
+      "regression_metrics",
+      "multiple_linear_regression_intuition_code",
+      "multiple_linear_regression_math_from_scratch",
+      "multiple_linear_regression_code_from_scratch"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/ridge_regression_math_from_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 65,
+    "title_raw": "Ridge Regression Part 3 | Gradient Descent | Regularized Linear Models",
+    "topic": "Ridge Regression - Gradient Descent",
+    "url": "https://www.youtube.com/watch?v=Fci_wwMp8G8",
+    "duration_seconds": 1123,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [
+      "simple_linear_regression_intuition_code",
+      "simple_linear_regression_math_scratch",
+      "regression_metrics",
+      "multiple_linear_regression_intuition_code",
+      "multiple_linear_regression_math_from_scratch",
+      "multiple_linear_regression_code_from_scratch",
+      "gradient_descent_from_scratch",
+      "batch_gradient_descent",
+      "stochastic_gradient_descent",
+      "mini_batch_gradient_descent"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/ridge_regression_gradient_descent.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 66,
+    "title_raw": "5 Key Points - Ridge Regression | Part 4 | Regularized Linear Models",
+    "topic": "Ridge Regression - 5 Key Points",
+    "url": "https://www.youtube.com/watch?v=8osKeShYVRQ",
+    "duration_seconds": 1817,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [
+      "simple_linear_regression_intuition_code",
+      "simple_linear_regression_math_scratch",
+      "regression_metrics",
+      "multiple_linear_regression_intuition_code",
+      "multiple_linear_regression_math_from_scratch",
+      "multiple_linear_regression_code_from_scratch"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/ridge_regression_5_key_points.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 67,
+    "title_raw": "Lasso Regression | Intuition and Code Sample | Regularized Linear Models",
+    "topic": "Lasso Regression",
+    "url": "https://www.youtube.com/watch?v=HLF4bFbBgwk",
+    "duration_seconds": 1717,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [
+      "simple_linear_regression_intuition_code",
+      "simple_linear_regression_math_scratch",
+      "regression_metrics",
+      "multiple_linear_regression_intuition_code",
+      "multiple_linear_regression_math_from_scratch",
+      "multiple_linear_regression_code_from_scratch"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/lasso_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 68,
+    "title_raw": "Why Lasso Regression creates sparsity?",
+    "topic": "Why Lasso Creates Sparsity",
+    "url": "https://www.youtube.com/watch?v=FN4aZPIAfI4",
+    "duration_seconds": 1470,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [
+      "simple_linear_regression_intuition_code",
+      "simple_linear_regression_math_scratch",
+      "regression_metrics",
+      "multiple_linear_regression_intuition_code",
+      "multiple_linear_regression_math_from_scratch",
+      "multiple_linear_regression_code_from_scratch"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/why_lasso_creates_sparsity.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 69,
+    "title_raw": "ElasticNet Regression | Intuition and Code Example | Regularized Linear Models",
+    "topic": "ElasticNet Regression",
+    "url": "https://www.youtube.com/watch?v=2g2DBkFhTTY",
+    "duration_seconds": 701,
+    "section": "Polynomial & Regularized Regression",
+    "prerequisites": [
+      "simple_linear_regression_intuition_code",
+      "simple_linear_regression_math_scratch",
+      "regression_metrics",
+      "multiple_linear_regression_intuition_code",
+      "multiple_linear_regression_math_from_scratch",
+      "multiple_linear_regression_code_from_scratch"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "6"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/elasticnet_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 70,
+    "title_raw": "Logistic Regression Part 1 | Perceptron Trick",
+    "topic": "Logistic Regression - Perceptron Trick",
+    "url": "https://www.youtube.com/watch?v=XNXzVfItWGY",
+    "duration_seconds": 2826,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/logistic_regression_perceptron_trick.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 71,
+    "title_raw": "Logistic Regression Part 2 | Perceptron Trick Code",
+    "topic": "Logistic Regression - Perceptron Code",
+    "url": "https://www.youtube.com/watch?v=tLezwPKvPK4",
+    "duration_seconds": 1027,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/logistic_regression_perceptron_code.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 72,
+    "title_raw": "Logistic Regression Part 3 | Sigmoid Function | 100 Days of ML",
+    "topic": "Sigmoid Function",
+    "url": "https://www.youtube.com/watch?v=ehO0-6i9qD4",
+    "duration_seconds": 2444,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/sigmoid_function.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 73,
+    "title_raw": "Logistic Regression Part 4 | Loss Function | Maximum Likelihood | Binary Cross Entropy",
+    "topic": "Loss Function / MLE / Binary Cross-Entropy",
+    "url": "https://www.youtube.com/watch?v=6bXOo0sxY5c",
+    "duration_seconds": 1743,
+    "section": "Logistic Regression",
+    "prerequisites": [
+      "naive_bayes_part_1",
+      "naive_bayes_part_2",
+      "naive_bayes_part_3",
+      "naive_bayes_part_4",
+      "naive_bayes_part_5"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/loss_function_mle_binary_cross_entropy.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 74,
+    "title_raw": "Derivative of Sigmoid Function",
+    "topic": "Derivative of Sigmoid",
+    "url": "https://www.youtube.com/watch?v=awjXaFR1jOM",
+    "duration_seconds": 357,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/derivative_of_sigmoid.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 75,
+    "title_raw": "Logistic Regression Part 5 | Gradient Descent & Code From Scratch",
+    "topic": "Logistic Regression - Gradient Descent from Scratch",
+    "url": "https://www.youtube.com/watch?v=ABrrSwMYWSg",
+    "duration_seconds": 2202,
+    "section": "Logistic Regression",
+    "prerequisites": [
+      "gradient_descent_from_scratch",
+      "batch_gradient_descent",
+      "stochastic_gradient_descent",
+      "mini_batch_gradient_descent"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/logistic_regression_gradient_descent_from_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 76,
+    "title_raw": "Accuracy and Confusion Matrix | Type 1 and Type 2 Errors | Classification Metrics Part 1",
+    "topic": "Accuracy and Confusion Matrix",
+    "url": "https://www.youtube.com/watch?v=c09drtuCS3c",
+    "duration_seconds": 2048,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/accuracy_and_confusion_matrix.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 77,
+    "title_raw": "Precision, Recall and F1 Score | Classification Metrics Part 2",
+    "topic": "Precision, Recall, F1 Score",
+    "url": "https://www.youtube.com/watch?v=iK-kdhJ-7yI",
+    "duration_seconds": 2562,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/precision_recall_f1_score.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 78,
+    "title_raw": "ROC Curve in Machine Learning | ROC-AUC in Machine Learning Simplified | CampusX",
+    "topic": "ROC Curve and AUC",
+    "url": "https://www.youtube.com/watch?v=gdW6hj9IXaA",
+    "duration_seconds": 4275,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/roc_curve_and_auc.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 79,
+    "title_raw": "Softmax Regression || Multinomial Logistic Regression || Logistic Regression Part 6",
+    "topic": "Softmax Regression / Multinomial Logistic Regression",
+    "url": "https://www.youtube.com/watch?v=Z8noL_0M4tw",
+    "duration_seconds": 2301,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 7,
+    "notes_file": "notes/softmax_regression_multinomial_logistic_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 80,
+    "title_raw": "Polynomial Features in Logistic Regression | Non Linear Logistic Regression | Logistic Regression 7",
+    "topic": "Polynomial Features in Logistic Regression",
+    "url": "https://www.youtube.com/watch?v=WnBYW_DX3sM",
+    "duration_seconds": 551,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "7"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/polynomial_features_in_logistic_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 81,
+    "title_raw": "Logistic Regression Hyperparameters || Logistic Regression Part 8",
+    "topic": "Logistic Regression Hyperparameters",
+    "url": "https://www.youtube.com/watch?v=ay_OcblJasE",
+    "duration_seconds": 787,
+    "section": "Logistic Regression",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 5,
+    "notes_file": "notes/logistic_regression_hyperparameters.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 82,
+    "title_raw": "Naive Bayes Classifier | Part 1 | Conditional Probability",
+    "topic": "Naive Bayes Part 1",
+    "url": "https://www.youtube.com/watch?v=Ty7knppVo9E",
+    "duration_seconds": 566,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "1",
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_part_1.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 83,
+    "title_raw": "Naive Bayes Classifier | Part 2 | Independent Events in Probability",
+    "topic": "Naive Bayes Part 2",
+    "url": "https://www.youtube.com/watch?v=0GD480CnrO4",
+    "duration_seconds": 479,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "1",
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_part_2.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 84,
+    "title_raw": "Naive Bayes Classifier | Part 3 | Mutually Exclusive Events",
+    "topic": "Naive Bayes Part 3",
+    "url": "https://www.youtube.com/watch?v=nneTjTYikBE",
+    "duration_seconds": 109,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "1",
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_part_3.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 85,
+    "title_raw": "Naive Bayes Classifier | Part 4 | Bayes Theorem in Probability",
+    "topic": "Naive Bayes Part 4",
+    "url": "https://www.youtube.com/watch?v=Oqw-v-Z7PuU",
+    "duration_seconds": 267,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "1",
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_part_4.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 86,
+    "title_raw": "Naive Bayes Classifier | Part 5 | Problem based upon Bayes Theorem",
+    "topic": "Naive Bayes Part 5",
+    "url": "https://www.youtube.com/watch?v=aAEHjXDHtbE",
+    "duration_seconds": 540,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "1",
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_part_5.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 87,
+    "title_raw": "Naive Bayes Classifier | Part 6 | Intuition",
+    "topic": "Naive Bayes - Intuition",
+    "url": "https://www.youtube.com/watch?v=ZR1_QtLk_4U",
+    "duration_seconds": 884,
+    "section": "Naive Bayes",
+    "prerequisites": [
+      "naive_bayes_part_1",
+      "naive_bayes_part_2",
+      "naive_bayes_part_3",
+      "naive_bayes_part_4",
+      "naive_bayes_part_5"
+    ],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_intuition.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 88,
+    "title_raw": "Naive Bayes Classifier | Part 7 | Mathematics behind Naive Bayes Algorithm",
+    "topic": "Naive Bayes - Mathematics",
+    "url": "https://www.youtube.com/watch?v=2PVRG45eVrY",
+    "duration_seconds": 1149,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "4"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_mathematics.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 89,
+    "title_raw": "Naive Bayes Classifier | Part 8 | Simple Example Code",
+    "topic": "Naive Bayes - Code Example",
+    "url": "https://www.youtube.com/watch?v=DeeWsqoY4Eo",
+    "duration_seconds": 963,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_code_example.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 90,
+    "title_raw": "Naive Bayes Part 9 | Handling Numerical Data",
+    "topic": "Naive Bayes - Numerical Data",
+    "url": "https://www.youtube.com/watch?v=TCgK2nBJx9o",
+    "duration_seconds": 527,
+    "section": "Naive Bayes",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 7,
+    "notes_file": "notes/naive_bayes_numerical_data.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 91,
+    "title_raw": "What is K Nearest Neighbors? | KNN Explained in Hindi | Simple Overview in 1 Video | CampusX",
+    "topic": "K-Nearest Neighbors",
+    "url": "https://www.youtube.com/watch?v=abnL_GUGub4",
+    "duration_seconds": 3121,
+    "section": "KNN",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "1",
+          "3"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "2",
+          "4"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 3,
+    "notes_file": "notes/k_nearest_neighbors.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 92,
+    "title_raw": "Support Vector Machines | Geometric Intuition",
+    "topic": "SVM - Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=ugTxMLjLS8M",
+    "duration_seconds": 706,
+    "section": "SVM",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "5"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "9"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/svm_geometric_intuition.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 93,
+    "title_raw": "Mathematics of SVM | Support Vector Machines | Hard margin SVM",
+    "topic": "SVM - Hard Margin Mathematics",
+    "url": "https://www.youtube.com/watch?v=yCAlHPDgWtM",
+    "duration_seconds": 2094,
+    "section": "SVM",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "5"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "9"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/svm_hard_margin_mathematics.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 94,
+    "title_raw": "Mathematics of Support Vector Machine | Soft Margin SVM",
+    "topic": "SVM - Soft Margin Mathematics",
+    "url": "https://www.youtube.com/watch?v=utqrvIFAE1k",
+    "duration_seconds": 878,
+    "section": "SVM",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "5"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "9"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/svm_soft_margin_mathematics.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 95,
+    "title_raw": "Kernel Trick in SVM | Geometric Intuition",
+    "topic": "Kernel Trick - Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=egxjT0p7_K8",
+    "duration_seconds": 378,
+    "section": "SVM",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "PRML",
+        "chapters": [
+          "6"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "HOML",
+        "chapters": [
+          "5"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "9"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/kernel_trick_geometric_intuition.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 96,
+    "title_raw": "Kernel Trick in SVM | Code Example",
+    "topic": "Kernel Trick - Code Example",
+    "url": "https://www.youtube.com/watch?v=pjvmVMDrzVU",
+    "duration_seconds": 844,
+    "section": "SVM",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "5"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "9"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/kernel_trick_code_example.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 97,
+    "title_raw": "Decision Trees Geometric Intuition | Entropy | Gini impurity | Information Gain",
+    "topic": "Decision Trees - Entropy, Gini, Information Gain",
+    "url": "https://www.youtube.com/watch?v=IZnno-dKgVQ",
+    "duration_seconds": 3509,
+    "section": "Decision Trees",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "6"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "14"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/decision_trees_entropy_gini_information_gain.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 98,
+    "title_raw": "Decision Trees - Hyperparameters | Overfitting and Underfitting in Decision Trees",
+    "topic": "Decision Trees - Hyperparameters / Overfitting",
+    "url": "https://www.youtube.com/watch?v=mDEV0Iucwz0",
+    "duration_seconds": 1643,
+    "section": "Decision Trees",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "6"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/decision_trees_hyperparameters_overfitting.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 99,
+    "title_raw": "Regression Trees | Decision Trees Part 3",
+    "topic": "Regression Trees",
+    "url": "https://www.youtube.com/watch?v=RANHxyAvtM4",
+    "duration_seconds": 2115,
+    "section": "Decision Trees",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "6"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/regression_trees.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 100,
+    "title_raw": "Awesome Decision Tree Visualization using dtreeviz library",
+    "topic": "Decision Tree Visualization",
+    "url": "https://www.youtube.com/watch?v=SlMZqfvl5uw",
+    "duration_seconds": 1116,
+    "section": "Decision Trees",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "6"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/decision_tree_visualization.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 101,
+    "title_raw": "Introduction to Ensemble Learning | Ensemble Techniques in Machine Learning",
+    "topic": "Introduction to Ensemble Learning",
+    "url": "https://www.youtube.com/watch?v=bHK1fE_BUms",
+    "duration_seconds": 2263,
+    "section": "Ensemble Methods",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain",
+      "decision_trees_hyperparameters_overfitting",
+      "regression_trees"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/introduction_to_ensemble_learning.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 102,
+    "title_raw": "Voting Ensemble |  Introduction and Core Idea | Part 1",
+    "topic": "Voting Ensemble - Intro",
+    "url": "https://www.youtube.com/watch?v=_W1i-c_6rOk",
+    "duration_seconds": 990,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/voting_ensemble_intro.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 103,
+    "title_raw": "Voting Ensemble | Classification | Voting Classifier | Hard Voting Vs Soft Voting | Part 2",
+    "topic": "Voting Ensemble - Classification",
+    "url": "https://www.youtube.com/watch?v=pGQnNYdPTvY",
+    "duration_seconds": 1430,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/voting_ensemble_classification.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 104,
+    "title_raw": "Voting Ensemble | Regression | Part 3",
+    "topic": "Voting Ensemble - Regression",
+    "url": "https://www.youtube.com/watch?v=ut4vh59rGkw",
+    "duration_seconds": 657,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/voting_ensemble_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 105,
+    "title_raw": "Bagging | Introduction | Part 1",
+    "topic": "Bagging - Intro",
+    "url": "https://www.youtube.com/watch?v=LUiBOAy7x6Y",
+    "duration_seconds": 1873,
+    "section": "Ensemble Methods",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain",
+      "decision_trees_hyperparameters_overfitting",
+      "regression_trees"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/bagging_intro.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 106,
+    "title_raw": "Bagging Ensemble | Part 2 | Bagging Classifiers",
+    "topic": "Bagging - Classifiers",
+    "url": "https://www.youtube.com/watch?v=-1T54G_E-ys",
+    "duration_seconds": 1352,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/bagging_classifiers.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 107,
+    "title_raw": "Bagging Ensemble | Part 3 | Bagging Regressor",
+    "topic": "Bagging - Regressors",
+    "url": "https://www.youtube.com/watch?v=HYVzrETXbkE",
+    "duration_seconds": 655,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 9,
+    "notes_file": "notes/bagging_regressors.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 108,
+    "title_raw": "Introduction to Random Forest | Intuition behind the Algorithm",
+    "topic": "Introduction to Random Forest",
+    "url": "https://www.youtube.com/watch?v=F9uESCHGjhA",
+    "duration_seconds": 2035,
+    "section": "Ensemble Methods",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain",
+      "decision_trees_hyperparameters_overfitting",
+      "regression_trees"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/introduction_to_random_forest.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 109,
+    "title_raw": "How Random Forest Performs So Well? Bias Variance Trade-Off in Random Forest",
+    "topic": "Random Forest - Bias-Variance",
+    "url": "https://www.youtube.com/watch?v=jHgG4gjuFAk",
+    "duration_seconds": 772,
+    "section": "Ensemble Methods",
+    "prerequisites": [
+      "bias_variance_trade_off"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/random_forest_bias_variance.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 110,
+    "title_raw": "Bagging Vs Random Forest | What is the difference between Bagging and Random Forest | Very Important",
+    "topic": "Bagging vs Random Forest",
+    "url": "https://www.youtube.com/watch?v=l93jRojZMqU",
+    "duration_seconds": 722,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/bagging_vs_random_forest.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 111,
+    "title_raw": "Random Forest Hyper-parameters",
+    "topic": "Random Forest Hyperparameters",
+    "url": "https://www.youtube.com/watch?v=WOFVY_wQ9wU",
+    "duration_seconds": 917,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/random_forest_hyperparameters.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 112,
+    "title_raw": "Hyperparameter Tuning Random Forest using GridSearchCV and RandomizedSearchCV | Code Example",
+    "topic": "Hyperparameter Tuning with GridSearchCV",
+    "url": "https://www.youtube.com/watch?v=4Im0CT43QxY",
+    "duration_seconds": 704,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "5"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/hyperparameter_tuning_with_gridsearchcv.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 113,
+    "title_raw": "OOB Score | Out of Bag Evaluation in Random Forest | Machine Learning",
+    "topic": "OOB Score",
+    "url": "https://www.youtube.com/watch?v=tdDhyFoSG94",
+    "duration_seconds": 405,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/oob_score.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 114,
+    "title_raw": "Feature Importance using Random Forest and Decision Trees | How is Feature Importance calculated",
+    "topic": "Feature Importance",
+    "url": "https://www.youtube.com/watch?v=R47JAob1xBY",
+    "duration_seconds": 1640,
+    "section": "Ensemble Methods",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 10,
+    "notes_file": "notes/feature_importance.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 115,
+    "title_raw": "How Adaboost Classifier Works? | Geometric Intuition",
+    "topic": "AdaBoost - Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=sFKnP0iP0K0",
+    "duration_seconds": 1034,
+    "section": "Boosting",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain",
+      "decision_trees_hyperparameters_overfitting",
+      "regression_trees"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/adaboost_geometric_intuition.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 116,
+    "title_raw": "AdaBoost - A Step by Step Explanation",
+    "topic": "AdaBoost - Step by Step",
+    "url": "https://www.youtube.com/watch?v=RT0t9a3Xnfw",
+    "duration_seconds": 1163,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/adaboost_step_by_step.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 117,
+    "title_raw": "AdaBoost Algorithm | Code from Scratch",
+    "topic": "AdaBoost - Code from Scratch",
+    "url": "https://www.youtube.com/watch?v=a20TaKNsriE",
+    "duration_seconds": 987,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/adaboost_code_from_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 118,
+    "title_raw": "AdaBoost Hyperparameters | GridSearchCV in Adaboost",
+    "topic": "AdaBoost Hyperparameters",
+    "url": "https://www.youtube.com/watch?v=JmXnztjULnQ",
+    "duration_seconds": 673,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 9,
+    "notes_file": "notes/adaboost_hyperparameters.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 119,
+    "title_raw": "Bagging Vs Boosting | What is the difference between Bagging and Boosting",
+    "topic": "Bagging vs Boosting",
+    "url": "https://www.youtube.com/watch?v=7M5oWXCpDEw",
+    "duration_seconds": 377,
+    "section": "Boosting",
+    "prerequisites": [
+      "bias_variance_trade_off"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": null,
+    "notes_file": "notes/bagging_vs_boosting.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 120,
+    "title_raw": "Gradient Boosting Explained | How Gradient Boosting Works?",
+    "topic": "Gradient Boosting Explained",
+    "url": "https://www.youtube.com/watch?v=fbKz7N92mhQ",
+    "duration_seconds": 1969,
+    "section": "Boosting",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain",
+      "decision_trees_hyperparameters_overfitting",
+      "regression_trees"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/gradient_boosting_explained.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 121,
+    "title_raw": "Gradient Boosting Regression Part 2 | Mathematics of Gradient Boosting",
+    "topic": "Gradient Boosting Regression - Mathematics",
+    "url": "https://www.youtube.com/watch?v=nMNiTZm-qY0",
+    "duration_seconds": 3402,
+    "section": "Boosting",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain",
+      "decision_trees_hyperparameters_overfitting",
+      "regression_trees"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/gradient_boosting_regression_mathematics.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 122,
+    "title_raw": "Gradient Boosting for Classification | Geometric Intuition | CampusX",
+    "topic": "Gradient Boosting for Classification",
+    "url": "https://www.youtube.com/watch?v=4p5EQtyxSyI",
+    "duration_seconds": 3873,
+    "section": "Boosting",
+    "prerequisites": [
+      "decision_trees_entropy_gini_information_gain",
+      "decision_trees_hyperparameters_overfitting",
+      "regression_trees"
+    ],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/gradient_boosting_for_classification.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 123,
+    "title_raw": "Introduction to XGBOOST | Machine Learning | CampusX",
+    "topic": "Introduction to XGBoost",
+    "url": "https://www.youtube.com/watch?v=C6aDw4y8qJ0",
+    "duration_seconds": 4777,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/introduction_to_xgboost.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 124,
+    "title_raw": "XGBoost for Regression | XGBoost Part 2 | CampusX",
+    "topic": "XGBoost for Regression",
+    "url": "https://www.youtube.com/watch?v=gmp2tS2joaA",
+    "duration_seconds": 2837,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/xgboost_for_regression.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 125,
+    "title_raw": "XGBoost For Classification | How XGBoost works on Classification Problems | CampusX",
+    "topic": "XGBoost for Classification",
+    "url": "https://www.youtube.com/watch?v=mELtxVUNNrw",
+    "duration_seconds": 2348,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/xgboost_for_classification.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 126,
+    "title_raw": "The Maths Behind XGBoost | Machine Learning | CampusX",
+    "topic": "The Math Behind XGBoost",
+    "url": "https://www.youtube.com/watch?v=0Eo-_5bfers",
+    "duration_seconds": 7048,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "PRML",
+        "chapters": [
+          "14"
+        ],
+        "priority": "reference"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "high",
+    "interview_importance": 10,
+    "notes_file": "notes/the_math_behind_xgboost.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 127,
+    "title_raw": "Stacking and Blending Ensembles",
+    "topic": "Stacking and Blending Ensembles",
+    "url": "https://www.youtube.com/watch?v=O-aDHBGMqXA",
+    "duration_seconds": 2120,
+    "section": "Boosting",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "7"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "8"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/stacking_and_blending_ensembles.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 128,
+    "title_raw": "K-Means Clustering Algorithm | Geometric Intuition | Clustering | Unsupervised Learning",
+    "topic": "K-Means - Geometric Intuition",
+    "url": "https://www.youtube.com/watch?v=5shTLzwAdEc",
+    "duration_seconds": 1438,
+    "section": "Clustering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "9"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/k_means_geometric_intuition.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 129,
+    "title_raw": "K-Means Clustering Algorithm in Python | Practical Example | Student Clustering Example | sklearn",
+    "topic": "K-Means - sklearn",
+    "url": "https://www.youtube.com/watch?v=UPvv9SprgVo",
+    "duration_seconds": 613,
+    "section": "Clustering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "9"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/k_means_sklearn.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 130,
+    "title_raw": "K-Means Clustering Algorithm From Scratch In Python | ML Algorithms From Scratch",
+    "topic": "K-Means - From Scratch",
+    "url": "https://www.youtube.com/watch?v=MFraC1JObUo",
+    "duration_seconds": 2033,
+    "section": "Clustering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "9"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/k_means_from_scratch.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 131,
+    "title_raw": "Agglomerative Hierarchical Clustering | Python Code Example",
+    "topic": "Agglomerative Hierarchical Clustering",
+    "url": "https://www.youtube.com/watch?v=Ka5i9TVUT-E",
+    "duration_seconds": 2243,
+    "section": "Clustering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "9"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/agglomerative_hierarchical_clustering.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 132,
+    "title_raw": "DBSCAN Clustering Algorithms | Density Based Clustering | How DBSCAN Works | CampusX",
+    "topic": "DBSCAN Clustering",
+    "url": "https://www.youtube.com/watch?v=1_bLnsNmhCI",
+    "duration_seconds": 2056,
+    "section": "Clustering",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "9"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "12"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": null,
+    "notes_file": "notes/dbscan_clustering.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 133,
+    "title_raw": "Imbalanced Data in Machine Learning | Undersampling | Oversampling | SMOTE",
+    "topic": "Imbalanced Data",
+    "url": "https://www.youtube.com/watch?v=yh2AKoJCV3k",
+    "duration_seconds": 3437,
+    "section": "Advanced Topics",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "3"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "4"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 3,
+    "notes_file": "notes/imbalanced_data.md",
+    "needs_review": false
+  },
+  {
+    "playlist_day": 134,
+    "title_raw": "Hyperparameter Tuning using Optuna | Bayesian Optimization using Optuna",
+    "topic": "Hyperparameter Tuning with Optuna",
+    "url": "https://www.youtube.com/watch?v=E2b3SKMw934",
+    "duration_seconds": 3563,
+    "section": "Advanced Topics",
+    "prerequisites": [],
+    "textbook_sources": [
+      {
+        "book": "HOML",
+        "chapters": [
+          "2"
+        ],
+        "priority": "primary"
+      },
+      {
+        "book": "ISL",
+        "chapters": [
+          "5"
+        ],
+        "priority": "support"
+      }
+    ],
+    "status": "not_started",
+    "difficulty": "medium",
+    "interview_importance": 3,
+    "notes_file": "notes/hyperparameter_tuning_with_optuna.md",
+    "needs_review": true,
+    "external_reference": "Optuna Documentation"
+  }
+]
