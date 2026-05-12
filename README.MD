@@ -1,4 +1,4 @@
-# ML Curriculum Operating System
+# ML NOTES GENERATION SYSTEM
 
 A local, fully automated Machine Learning study system that ingests a 134-video YouTube playlist and three major ML textbooks, synthesises structured Obsidian notes using Claude AI, and wires them into a navigable knowledge graph — with zero manual note-taking.
 
