@@ -1,14 +1,111 @@
 {
-  "generated_at": "2026-05-12T17:17:48.774764Z",
-  "total_notes": 4,
+  "generated_at": "2026-05-12T17:47:48.170395Z",
+  "total_notes": 25,
   "sections": {
+    "Data Ingestion": [
+      {
+        "section": "Data Ingestion",
+        "day": 15,
+        "title": "Basic usage: provide file path",
+        "path": "Data_Ingestion/day_15_working_with_csv_files.md",
+        "filename": "day_15_working_with_csv_files.md"
+      },
+      {
+        "section": "Data Ingestion",
+        "day": 16,
+        "title": "Working with JSON / SQL",
+        "path": "Data_Ingestion/day_16_working_with_json_sql.md",
+        "filename": "day_16_working_with_json_sql.md"
+      },
+      {
+        "section": "Data Ingestion",
+        "day": 17,
+        "title": "Fetching Data from an API",
+        "path": "Data_Ingestion/day_17_fetching_data_from_an_api.md",
+        "filename": "day_17_fetching_data_from_an_api.md"
+      },
+      {
+        "section": "Data Ingestion",
+        "day": 18,
+        "title": "Web Scraping",
+        "path": "Data_Ingestion/day_18_web_scraping.md",
+        "filename": "day_18_web_scraping.md"
+      }
+    ],
+    "Data Representation & Tooling": [
+      {
+        "section": "Data Representation & Tooling",
+        "day": 11,
+        "title": "What are Tensors",
+        "path": "Data_Representation_&_Tooling/day_11_what_are_tensors.md",
+        "filename": "day_11_what_are_tensors.md"
+      },
+      {
+        "section": "Data Representation & Tooling",
+        "day": 12,
+        "title": "Installing Anaconda / Jupyter / Colab",
+        "path": "Data_Representation_&_Tooling/day_12_installing_anaconda_jupyter_colab.md",
+        "filename": "day_12_installing_anaconda_jupyter_colab.md"
+      },
+      {
+        "section": "Data Representation & Tooling",
+        "day": 13,
+        "title": "End To End Toy Project",
+        "path": "Data_Representation_&_Tooling/day_13_end_to_end_toy_project.md",
+        "filename": "day_13_end_to_end_toy_project.md"
+      },
+      {
+        "section": "Data Representation & Tooling",
+        "day": 14,
+        "title": "How to Frame an ML Problem",
+        "path": "Data_Representation_&_Tooling/day_14_how_to_frame_an_ml_problem.md",
+        "filename": "day_14_how_to_frame_an_ml_problem.md"
+      }
+    ],
+    "EDA": [
+      {
+        "section": "EDA",
+        "day": 19,
+        "title": "Understanding Your Data",
+        "path": "EDA/day_19_understanding_your_data.md",
+        "filename": "day_19_understanding_your_data.md"
+      },
+      {
+        "section": "EDA",
+        "day": 20,
+        "title": "Univariate Analysis",
+        "path": "EDA/day_20_univariate_analysis.md",
+        "filename": "day_20_univariate_analysis.md"
+      },
+      {
+        "section": "EDA",
+        "day": 21,
+        "title": "Bivariate and Multivariate Analysis",
+        "path": "EDA/day_21_bivariate_and_multivariate_analysis.md",
+        "filename": "day_21_bivariate_and_multivariate_analysis.md"
+      },
+      {
+        "section": "EDA",
+        "day": 22,
+        "title": "Pandas Profiling",
+        "path": "EDA/day_22_pandas_profiling.md",
+        "filename": "day_22_pandas_profiling.md"
+      }
+    ],
     "Feature Engineering": [
       {
         "section": "Feature Engineering",
-        "day": 25,
-        "title": "Feature Scaling - Normalization",
-        "path": "Feature_Engineering/day_25_feature_scaling___normalization.md",
-        "filename": "day_25_feature_scaling___normalization.md"
+        "day": 23,
+        "title": "What Is Feature Engineering",
+        "path": "Feature_Engineering/day_23_what_is_feature_engineering.md",
+        "filename": "day_23_what_is_feature_engineering.md"
+      },
+      {
+        "section": "Feature Engineering",
+        "day": 24,
+        "title": "Feature Scaling - Standardization",
+        "path": "Feature_Engineering/day_24_feature_scaling_standardization.md",
+        "filename": "day_24_feature_scaling_standardization.md"
       },
       {
         "section": "Feature Engineering",
@@ -32,6 +129,62 @@
         "title": "AI vs ML vs DL",
         "path": "Foundations/day_2_ai_vs_ml_vs_dl.md",
         "filename": "day_2_ai_vs_ml_vs_dl.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 3,
+        "title": "Types of Machine Learning",
+        "path": "Foundations/day_3_types_of_machine_learning.md",
+        "filename": "day_3_types_of_machine_learning.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 4,
+        "title": "Batch Learning",
+        "path": "Foundations/day_4_batch_learning.md",
+        "filename": "day_4_batch_learning.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 5,
+        "title": "Online Machine Learning",
+        "path": "Foundations/day_5_online_machine_learning.md",
+        "filename": "day_5_online_machine_learning.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 6,
+        "title": "Instance-Based vs Model-Based Learning",
+        "path": "Foundations/day_6_instance_based_vs_model_based_learning.md",
+        "filename": "day_6_instance_based_vs_model_based_learning.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 7,
+        "title": "Challenges In Machine Learning",
+        "path": "Foundations/day_7_challenges_in_machine_learning.md",
+        "filename": "day_7_challenges_in_machine_learning.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 8,
+        "title": "Applications of Machine Learning",
+        "path": "Foundations/day_8_applications_of_machine_learning.md",
+        "filename": "day_8_applications_of_machine_learning.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 9,
+        "title": "ML Development Life Cycle",
+        "path": "Foundations/day_9_ml_development_life_cycle.md",
+        "filename": "day_9_ml_development_life_cycle.md"
+      },
+      {
+        "section": "Foundations",
+        "day": 10,
+        "title": "Data Roles",
+        "path": "Foundations/day_10_data_roles.md",
+        "filename": "day_10_data_roles.md"
       }
     ]
   }
