@@ -1,4 +1,4 @@
-# Universal Curriculum Operating System (UCOS)
+# SUPPLEMENTARY NOTES GENERATION SYSTEM
 
 A universal, fully automated study system that ingests YouTube playlists and relevant textbooks, synthesizes structured knowledge bases using any LLM (Claude, GPT, etc.), and wires them into a navigable Obsidian vault — with zero manual note-taking.
 
