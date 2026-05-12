@@ -15,7 +15,7 @@ def load_topics_metadata() -> dict:
     metadata = {}
     for t in topics:
         # Create a matching key based on the topic name to map back from markdown filename
-        slug = t["topic"].lower().replace(" ", "_").replace("-", "_").replace("/", "_")
+        slug = t["slug"]
         metadata[slug] = t
     return metadata
 

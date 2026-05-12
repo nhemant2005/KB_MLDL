@@ -1,6 +1,8 @@
-# ML Curriculum Operating System
+# Universal Curriculum Operating System (UCOS)
 
-A local, fully automated Machine Learning study system that ingests a 134-video YouTube playlist and three major ML textbooks, synthesises structured Obsidian notes using Claude AI, and wires them into a navigable knowledge graph — with zero manual note-taking.
+A universal, fully automated study system that ingests YouTube playlists and relevant textbooks, synthesizes structured knowledge bases using any LLM (Claude, GPT, etc.), and wires them into a navigable Obsidian vault — with zero manual note-taking.
+
+While the architecture is universal, this instance is currently configured for the **CampusX "100 Days of ML"** playlist.
 
 ---
 
@@ -20,15 +22,15 @@ A local, fully automated Machine Learning study system that ingests a 134-video 
 
 ## Project Overview
 
-This project treats your ML study plan as software: each topic is a typed object, each note is a compiled artifact, and the knowledge graph is a queryable database. The system is split into three phases:
+This project treats your learning plan as software: each topic is a typed object, each note is a compiled artifact, and the knowledge graph is a queryable database. The system is designed to be **curriculum-agnostic**: you provide the playlist URL, the textbook PDFs, and the prompt templates, and the OS handles the rest.
 
-| Phase | Goal | Status |
-|---|---|---|
-| **Phase 1 — Ingestion** | Extract playlist metadata and structure topic database | Complete |
-| **Phase 2 — Synthesis** | Generate structured Obsidian notes from textbook content using Claude | Complete |
-| **Phase 3 — Wiring** | Inject YAML frontmatter, dependency-aware links, MOC files, and study briefs | Complete |
+### Key Universal Features
+- **Model Independence**: Swap between Claude, GPT-4, or local models via `user_config.json`.
+- **Iterative Synthesis**: Automatically breaks down complex, multi-video topics into deep, section-by-section notes to bypass LLM output limits.
+- **Context Injection**: Directly maps specific textbook chapters to videos, ensuring the LLM writes from primary sources, not hallucinations.
+- **Obsidian Wiring**: Auto-generates Maps of Content (MOCs), dependency-aware backlinks, and LaTeX formula indexes.
 
-The playlist driving this system is the **CampusX "100 Days of ML"** series. It covers 134 topics across 22 curriculum sections — from Python tooling and EDA all the way through Ensemble Methods, SVMs, and Unsupervised Learning.
+> **Current Implementation**: This repository is currently populated with the **CampusX "100 Days of ML"** curriculum map (134 topics, 22 sections, and 3 reference textbooks).
 
 ---
 
@@ -37,23 +39,22 @@ The playlist driving this system is the **CampusX "100 Days of ML"** series. It 
 ```
 KB_MLDL/
 │
+├── user_config.json             ← THE CONTROL PANEL: Change model, playlist, paths, and prompts here.
+├── config.json                  ← Architecture defaults (page maps, etc.)
 ├── .env                         ← API keys (never committed)
-├── .gitignore
-├── mapping.txt                  ← Authoritative curriculum map: day → textbook chapters
-├── topics.json                  ← Full topic database (134 topics)
-├── formulas.json                ← Extracted LaTeX formulas (generated after notes exist)
-├── notes_progress.json          ← Per-day generation status tracker
-├── failed_topics.json           ← Auto-logged API failures
+├── mapping.txt                  ← Curriculum map: day → textbook chapters
+├── topics.json                  ← Full topic database (compiled by build_topics.py)
+├── notes_progress.json          ← Generation status tracker
 ├── playlist_raw.json            ← Raw YouTube playlist data
 │
 ├── scripts/
+│   ├── cfg.py                   ← Configuration loader (Single Source of Truth)
 │   ├── playlist_extractor.py    ← Phase 1: scrapes YouTube playlist metadata
-│   ├── build_topics.py          ← Phase 1: builds topics.json from raw playlist + mapping
-│   ├── inspect_pdf_toc.py       ← Phase 2 prep: exports PDF table of contents
-│   ├── extract_textbook_sections.py ← Phase 2 prep: extracts & caches chapter text from PDFs
-│   ├── generate_notes.py        ← Phase 2+3: LLM note generation + --brief study summary
-│   ├── extract_formulas.py      ← Phase 3: scans generated notes for LaTeX formulas
-│   └── wire_vault.py            ← Phase 3: injects YAML frontmatter, links, and MOC files
+│   ├── build_topics.py          ← Phase 1: builds topics.json
+│   ├── extract_textbook_sections.py ← Phase 2 prep: extracts & caches chapter text
+│   ├── generate_notes.py        ← Phase 2: LLM note generation + --brief summary
+│   ├── wire_vault.py            ← Phase 3: injects YAML, links, and MOC files
+│   └── extract_formulas.py      ← Phase 3: scans notes for LaTeX formulas
 │
 ├── Textbooks/                   ← PDF textbooks (git-ignored)
 │   └── extracted/               ← Cached plain-text chapter dumps (git-ignored)
@@ -95,21 +96,14 @@ Reads `playlist_raw.json` and cross-references `mapping.txt` to produce `topics.
 - `playlist_day` — day number in the playlist
 - `prerequisites` — upstream dependency list
 - `textbook_sources` — list of books + chapters with priority levels
+- `merge_group` / `merge_role` — groups multi-day topics into single notes
 - `difficulty`, `interview_importance`, `status`
 
 ---
 
-### Step 3 — Inspect PDF Table of Contents
-
-```bash
-python scripts/inspect_pdf_toc.py
-```
-
-One-time setup step. Opens all three textbook PDFs using PyMuPDF and dumps their embedded table of contents to `toc_output.txt`. Used manually to confirm the correct page ranges for `CHAPTER_PAGE_MAP`.
-
 ---
 
-### Step 4 — Extract & Cache Chapter Text
+### Step 3 — Extract & Cache Chapter Text
 
 ```bash
 python scripts/extract_textbook_sections.py
@@ -119,7 +113,7 @@ Reads every `textbook_sources` entry in `topics.json`, looks up the page range i
 
 ---
 
-### Step 5 — Generate Notes
+### Step 4 — Generate Notes
 
 ```bash
 # Single day
@@ -135,20 +129,17 @@ python scripts/generate_notes.py --section "Linear Regression"
 python scripts/generate_notes.py --days 50-56 --dry-run
 ```
 
-For each topic, the script:
-1. Loads the full cached chapter text for every mapped textbook source
-2. Classifies the topic into one of four note types: `tooling`, `math_heavy`, `algorithm`, or `concept`
-3. Builds a structured prompt embedding the textbook text as the sole source of truth
-4. Calls the Claude API (`claude-sonnet-4-6`) with `max_tokens=4000`
-5. Saves the generated note to `KB_Obsidian/[Section]/day_NN_topic_name.md`
-6. Marks the topic as `done` in `notes_progress.json`
-7. Prints a per-topic study summary immediately after generation
+For each topic, the script handles either **Standalone** or **Merged** logic:
+1. **Standalone Days**: Classifies the topic (`tooling`, `algorithm`, etc.) and generates a structured note in a single API call using the textbook text.
+2. **Merged Groups (e.g., Days 50-56 for Linear Regression)**: Aggregates chapters and iteratively generates the note **section-by-section** (Math, Intuition, Code) with independent API calls. This preserves maximum depth and bypasses LLM output token limits.
+  
+Finally, the script saves the note to `KB_Obsidian/[Section]/`, marks the day(s) as `done` in `notes_progress.json`, and prints a detailed study summary.
 
 Failed generations are automatically logged to `failed_topics.json` for retry.
 
 ---
 
-### Step 6 — Extract Formulas
+### Step 5 — Extract Formulas
 
 ```bash
 python scripts/extract_formulas.py
@@ -158,7 +149,7 @@ Scans every `.md` file in `KB_Obsidian/` for `## Key Formulas` sections, extract
 
 ---
 
-### Step 7 — Wire the Vault
+### Step 6 — Wire the Vault
 
 ```bash
 # Wire all generated notes in a specific section + generate its MOC
@@ -187,7 +178,7 @@ For each generated note, `wire_vault.py`:
 
 ---
 
-### Step 8 — Daily Study Brief (no API call)
+### Step 7 — Daily Study Brief (no API call)
 
 ```bash
 # Brief for a single day
@@ -208,6 +199,8 @@ python scripts/generate_notes.py --brief --days 50-56
 - Note stats (word count, character count, note type)
 - An `obsidian://` deep-link to open the note directly in Obsidian
 
+*Note: For merged topics, `--brief` automatically prints a unified summary aggregating prerequisites and textbook chapters across all days in the group.*
+
 ---
 
 ## Scripts Reference
@@ -221,7 +214,6 @@ python scripts/generate_notes.py --brief --days 50-56
 | `generate_notes.py` | 2 + 3 | LLM note orchestration; also handles `--brief` study summaries |
 | `extract_formulas.py` | 3 | Parses LaTeX from generated notes into `formulas.json` |
 | `wire_vault.py` | 3 | Injects YAML frontmatter, dependency link sections, and section MOC files |
-| `populate.py` | utility | Propagates `CHAPTER_PAGE_MAP` into both generate and extract scripts |
 
 ---
 
@@ -230,7 +222,7 @@ python scripts/generate_notes.py --brief --days 50-56
 | File | Generated By | Consumed By | Contents |
 |---|---|---|---|
 | `playlist_raw.json` | `playlist_extractor.py` | `build_topics.py` | Raw YouTube metadata (title, URL, duration) |
-| `topics.json` | `build_topics.py` | Everything | 134-topic database with full curriculum metadata |
+| `topics.json` | `build_topics.py` | Everything | 134-topic database with metadata and `merge_group` flags |
 | `mapping.txt` | Hand-authored | `build_topics.py`, `generate_notes.py` | Day-by-day textbook chapter mappings |
 | `notes_progress.json` | `generate_notes.py` | `generate_notes.py` | Per-day `"done"` flags for skip logic |
 | `failed_topics.json` | `generate_notes.py` | Manual review | Topics that errored during generation |
@@ -264,17 +256,11 @@ pip install anthropic pymupdf yt-dlp python-dotenv flake8
 
 ---
 
-## External Services & APIs
-
-### Anthropic Claude API
-
-- **Model used:** `claude-sonnet-4-6`
-- **Purpose:** Generates the actual note content from textbook source material
-- **Max output tokens:** 4,000 per note
-- **Context window:** Claude Sonnet 4.6's large context window allows sending full textbook chapters (not cropped excerpts) as source material
-- **Prompt design:** Four structured templates depending on note type (`tooling`, `math_heavy`, `algorithm`, `concept`). The LLM is explicitly instructed to use only the provided textbook text — never its training data.
-- **Auth:** `ANTHROPIC_API_KEY` environment variable loaded from `.env`
-- **SDK:** `anthropic` Python package
+### LLM Orchestration
+- **Model Agnostic:** Change `model` in `user_config.json` to any supported model (e.g., `claude-3-5-sonnet`, `gpt-4o`, etc.).
+- **Iterative Merged Logic:** For multi-video topics, the system generates notes section-by-section to bypass output token limits.
+- **Context Integrity:** Full textbook chapters are sent as source material, with strict instructions to use ONLY provided text.
+- **Prompt Templates:** All system and user prompt templates are editable in `user_config.json`.
 
 ### YouTube (via yt-dlp)
 
@@ -333,9 +319,15 @@ ANTHROPIC_API_KEY=sk-ant-...your-key-here...
 
 > `.env` is git-ignored. Never commit your API key.
 
-### 3. Add your textbooks
+### 3. Configure the System
+Edit `user_config.json` to set your:
+- LLM model
+- Playlist URL
+- Textbook PDF paths and page mappings
+- Custom prompt templates
 
-Place your PDF files inside `Textbooks/`. The exact filenames expected by the scripts are defined in `BOOK_PATHS` inside `generate_notes.py`. You can rename the PDFs and update that dictionary if needed.
+### 4. Add your textbooks
+Place your PDF files inside `Textbooks/` and ensure the paths in `user_config.json` match the filenames.
 
 ### 4. Run the pipeline
 

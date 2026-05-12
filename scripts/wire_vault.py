@@ -6,43 +6,6 @@ from pathlib import Path
 TOPICS_FILE = Path("topics.json")
 FORMULAS_FILE = Path("formulas.json")
 
-TOOLING_TOPICS = {
-    "installing_anaconda", "working_with_csv_files",
-    "working_with_json_sql", "fetching_data_from_an_api",
-    "web_scraping", "pandas_profiling", "column_transformer",
-    "ml_pipelines", "decision_tree_visualization",
-    "hyperparameter_tuning_rf_using_gridsearchcv",
-    "xgboost_for_regression", "xgboost_for_classification",
-    "naive_bayes_code_example", "end_to_end_toy_project",
-    "knn_code", "svm_kernel_code_example"
-}
-
-MATH_FOUNDATION_TOPICS = {
-    "what_are_tensors", "curse_of_dimensionality",
-    "derivative_of_sigmoid", "why_lasso_creates_sparsity",
-    "the_maths_behind_xgboost",
-    "gradient_boosting_regression_mathematics",
-    "ridge_regression_mathematical_formulation",
-    "multiple_linear_regression_mathematical_formulation",
-    "simple_linear_regression_mathematical_formulation",
-    "naive_bayes_mathematics", "svm_hard_margin_mathematics",
-    "svm_soft_margin_mathematics",
-    "pca_mathematical_formulation"
-}
-
-def classify_topic(topic: dict) -> str:
-    slug = (topic["topic"].lower()
-            .replace(" ", "_")
-            .replace("-", "_")
-            .replace("/", "_"))
-    if slug in TOOLING_TOPICS:
-        return "tooling"
-    if slug in MATH_FOUNDATION_TOPICS:
-        return "math_heavy"
-    if topic.get("difficulty") in ("high", "medium"):
-        return "algorithm"
-    return "concept"
-
 def load_json(path: Path):
     if not path.exists():
         return []
@@ -53,10 +16,7 @@ def get_vault_path(topic: dict) -> Path:
     section = topic.get("section", "Foundations")
     safe_section = section.replace(" (Unsupervised Learning)", "").replace(" ", "_")
     folder  = f"KB_Obsidian/{safe_section}/"
-    slug    = (topic["topic"].lower()
-               .replace(" ", "_")
-               .replace("-", "_")
-               .replace("/", "_"))
+    slug = topic["slug"]
     day = topic.get("playlist_day", "X")
     return Path(folder) / f"day_{day}_{slug}.md"
 
@@ -106,7 +66,7 @@ def wire_note(topic: dict, all_topics: list, dry_run: bool):
     if not file_path.exists():
         # Fallback check just in case it doesn't have the day prefix
         safe_section = topic.get("section", "Foundations").replace(" (Unsupervised Learning)", "").replace(" ", "_")
-        slug = (topic["topic"].lower().replace(" ", "_").replace("-", "_").replace("/", "_"))
+        slug = topic["slug"]
         fallback_path = Path(f"KB_Obsidian/{safe_section}/{slug}.md")
         if fallback_path.exists():
             file_path = fallback_path
@@ -121,7 +81,7 @@ def wire_note(topic: dict, all_topics: list, dry_run: bool):
         tags = [
             topic.get("section", "Misc").replace(" ", ""),
             topic.get("difficulty", "medium"),
-            classify_topic(topic)
+            topic.get("note_type", "concept")
         ]
         
         prereqs_list = topic.get("prerequisites", [])
@@ -227,8 +187,7 @@ def generate_moc(section: str, all_topics: list, formulas: list, dry_run: bool):
         
     # 3. Key Formulas
     formula_list = ""
-    topic_names = {t["topic"].lower() for t in section_topics}
-    topic_slugs = {t["topic"].lower().replace(" ", "_").replace("-", "_").replace("/", "_") for t in section_topics}
+    topic_slugs = {t["slug"] for t in section_topics}
     for f in formulas:
         if f.get("topic") in topic_slugs or f.get("section") == section:
             formula_list += f"- **{f.get('name', 'Formula')}**: {f.get('latex', '')}\n"

@@ -2,30 +2,12 @@ import fitz
 import json
 from pathlib import Path
 
-BOOK_PATHS = {
-    "HOML": "Textbooks/[2] Aurélien Géron - Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow_ Concepts, Tools, and Techniques to Build Intelligent System (2019, O’Reilly Media) - libgen.li.pdf",
-    "ISL":  "Textbooks/[Springer Texts in Statistics] Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani - An Introduction to Statistical Learning - with Applications in R (2021, Springer Science+Business Media) - libgen.li.pdf",
-    "PRML": "Textbooks/[Information Science and Statistics ] Christopher M. Bishop - Pattern Recognition and Machine Learning (2006, Springer) - libgen.li.pdf"
-}
 
-# ← Filled by me after TOC output is pasted
-CHAPTER_PAGE_MAP = {
-    'HOML': {
-        '1': (19, 59), '2': (60, 120), '3': (121, 153), '4': (154, 203),
-        '5': (204, 228), '6': (229, 243), '7': (244, 272), '8': (273, 298),
-        '9': (299, 348), '11': (414, 465), '12': (466, 510)
-    },
-    'ISL': {
-        '1': (16, 29), '2': (30, 72), '3': (73, 142), '4': (143, 209),
-        '5': (210, 236), '6': (237, 300), '7': (301, 338), '8': (339, 377),
-        '9': (378, 413), '12': (507, 562)
-    },
-    'PRML': {
-        '1': (21, 86), '2': (87, 156), '3': (157, 198), '4': (199, 244),
-        '5': (245, 310), '6': (311, 344), '7': (345, 378), '12': (579, 624),
-        '14': (673, 696)
-    }
-}
+
+with open("config.json") as f:
+    config = json.load(f)
+BOOK_PATHS = config["BOOK_PATHS"]
+CHAPTER_PAGE_MAP = config["CHAPTER_PAGE_MAP"]
 
 def extract_chapter(book: str, chapter: str) -> str:
     cache_path = Path(

@@ -1,0 +1,103 @@
+{
+  "_comment": "This is your personal configuration file. All user-facing settings live here.",
+  "_comment2": "Changes here take effect immediately — no code edits needed.",
+
+  "model": "claude-haiku-4-5-20251001",
+
+  "playlist_url": "https://www.youtube.com/playlist?list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH",
+
+  "vault_output_dir": "KB_Obsidian",
+
+  "books": {
+    "HOML": {
+      "path": "Textbooks/[2] Aurélien Géron - Hands-On Machine Learning with Scikit-Learn, Keras, and Tensorflow_ Concepts, Tools, and Techniques to Build Intelligent System (2019, O'Reilly Media) - libgen.li.pdf",
+      "full_name": "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow",
+      "author": "Aurélien Géron",
+      "year": 2019
+    },
+    "ISL": {
+      "path": "Textbooks/[Springer Texts in Statistics] Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani - An Introduction to Statistical Learning - with Applications in R (2021, Springer Science+Business Media) - libgen.li.pdf",
+      "full_name": "An Introduction to Statistical Learning",
+      "author": "James, Witten, Hastie, Tibshirani",
+      "year": 2021
+    },
+    "PRML": {
+      "path": "Textbooks/[Information Science and Statistics ] Christopher M. Bishop - Pattern Recognition and Machine Learning (2006, Springer) - libgen.li.pdf",
+      "full_name": "Pattern Recognition and Machine Learning",
+      "author": "Christopher M. Bishop",
+      "year": 2006
+    }
+  },
+
+  "chapter_page_map": {
+    "HOML": {
+      "1": [19, 59],
+      "2": [60, 120],
+      "3": [121, 153],
+      "4": [154, 203],
+      "5": [204, 228],
+      "6": [229, 243],
+      "7": [244, 272],
+      "8": [273, 298],
+      "9": [299, 348],
+      "11": [414, 465],
+      "12": [466, 510]
+    },
+    "ISL": {
+      "1": [16, 29],
+      "2": [30, 72],
+      "3": [73, 142],
+      "4": [143, 209],
+      "5": [210, 236],
+      "6": [237, 300],
+      "7": [301, 338],
+      "8": [339, 377],
+      "9": [378, 413],
+      "12": [507, 562]
+    },
+    "PRML": {
+      "1": [21, 86],
+      "2": [87, 156],
+      "3": [157, 198],
+      "4": [199, 244],
+      "5": [245, 310],
+      "6": [311, 344],
+      "7": [345, 378],
+      "12": [579, 624],
+      "14": [673, 696]
+    }
+  },
+
+  "generation": {
+    "_comment": "Set prompt_caching to true to mark textbook content blocks for Anthropic caching. Saves ~90% on repeated input tokens within merged group section calls.",
+    "prompt_caching": true,
+    "api_rate_limit_sleep_seconds": 2,
+    "merged_note_max_tokens": 2000,
+    "standalone_note_max_tokens": 4000
+  },
+
+  "prompts": {
+    "shared_rules": "- Use ONLY the textbook content provided at the bottom of this prompt\n- Do NOT use your training data or memory for any fact or formula\n- Every non-trivial claim must end with its source in parentheses: (HOML ch.4) or (ISL ch.3) or (PRML ch.7)\n- All mathematics must be LaTeX: $inline$ or $$block$$\n- [[backlinks]] must use ONLY exact topic names from the prerequisites list above — do not invent new backlinks\n- If textbook content is missing or insufficient for any section, write exactly:\n    > [NEEDS REVIEW: insufficient source material]\n  Do NOT fill gaps from memory.\n- Output ONLY the markdown note. No preamble. No explanation.\n- Respect the word limits specified in the template below.",
+
+    "note_type_headers": {
+      "tooling":    "You are generating an Obsidian markdown companion note for the CampusX 100 Days of ML playlist and its mapped textbooks.\n\nThis note serves two purposes simultaneously:\n  1. A companion to the playlist video for Day {playlist_day}\n  2. A companion to the textbook sections listed as sources",
+      "math_heavy": "You are generating an Obsidian markdown companion note for the CampusX 100 Days of ML playlist and its mapped textbooks.\n\nThis note serves two purposes simultaneously:\n  1. A companion to the playlist video for Day {playlist_day}\n  2. A companion to the textbook sections listed as sources",
+      "algorithm":  "You are generating an Obsidian markdown companion note for the CampusX 100 Days of ML playlist and its mapped textbooks.\n\nThis note serves two purposes simultaneously:\n  1. A companion to the playlist video for Day {playlist_day}\n  2. A companion to the textbook sections listed as sources",
+      "concept":    "You are generating an Obsidian markdown companion note for the CampusX 100 Days of ML playlist and its mapped textbooks.\n\nThis note serves two purposes simultaneously:\n  1. A companion to the playlist video for Day {playlist_day}\n  2. A companion to the textbook sections listed as sources"
+    },
+
+    "note_type_templates": {
+      "tooling": "Generate a TOOLING COMPANION NOTE.\nThis is a practical reference cheatsheet, not a theory note.\nTotal length: 300-450 words maximum.\n\n## What It Does\n1-2 sentences only. What is this tool or function for?\nCite textbook source.\n\n## When To Use It\nBullet list. 3-4 practical scenarios.\n\n## Core Syntax / API\nCode block showing the most important usage patterns.\nComment every parameter that matters.\nPull examples directly from textbook if available.\n\n## Key Parameters\nBullet list or small table.\n  Parameter | what it controls | typical value\nOnly parameters the textbook explicitly covers.\n\n## Common Mistakes\nBullet list. 3 points maximum.\nWhat breaks in practice.\n\n## Textbook Coverage\nOne sentence: what the textbook covers here and what it skips.\nBe honest if coverage is shallow.\n\n## Related Topics\nMaximum 3. Use [[backlinks]] for prerequisites only.",
+
+      "math_heavy": "Generate a MATHEMATICAL DERIVATION NOTE.\nThis note exists solely to show the full mathematical argument.\nTotal length: 500-700 words.\n\n## Why This Math Matters\n2-3 sentences. What does this derivation prove or enable?\nInterview importance is {importance}/10 — reflect this in depth.\n\n## Prerequisites Assumed\nBullet list. What must the reader already know?\nDraw only from: {prereqs}\n\n## Full Derivation\nShow every step. Number each step.\nExplain what is happening at each transition in plain English.\nIf the textbook skips steps, note it explicitly:\n  > [Textbook skips from step X to Y — intermediate step shown]\nDo NOT skip steps yourself.\nSource every equation: (HOML ch.4) or (PRML ch.3)\n\n## Key Result\nState the final formula in a LaTeX block.\nOne sentence: what does this result mean geometrically or statistically?\n\n## Intuition Behind The Math\n2-3 sentences. Plain English restatement of the derivation.\nWhat is the math actually doing?\n\n## Where This Formula Appears\nBullet list. Which algorithms use this result directly?\nMaximum 4 items. Use [[backlinks]] where applicable.\n\n## Interview Angle\n2-3 sentences. How is this derivation tested in interviews?\nWhat level of depth is expected at {importance}/10 importance?",
+
+      "algorithm_high": "Generate an ALGORITHM COMPANION NOTE.\nTotal length: 600-800 words.\n\n## Core Idea\n2-3 sentences. Plain English.\nWhat problem does this algorithm solve?\nWhy does it exist — what gap does it fill?\n\n## Intuition\n3-5 sentences. Build intuition before math.\nUse the textbook's own explanations and examples.\nCite source for every claim.\n\n## Mathematical Formulation\nFull derivation required. Show all steps with numbered transitions.\nExplain each step in plain English alongside the math.\nSource every equation.\n\n## Key Formulas\nBullet list. LaTeX. One formula per bullet.\nName each formula. Source each formula.\nOnly formulas the textbook explicitly states — do not add others.\n\n## Assumptions\nBullet list.\nWhen does this algorithm assume something about the data?\nPull directly from textbook — do not invent assumptions.\n\n## Step-by-Step Algorithm\nNumbered list. Maximum 7 steps.\nFollow the textbook's own description of the algorithm.\n\n## Hyperparameters\nBullet list or small table.\n  Parameter | effect on model | how to tune\nOnly cover what the textbook discusses.\n\n## Failure Modes\nBullet list.\nWhen does this break?\nWhat does the textbook specifically warn about?\n\n## Interview Questions\n5 questions. Mix of conceptual and derivation-level. Order most-to-least common.\nQuestions only — no answers in this section.\n\n## Code Example\nMinimal sklearn or numpy snippet.\nComment every non-obvious line.\nFollow textbook's own code examples where available.\n\n## Related Topics\nBullet list. Maximum 5.\n[[backlinks]] for prerequisites only.\nPlain text for related topics not in prerequisites.",
+
+      "algorithm_medium": "Generate an ALGORITHM COMPANION NOTE.\nTotal length: 450-600 words.\n\n## Core Idea\n2-3 sentences. Plain English.\n\n## Intuition\n3-5 sentences. Use the textbook's explanations. Cite sources.\n\n## Mathematical Formulation\nKey equations with explanation of each term.\nIntuition for why the math is structured this way.\nNo need for full derivation unless the textbook provides it explicitly.\n\n## Key Formulas\nBullet list. LaTeX. Source each formula.\n\n## Assumptions\nBullet list from the textbook.\n\n## Step-by-Step Algorithm\nNumbered list. Max 7 steps.\n\n## Hyperparameters\nBullet list or small table.\n\n## Interview Questions\n4 questions. Mostly conceptual with one math question.\nQuestions only — no answers.\n\n## Code Example\nMinimal snippet. Comment non-obvious lines.\n\n## Related Topics\nMaximum 5. [[backlinks]] for prerequisites only.",
+
+      "algorithm_low": "Generate an ALGORITHM COMPANION NOTE.\nTotal length: 350-500 words.\n\n## Core Idea\n2-3 sentences. Plain English.\n\n## Intuition\n3-5 sentences. Use the textbook's explanations. Cite sources.\n\n## Mathematical Formulation\nCore equation only. One sentence explanation of each term.\nSkip derivation entirely.\n\n## Step-by-Step Algorithm\nNumbered list. Max 5 steps.\n\n## Interview Questions\n3 questions. Conceptual only.\n\n## Related Topics\nMaximum 4. [[backlinks]] for prerequisites only.",
+
+      "concept": "Generate a CONCEPT EXPLANATION NOTE.\nTotal length: 300-450 words maximum.\n\n## Core Idea\n2-3 sentences. Plain English. What is this concept?\n\n## Why It Matters\n2-3 sentences.\nWhy does an ML practitioner need to understand this?\nTie to downstream algorithms where possible.\n\n## Explanation\n3-5 sentences expanding the core idea.\nUse the textbook's own explanation and examples.\nCite source for every claim.\n\n## Key Terms\nBullet list.\n  Term: one-line definition\nOnly terms the textbook explicitly defines in this context.\n\n## Common Misunderstanding\n1-2 sentences.\nWhat do beginners typically get wrong about this concept?\n\n## Interview Relevance\n1-2 sentences.\nHow does this concept appear in interviews?\nInterview importance is {importance}/10 — reflect this honestly.\n\n## Related Topics\nMaximum 4.\n[[backlinks]] for prerequisites only."
+    }
+  }
+}

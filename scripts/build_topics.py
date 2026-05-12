@@ -138,6 +138,580 @@ RAW_MAPPING = [
     (134, "Hyperparameter Tuning with Optuna", "Advanced Topics", [("HOML", ["2"], "primary"), ("ISL", ["5"], "support")])
 ]
 
+
+
+TOOLING_TOPICS = {
+    "installing_anaconda", "working_with_csv_files",
+    "working_with_json_sql", "fetching_data_from_an_api",
+    "web_scraping", "pandas_profiling", "column_transformer",
+    "ml_pipelines", "decision_tree_visualization",
+    "hyperparameter_tuning_rf_using_gridsearchcv",
+    "xgboost_for_regression", "xgboost_for_classification",
+    "naive_bayes_code_example", "end_to_end_toy_project",
+    "knn_code", "svm_kernel_code_example"
+}
+
+MATH_FOUNDATION_TOPICS = {
+    "what_are_tensors", "curse_of_dimensionality",
+    "derivative_of_sigmoid", "why_lasso_creates_sparsity",
+    "the_maths_behind_xgboost",
+    "gradient_boosting_regression_mathematics",
+    "ridge_regression_mathematical_formulation",
+    "multiple_linear_regression_mathematical_formulation",
+    "simple_linear_regression_mathematical_formulation",
+    "naive_bayes_mathematics", "svm_hard_margin_mathematics",
+    "svm_soft_margin_mathematics",
+    "pca_mathematical_formulation"
+}
+
+def classify_topic(slug: str, diff: str) -> str:
+    if slug in TOOLING_TOPICS:
+        return "tooling"
+    if slug in MATH_FOUNDATION_TOPICS:
+        return "math_heavy"
+    if diff in ("high", "medium"):
+        return "algorithm"
+    return "concept"
+
+MERGE_MAP = {
+    "1": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "2": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "3": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "4": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "5": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "6": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "7": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "8": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "9": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "10": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "11": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "12": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "13": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "14": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "15": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "16": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "17": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "18": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "19": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "20": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "21": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "22": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "23": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "24": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "25": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "26": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "27": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "28": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "29": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "30": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "31": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "32": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "33": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "34": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "35": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "36": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "37": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "38": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "39": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "40": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "41": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "42": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "43": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "44": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "45": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "46": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "47": {
+        "merge_group": "pca",
+        "merge_role": "intuition"
+    },
+    "48": {
+        "merge_group": "pca",
+        "merge_role": "mathematics"
+    },
+    "49": {
+        "merge_group": "pca",
+        "merge_role": "implementation"
+    },
+    "50": {
+        "merge_group": "linear_regression",
+        "merge_role": "intuition"
+    },
+    "51": {
+        "merge_group": "linear_regression",
+        "merge_role": "mathematics"
+    },
+    "52": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "53": {
+        "merge_group": "linear_regression",
+        "merge_role": "extension"
+    },
+    "54": {
+        "merge_group": "linear_regression",
+        "merge_role": "mathematics_extension"
+    },
+    "55": {
+        "merge_group": "linear_regression",
+        "merge_role": "implementation"
+    },
+    "56": {
+        "merge_group": "linear_regression",
+        "merge_role": "assumptions"
+    },
+    "57": {
+        "merge_group": "gradient_descent",
+        "merge_role": "intuition"
+    },
+    "58": {
+        "merge_group": "gradient_descent",
+        "merge_role": "batch"
+    },
+    "59": {
+        "merge_group": "gradient_descent",
+        "merge_role": "stochastic"
+    },
+    "60": {
+        "merge_group": "gradient_descent",
+        "merge_role": "mini_batch"
+    },
+    "61": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "62": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "63": {
+        "merge_group": "ridge_regression",
+        "merge_role": "intuition"
+    },
+    "64": {
+        "merge_group": "ridge_regression",
+        "merge_role": "mathematics"
+    },
+    "65": {
+        "merge_group": "ridge_regression",
+        "merge_role": "gradient_descent"
+    },
+    "66": {
+        "merge_group": "ridge_regression",
+        "merge_role": "key_points"
+    },
+    "67": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "68": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "69": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "70": {
+        "merge_group": "logistic_regression",
+        "merge_role": "intuition"
+    },
+    "71": {
+        "merge_group": "logistic_regression",
+        "merge_role": "implementation"
+    },
+    "72": {
+        "merge_group": "logistic_regression",
+        "merge_role": "sigmoid"
+    },
+    "73": {
+        "merge_group": "logistic_regression",
+        "merge_role": "loss_function"
+    },
+    "74": {
+        "merge_group": "logistic_regression",
+        "merge_role": "sigmoid_derivative"
+    },
+    "75": {
+        "merge_group": "logistic_regression",
+        "merge_role": "gradient_descent"
+    },
+    "76": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "77": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "78": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "79": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "80": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "81": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "82": {
+        "merge_group": "naive_bayes",
+        "merge_role": "conditional_probability"
+    },
+    "83": {
+        "merge_group": "naive_bayes",
+        "merge_role": "independent_events"
+    },
+    "84": {
+        "merge_group": "naive_bayes",
+        "merge_role": "mutually_exclusive"
+    },
+    "85": {
+        "merge_group": "naive_bayes",
+        "merge_role": "bayes_theorem"
+    },
+    "86": {
+        "merge_group": "naive_bayes",
+        "merge_role": "examples"
+    },
+    "87": {
+        "merge_group": "naive_bayes",
+        "merge_role": "intuition"
+    },
+    "88": {
+        "merge_group": "naive_bayes",
+        "merge_role": "mathematics"
+    },
+    "89": {
+        "merge_group": "naive_bayes",
+        "merge_role": "implementation"
+    },
+    "90": {
+        "merge_group": "naive_bayes",
+        "merge_role": "numerical_data"
+    },
+    "91": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "92": {
+        "merge_group": "svm",
+        "merge_role": "intuition"
+    },
+    "93": {
+        "merge_group": "svm",
+        "merge_role": "hard_margin"
+    },
+    "94": {
+        "merge_group": "svm",
+        "merge_role": "soft_margin"
+    },
+    "95": {
+        "merge_group": "svm",
+        "merge_role": "kernel_intuition"
+    },
+    "96": {
+        "merge_group": "svm",
+        "merge_role": "kernel_implementation"
+    },
+    "97": {
+        "merge_group": "decision_trees",
+        "merge_role": "theory"
+    },
+    "98": {
+        "merge_group": "decision_trees",
+        "merge_role": "hyperparameters"
+    },
+    "99": {
+        "merge_group": "decision_trees",
+        "merge_role": "regression"
+    },
+    "100": {
+        "merge_group": "decision_trees",
+        "merge_role": "visualization"
+    },
+    "101": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "102": {
+        "merge_group": "voting_ensemble",
+        "merge_role": "intro"
+    },
+    "103": {
+        "merge_group": "voting_ensemble",
+        "merge_role": "classification"
+    },
+    "104": {
+        "merge_group": "voting_ensemble",
+        "merge_role": "regression"
+    },
+    "105": {
+        "merge_group": "bagging",
+        "merge_role": "intro"
+    },
+    "106": {
+        "merge_group": "bagging",
+        "merge_role": "classifiers"
+    },
+    "107": {
+        "merge_group": "bagging",
+        "merge_role": "regressors"
+    },
+    "108": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "109": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "110": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "111": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "112": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "113": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "114": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "115": {
+        "merge_group": "adaboost",
+        "merge_role": "intuition"
+    },
+    "116": {
+        "merge_group": "adaboost",
+        "merge_role": "step_by_step"
+    },
+    "117": {
+        "merge_group": "adaboost",
+        "merge_role": "implementation"
+    },
+    "118": {
+        "merge_group": "adaboost",
+        "merge_role": "hyperparameters"
+    },
+    "119": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "120": {
+        "merge_group": "gradient_boosting",
+        "merge_role": "intuition"
+    },
+    "121": {
+        "merge_group": "gradient_boosting",
+        "merge_role": "mathematics_regression"
+    },
+    "122": {
+        "merge_group": "gradient_boosting",
+        "merge_role": "classification"
+    },
+    "123": {
+        "merge_group": "xgboost",
+        "merge_role": "intuition"
+    },
+    "124": {
+        "merge_group": "xgboost",
+        "merge_role": "regression"
+    },
+    "125": {
+        "merge_group": "xgboost",
+        "merge_role": "classification"
+    },
+    "126": {
+        "merge_group": "xgboost",
+        "merge_role": "mathematics"
+    },
+    "127": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "128": {
+        "merge_group": "kmeans",
+        "merge_role": "intuition"
+    },
+    "129": {
+        "merge_group": "kmeans",
+        "merge_role": "sklearn"
+    },
+    "130": {
+        "merge_group": "kmeans",
+        "merge_role": "from_scratch"
+    },
+    "131": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "132": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "133": {
+        "merge_group": None,
+        "merge_role": None
+    },
+    "134": {
+        "merge_group": None,
+        "merge_role": None
+    }
+}
+
 def get_slug(topic):
     slug = topic.lower()
     slug = re.sub(r'[^a-z0-9\s-]', '', slug)
@@ -243,10 +817,17 @@ def main():
         if len(words_topic.intersection(words_raw)) < len(words_topic) * 0.3:
             needs_review = True
             
+        note_type = classify_topic(slug, diff)
+        m_data = MERGE_MAP.get(str(day), {"merge_group": None, "merge_role": None})
+        if not m_data.get("merge_group"): # Check int key fallback
+            m_data = MERGE_MAP.get(day, {"merge_group": None, "merge_role": None})
+        
         entry = {
             "playlist_day": day,
             "title_raw": title_raw,
             "topic": topic_name,
+            "slug": slug,
+            "note_type": note_type,
             "url": item.get('url'),
             "duration_seconds": item.get('duration_seconds'),
             "section": section,
@@ -256,7 +837,9 @@ def main():
             "difficulty": diff,
             "interview_importance": imp,
             "notes_file": f"notes/{slug}.md",
-            "needs_review": needs_review
+            "needs_review": needs_review,
+            "merge_group": m_data["merge_group"],
+            "merge_role": m_data["merge_role"]
         }
         
         if day == 134:
